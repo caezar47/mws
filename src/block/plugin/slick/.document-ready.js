@@ -36,7 +36,6 @@ $(function() {
 			infinite: false,
 			prevArrow: $(this).find('.slick-btn.is--prev'),
 			nextArrow: $(this).find('.slick-btn.is--next'),
-
 			responsive: [	
 			    {
 					breakpoint: 768,
