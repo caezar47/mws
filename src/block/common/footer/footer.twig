@@ -1,0 +1,27 @@
+<footer class="{{footer_prefix}}block">	
+	<div class="{{footer_prefix}}inner">	
+		<div class="{{footer_prefix}}container container">
+			<div class="{{footer_prefix}}row row  is--base">
+				<div class="{{footer_prefix}}cols cols  is--copyright">
+					<a href="{{page.index}}" class="{{footer_prefix}}logotip">
+						{% include "../svg-sprite/svg.twig" with {icon:"logotip"} %}
+					</a>
+				</div>	
+				<div class="{{footer_prefix}}cols cols  is--mc">
+					<div class="{{footer_prefix}}row row">
+						<div class="{{footer_prefix}}cols cols">
+							Все права защищены
+						</div>	
+						<div class="{{footer_prefix}}cols cols">
+							ИНН {{contacts.inn}}
+						</div>	
+						<div class="{{footer_prefix}}cols cols">
+							ОГРН {{contacts.ogrn}}
+						</div>				
+					</div>				
+				</div>				
+				{% include "../../common/continfo/tpl.twig" with {prefix:"continfo__", mod:"is--footer"} %} 
+			</div>	
+		</div>
+	</div>
+</footer>

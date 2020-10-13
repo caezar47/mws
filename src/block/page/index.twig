@@ -1,0 +1,120 @@
+{% if view == "header" %}
+	<section class="{{prefix}}content  {{mod}}" style="background-image: url({{bg}})">
+		<div class="{{prefix}}container container  {{mod}}">
+			<div class="{{prefix}}inner  {{mod}}">
+				<h1 class="page-header__heading  {{mod}}">{{heading}}</h1>
+				<a href="tel:{{contacts.phone_tel}}" class="{{prefix}}phone  {{mod}}">{{contacts.phone}}</a>
+			</div>
+		</div>
+	</section>
+{% endif %}
+
+{% if view == "objective" %}
+	<section class="{{prefix}}content  {{mod}}">
+		<div class="{{prefix}}container container  {{mod}}">
+			<div class="{{prefix}}grid  grid__row  {{mod}}">
+				<div>
+					<div class="{{prefix}}img  {{mod}}-logo">
+						<a href="http://reestr.rgr.ru/" target="_blank" rel="nofollow"><img src="{{path.img}}/svg/logo-purpose.svg" class="img-responsive" alt=""></a>
+					</div> 
+					<h2 class="page-header__heading  {{mod}}-line">
+						{{heading}}
+					</h2>
+					<div class="page-header__heading  {{mod}}-note">
+						{{note}}
+					</div>
+				</div> 
+				<div>
+					<div class="{{prefix}}img  {{mod}}-bg">
+						<img src="{{banner}}" class="img-responsive" alt="">
+						<div class="page-header__heading  {{mod}}-bg">
+							{{banner_note}}
+						</div>
+					</div> 
+				</div> 
+			</div> 
+		</div>
+	</section> 
+{% endif %}
+
+{% if view == "adv" %}
+	<section class="{{prefix}}content  {{mod}}">
+		<div class="{{prefix}}container container  {{mod}}">
+			{% include "../common/page-header/elem.twig" with {
+				prefix:"page-header__", 
+				mod:heading_mod, 
+				group:heading_group, 
+				level:heading_level, 
+				heading:heading
+			} %}
+			<div class="{{prefix}}grid  grid__row  {{mod}}">
+				<picture class="grid__cols">	
+					<img src="{{path.img}}/temp/adv-agencies.jpg" class="img-responsive" alt="">
+				</picture>
+				<div class="grid__cols">
+					<h3 class="page-header__heading  {{mod}}-text">Для агентств недвижимости</h3>
+					<div class="text__block  {{mod}}">
+						<p>Развитие профессионального рынка недвижимости, объединяющего риэлторские, оценочные, строительные, информационные, образовательные учреждения.</p>
+                        <ul> 
+                            <li>Защита интересов членов союза экспертов недвижимости</li>
+                            <li>Помощь в согласовании с надзорными органами</li>
+                            <li>Актуальная информация о состоянии рынка</li>
+                            <li>Повышение профессионального уровня риэлторов</li>
+                            <li>Единая база объектов недвижимости</li>
+                            <li>Дополнительные сервисы, для эффективной работы вашей компании</li>
+                        </ul>
+					</div>
+					<div class="{{prefix}}btn  {{mod}}">
+						<a href="//crm.fedoperator.ru" target="_blank" class="btn__item">Стать партнером</a>
+					</div>
+				</div>
+				<div class="grid__cols">		
+					<h3 class="page-header__heading  {{mod}}-text">Для Физических лиц</h3>
+					<div class="text__block  {{mod}}">
+						<p>Развитие комплексной системы защиты интересов физических лиц путем утверждения норм профессиональных стандартов и&nbsp;профессиональной этики.</p>
+                        <ul> 
+                            <li>Проверка юридической чистоты сделок</li>
+                            <li>Страхование ответственности</li>
+                            <li>Помощь в&nbsp;купле-продаже недвижимости</li>
+                            <li>Защита ваших прав</li>
+                            <li>Обширная база объектов недвижимости</li>
+                            <li>Уверенность в&nbsp;надёжности членов федерального партнерства экспертов недвижимости</li>
+                         </ul>
+					</div>
+					<div class="{{prefix}}btn  {{mod}}">
+						<a href="//crm.fedoperator.ru" target="_blank" class="btn__item">Подключиться</a>
+					</div>
+				</div>
+				<picture class="grid__cols">	
+					<img src="{{path.img}}/temp/adv-individuals.jpg" class="img-responsive" alt="">
+				</picture>
+			</div> 
+		</div>
+	</section> 
+{% endif %}
+
+{% if view == "services" %}
+	<section class="{{prefix}}content  {{mod}}"  {% if bg %}style="background-image: url({{bg}})"{% endif %}> 
+		<div class="{{prefix}}container container  {{mod}}">
+			<div class="{{prefix}}inner  {{mod}}">
+				{% include "../common/page-header/elem.twig" with {
+					prefix:"page-header__", 
+					mod:heading_mod, 
+					group:heading_group, 
+					level:heading_level, 
+					heading:heading
+				} %}
+				{% include "../common/page-header/elem.twig" with {
+					prefix:"page-header__", 
+					mod:heading_sm_mod, 
+					group:heading_sm_group, 
+					level:heading_sm_level, 
+					heading:heading_sm
+				} %}
+				<div class="{{prefix}}btn  {{mod}}">
+					{% include "../common/button/btn.twig" with {view:"link", prefix:"btn__", link:page.services, name:"Подробнее" } %}
+				</div>
+			</div>
+		</div>
+	</section> 
+{% endif %}

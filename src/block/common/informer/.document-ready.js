@@ -1,0 +1,1 @@
+$('.informer__panel.is--catalog.is--open').closest('body').addClass('is--informer-catalog').trigger();

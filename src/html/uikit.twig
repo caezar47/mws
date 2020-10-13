@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="ru-RU"> 
+	<head>	
+    	{% include "../block/common/head/head.twig" with {title:"index"}  %}
+	</head>
+	<body>
+        {% include "../block/common/navbar/navbar.twig" with {
+            view: "header",
+            prefix:"navbar__", 
+            mod:"",
+            basket:"Корзина",
+            basket_qty:"999",
+            basket_cost:"15 900",
+        } %}
+        {% include "../block/common/navbar/navbar.twig" with {
+            view: "aside",
+            prefix:"navbar__",
+            collapse:"active",  
+            mod:"",            
+            active:page.projects,
+        } %} 
+
+        <main class="{{prefix.section}}wrap">
+            {% include "../block/page/uikit.twig" with {
+                content_prefix:prefix.section, 
+                content_mod:"", 
+                heading_group:"", 
+                heading_attr:"",
+                heading_mod:"is--page-default", 
+                heading_level:"h1", 
+                heading:"UiKit",
+                bread:[
+                    {name:"Каталог", link:page.catalog},
+                    {name:"Регистрационные услуги"}
+                ],              
+            } %}
+        </main>
+
+        {% include "../block/common/modals/include.twig"%}
+    	{% include "../block/common/script/script.twig"%}
+	</body>
+</html> 

@@ -1,0 +1,53 @@
+.tabs__{ 
+	&panel{
+		margin-bottom: 10px;
+	}
+	&nav{
+		margin: 0;
+		padding: 2px;
+		list-style: none;
+		display: flex;
+		flex-wrap: wrap;
+		position: relative;
+		background-color: @tabs_panel_bg;
+		border-radius: @tabs_panel_radius;
+	}
+	&item{
+		&.is--base{
+			flex: 1 1 0;
+		}	
+	}
+	&link{
+		.btn-clearfix();
+		position: relative;
+		display: block;
+		text-align: center;
+		.heading2();
+		color: @tabs_color;
+		padding: 15px 25px;
+		background-color: @tabs_bg;
+		font-weight: 700;
+		border-radius: @tabs_panel_radius;
+		span{
+			position: relative;
+			z-index: 2;			
+		}
+		&:hover{
+			color: @tabs_hover_color;			
+		}
+		.tabs__item.active &{
+			box-shadow: @tabs_active_shadow;
+			color: @tabs_active_color;
+			background-color: @tabs_active_bg;
+		}
+		.tabs__item.active &{
+			cursor: default;
+		}
+	}
+	&pane{
+		display: none;
+		&.active{
+			display: block;
+		}
+	}
+}

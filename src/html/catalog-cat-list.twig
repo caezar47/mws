@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="ru-RU"> 
+	<head>	
+    	{% include "../block/common/head/head.twig" with {title:"Каталог"}  %}
+	</head>
+	<body>
+        {% include "../block/common/navbar/navbar.twig" with {
+            view: "header",
+            prefix:"navbar__", 
+            mod:"",
+            basket:"Корзина",
+            basket_qty:"999",
+            basket_cost:"15 900",
+        } %}
+        {% include "../block/common/navbar/navbar.twig" with {
+            view: "aside",
+            prefix:"navbar__",
+            collapse:"active",  
+            mod:"",            
+            active:page.catalog_cat,
+        } %} 
+
+        <main class="{{prefix.section}}wrap">
+            {% include "../block/page/catalog.twig" with {
+                view:"cat_list", 
+                catalog_view: page.catalog_cat_list,
+                content_prefix:prefix.section, 
+                content_mod:"is--page-catalog", 
+                heading_group:"", 
+                heading_attr:"",
+                heading_mod:"", 
+                heading_level:"h1", 
+                heading:"Регистрационные услуги", 
+                bread_attr:"",
+                bread_mod:"",
+                bread:[
+                    {name:"Каталог", link:page.catalog},
+                    {name:"Регистрационные услуги"}
+                ],             
+            } %}
+        </main>
+
+        {% include "../block/common/modals/include.twig"%}
+    	{% include "../block/common/script/script.twig"%}
+        <script>
+            $('.form__checkbox').on('change', ':checkbox', function () {
+                if ($(this).is(':checked')) {
+                    $(this).closest('body').find( $(".informer__panel") ).addClass('is--open');
+                    $(this).closest('body').addClass('is--informer-catalog');
+                } else {
+                    $(this).closest('body').find( $(".informer__panel") ).removeClass('is--open');
+                    $(this).closest('body').removeClass('is--informer-catalog');
+                }
+            });
+        </script>
+	</body>
+</html> 

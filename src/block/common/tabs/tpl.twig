@@ -1,0 +1,18 @@
+{% if view == "base" %}
+<div class="{{prefix}}panel">
+	<ul class="{{prefix}}nav  {{mod}}">
+		{% for value in list %}
+		<li class="{{prefix}}item  {{mod}}  {{value.status}}">
+			<a class="{{prefix}}link  {{mod}}" href="#{{value.id}}" data-toggle="tab">{{value.name}}</a>
+		</li>
+		{% endfor %}
+	</ul>
+</div>
+{% for value in list %}
+{% if value.text %}
+<div class="{{prefix}}pane  {{value.status}}" id="{{value.id}}">
+	{{value.text}}
+</div>
+{% endif %}
+{% endfor %}
+{% endif %}

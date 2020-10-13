@@ -1,0 +1,1363 @@
+<section class="{{content_prefix}}content">
+	<div class="{{content_prefix}}container container">
+		{% include "../common/page-header/elem.twig" with {
+			prefix:"page-header__", 
+			mod:heading_mod,
+			attr:heading_attr, 
+			level:heading_level, 
+			heading:heading
+		} %}
+		<div style="margin-bottom: 50px;">
+			<h2 class="page-header__heading  is--uikit" style="margin-bottom: 50px;">Хлебные крошки</h2>
+			{% include "../common/breadcrumb/tpl.twig" with {
+				prefix:prefix.breadcrumb, 
+				mod:bread_mod, 
+				bread:bread
+			} %}
+		</div> 
+		<div style="margin-bottom: 50px;">
+			<h2 class="page-header__heading  is--uikit" style="margin-bottom: 40px;">Типографика</h2>
+			<h1 style="margin-bottom: 20px;">Заголовок 1</h1>
+			<h2 style="margin-bottom: 20px;">Заголовок 2</h2>
+			<p style="margin-bottom: 20px;">Основной текст</p>
+			<h6>Маленький текст</h6>
+		</div> 
+		<div style="margin-bottom: 50px;">
+			<h2 class="page-header__heading  is--uikit" style="margin-bottom: 59px;">Кнопки</h2>
+			<div class="row  is--gutter"  style="margin-bottom: 20px;">
+				<div class="cols">
+					<a href="#" class="btn__item  is--primary">Повторить</a>
+				</div>
+				<div class="cols">
+					<button type="button" class="btn__item">Отменить</button>
+				</div>
+			</div>
+			<div class="row  is--gutter"  style="margin-bottom: 20px;">
+				<div class="cols">
+					<a href="#" class="btn__item  is--primary  is--hover">Повторить</a>
+				</div>
+				<div class="cols">
+					<button type="button" class="btn__item  is--hover">Отменить</button>
+				</div>
+			</div>
+			<div class="row  is--gutter"  style="margin-bottom: 20px;">
+				<div class="cols">
+					<a href="#" class="btn__item  is--primary  is--disabled">Повторить</a>
+				</div>
+				<div class="cols">
+					<button disabled type="button" class="btn__item">Отменить</button>
+				</div>
+			</div>
+			<div class="row  is--gutter"  style="margin-bottom: 20px;">
+				<div class="cols">
+					<a href="#" class="btn__item  is--primary  is--focus">Повторить</a>
+				</div>
+				<div class="cols">
+					<button type="button" class="btn__item  is--focus">Отменить</button>
+				</div>
+			</div>
+		</div> 
+		<div style="margin-bottom: 50px;">
+			<h2 class="page-header__heading  is--uikit" style="margin-bottom: 60px;">Кнопки перехода</h2>
+			{% include "../common/button/btn.twig" with {
+				view:"next",
+				prefix:"btn__", 
+				mod:"",  
+				link:"#"
+			} %}
+		</div> 
+		<div style="margin-bottom: 50px;">
+			<h2 class="page-header__heading  is--uikit" style="margin-bottom: 59px;">Чекбоксы</h2>
+			<div class="row  is--gutter"  style="margin-bottom: 20px;">
+				<div class="cols">
+					{% include "../common/form/elem.twig" with {
+						view:"checkbox", 
+						prefix:'form__', 
+						mod:"", 
+						color:"", 
+						list: [
+							{
+								"id":"agreement", 
+								"form_id":ID, 
+								"status":"", 
+								"name":"", 
+							}
+						]
+					} %}
+				</div>
+				<div class="cols">
+					{% include "../common/form/elem.twig" with {
+						view:"checkbox", 
+						prefix:'form__', 
+						mod:"", 
+						color:"", 
+						list: [
+							{
+								"id":"agreement", 
+								"form_id":ID, 
+								"status":"checked", 
+								"name":"", 
+							}
+						]
+					} %}
+				</div>
+			</div>
+			<div class="row  is--gutter"  style="margin-bottom: 20px;">
+				<div class="cols">
+					{% include "../common/form/elem.twig" with {
+						view:"checkbox", 
+						prefix:'form__', 
+						mod:"", 
+						color:"", 
+						list: [
+							{
+								"id":"agreement", 
+								"form_id":ID, 
+								"status":"disabled", 
+								"name":"", 
+							}
+						]
+					} %}
+				</div>
+				<div class="cols">
+					{% include "../common/form/elem.twig" with {
+						view:"checkbox", 
+						prefix:'form__', 
+						mod:"", 
+						color:"", 
+						list: [
+							{
+								"id":"agreement", 
+								"form_id":ID, 
+								"status":"checked  disabled", 
+								"name":"", 
+							}
+						]
+					} %}
+				</div>
+			</div>
+		</div>
+		<div style="margin-bottom: 50px;">
+			<h2 class="page-header__heading  is--uikit" style="margin-bottom: 60px;">Табы</h2>
+			<div style="max-width: 435px;">
+				{% include "../common/tabs/tpl.twig" with {
+					view:"base", 
+					prefix:'tabs__', 
+					mod:"is--base",
+					list: [
+						{
+							"id":"tabs1",  
+							"status":"", 
+							"name":"Чат с менеджером", 
+						},
+						{
+							"id":"tabs2",  
+							"status":"active", 
+							"name":"Лента событий",  
+						}
+					]
+				} %}
+			</div>
+		</div>  
+		<div style="margin-bottom: 50px;">
+			<h2 class="page-header__heading  is--uikit" style="margin-bottom: 60px;">Инпуты</h2>
+			<div class="grid__row" style="max-width: 435px; grid-gap: 21px 20px">
+				{% include "../common/form/elem.twig" with {
+					view: "input", 
+					prefix:'form__', 
+					mod:'', 
+					color:'', 
+					list: [
+						{
+							"type":"text", 
+							"id":"text1", 
+							"form_id":"base", 
+							"required": "required", 
+							"error": "Обязательно к заполнению",
+							"name":"fio", 
+							"label":"Название",
+							"placeholder":"Плейсхолдер"
+						},
+						{
+							"type":"text", 
+							"id":"text2", 
+							"form_id":"base", 
+							"required": "required", 
+							"error": "Обязательно к заполнению",
+							"name":"fio", 
+							"label":"Название",
+							"value":"Введенный текст",
+							"placeholder":"Плейсхолдер"
+						},
+						{
+							"type":"text", 
+							"id":"text3", 
+							"mod":"is--focus", 
+							"form_id":"base", 
+							"required": "required", 
+							"error": "Обязательно к заполнению",
+							"name":"fio", 
+							"label":"Название",
+							"value":"Вводит текст",
+							"placeholder":"Плейсхолдер"
+						},
+						{
+							"type":"text", 
+							"id":"text4", 
+							"mod":"is--error", 
+							"form_id":"base", 
+							"required": "required", 
+							"error": "Название ошибки", 
+							"name":"fio", 
+							"label":"Название",
+							"value":"Текст с ошибкой",
+							"placeholder":"Плейсхолдер"
+						},
+						{
+							"status":"disabled", 
+							"type":"text", 
+							"id":"text5", 
+							"form_id":"base", 
+							"required": "required", 
+							"error": "Обязательно к заполнению",
+							"name":"fio", 
+							"label":"Название",
+							"value":"Залоченный инпут без возможности ввода",
+							"placeholder":"Залоченный инпут без возможности ввода"
+						},
+				]} %}
+			</div>
+		</div> 
+		<div style="margin-bottom: 50px;">
+			<h2 class="page-header__heading  is--uikit" style="margin-bottom: 60px;">Поиск</h2>
+			<div class="grid__row" style="max-width: 435px; grid-gap: 21px 20px">
+				{% include "../common/form/elem.twig" with {
+					view: "search", 
+					prefix:'form__', 
+					mod:'', 
+					color:'',
+					placeholder:"Поиск по каталогу",
+				} %}
+				{% include "../common/form/elem.twig" with {
+					view: "search", 
+					prefix:'form__', 
+					mod:'', 
+					input_mod:'is--focus', 
+					color:'',
+					placeholder:"Поиск по каталогу",
+				} %}
+			</div> 
+		</div> 
+		<div style="margin-bottom: 50px;">
+			<h2 class="page-header__heading  is--uikit" style="margin-bottom: 60px;">Кнопки с иконкой</h2>
+			<div class="row  is--gutter">
+				<div class="cols">
+					{% include "../common/button/btn.twig" with {
+						view:"icon",
+						prefix:"btn__", 
+						mod:"", 
+						icon:'icon-upload', 
+						link:"#", 
+						name:"Скачать" 
+					} %}
+				</div>
+				<div class="cols">
+					{% include "../common/button/btn.twig" with {
+						view:"icon",
+						prefix:"btn__", 
+						mod:"", 
+						icon:'icon-print', 
+						link:"#", 
+						name:"Напичатать" 
+					} %}
+				</div>
+				<div class="cols">
+					{% include "../common/button/btn.twig" with {
+						view:"icon",
+						prefix:"btn__", 
+						mod:"is--outline", 
+						icon:'icon-del', 
+						link:"#", 
+						name:"Удалить" 
+					} %}
+				</div>
+			</div>
+		</div>
+		<div style="margin-bottom: 50px;">
+			<h2 class="page-header__heading  is--uikit" style="margin-bottom: 60px;">Большое радио</h2>
+			<div class="grid__row" style="max-width: 435px; grid-gap: 10px 20px">
+				{% include "../common/form/elem.twig" with {
+					view:"radio", 
+					prefix:'form__', 
+					mod:"is--panel", 
+					color:"", 
+					list: [
+						{
+							"mod":"", 
+							"type":"panel", 
+							"id":"radio1", 
+							"form_id":"base", 
+							"status":"checked", 
+							"name":"Большой красивый радио селект", 
+							"note":"Пояснение", 
+						},
+						{
+							"mod":"", 
+							"type":"panel", 
+							"id":"radio2", 
+							"form_id":"base", 
+							"status":"", 
+							"name":"Большой красивый радио селект", 
+							"note":"Пояснение", 
+						},
+						{
+							"mod":"is--hover", 
+							"type":"panel", 
+							"id":"radio3", 
+							"form_id":"base", 
+							"status":"", 
+							"name":"Большой красивый радио селект", 
+							"note":"Пояснение", 
+						},
+						{
+							"mod":"", 
+							"type":"panel", 
+							"id":"radio4", 
+							"form_id":"base", 
+							"status":"disabled", 
+							"name":"Большой красивый радио селект", 
+							"note":"Пояснение", 
+						}
+					]
+				} %}
+			</div>
+		</div>
+		<div style="margin-bottom: 50px;">
+			<h2 class="page-header__heading  is--uikit" style="margin-bottom: 60px;">Селектор количества</h2>
+			<div class="grid__row" style="max-width: 158px; grid-gap: 20px">
+				{% include "../common/form/elem.twig" with {
+					view:"qty", 
+					prefix:'form__',
+					value: '19'
+				} %}
+				{% include "../common/form/elem.twig" with {
+					view:"qty", 
+					prefix:'form__',
+					status: 'disabled',
+					value: '19'
+				} %}
+			</div>
+		</div>
+		<div style="margin-bottom: 50px;">
+			<h2 class="page-header__heading  is--uikit" style="margin-bottom: 60px;">Назад и крошки</h2>
+			{% include "../common/button/btn.twig" with {
+				view:"link_back",
+				prefix:"btn__", 
+				mod:"",  
+				link:"#",
+				name:"К корзине"
+			} %}
+		</div>
+		<div style="margin-bottom: 50px;">
+			<h2 class="page-header__heading  is--uikit" style="margin-bottom: 60px;">Кнопка Еще</h2>
+			<div style="display: flex; max-width: 300px; justify-content: flex-end; ">				
+				{% include "../common/button/btn.twig" with {
+					view:"more",
+					prefix:"btn__", 
+					mod:"",  
+					link:"#",
+					list: [
+						{
+							"name":"Повторить", 
+							"tag":"button", 
+							"attr":'type="button"',
+							"class":'btn__item  is--primary  is--sm',
+						},
+						{
+							"name":"Отменить", 
+							"tag":"button", 
+							"attr":'type="button"',
+							"class":'btn__item  is--sm',
+						},
+					]
+				} %}
+				<div style="margin-left: auto;">				
+					{% include "../common/button/btn.twig" with {
+						view:"more",
+						prefix:"btn__", 
+						mod:"is--right",  
+						link:"#",
+						list: [
+							{
+								"name":"Повторить", 
+								"tag":"button", 
+								"attr":'type="button"',
+								"class":'btn__item  is--primary  is--sm',
+							},
+							{
+								"name":"Отменить", 
+								"tag":"button", 
+								"attr":'type="button"',
+								"class":'btn__item  is--sm',
+							},
+						]
+					} %}
+				</div>
+			</div>
+		</div>
+		<div style="margin-bottom: 50px;">
+			<h2 class="page-header__heading  is--uikit" style="margin-bottom: 60px;">Переключатели вида каталога</h2>
+			{% include "../common/button/btn.twig" with {
+				view:"view",
+				prefix:"btn__", 
+				mod:"",
+				catalog_view: page.catalog_cat_table,   
+				list: [
+					{
+						"name":"Таблицей", 
+						"link":page.catalog_cat_table,
+					},
+					{
+						"name":"Плиткой", 
+						"link":page.catalog_cat,
+					},
+				]
+			} %}
+		</div>
+		<div style="margin-bottom: 50px;">
+			<h2 class="page-header__heading  is--uikit" style="margin-bottom: 60px;">Каталог - Карточки</h2>
+			<div class="section__section  is--page-catalog" >
+				<div data-slick-catalog >
+					<div class="section__row  row  is--gap-xs  is--heading  is--page-catalog">
+						<div class="cols  hidden--md  is--slick-nav">
+							<div class="slick-navigation">
+								<button type="button" class="slick-btn  is--prev  is--inline"><span class="sr-only">Предыдущий слайд</span></button>
+								<div class="slick-count"></div>
+								<button type="button" class="slick-btn  is--next  is--inline"><span class="sr-only">Следующий слайд</span></button>
+							</div>
+						</div>
+					</div>					
+					{% include "../common/card/card.twig" with {
+						view:"catalog",
+						prefix:"card__", 
+						mod:"is--catalog", 
+						group:"is--view-card", 
+						list: [
+							{					
+								"link":"#",
+								"id":"1",
+								"img": [path.img,"/default/catalog-lock.jpg"].join(""), 	 
+								"heading":"Услуги по ликвидации юридического лица",
+								"code":"051456",
+								"decs":[
+									{
+										"name":"Гарантия:",
+										"value":"1 год",
+									},
+									{
+										"name":"Срок службы:",
+										"value":"5 лет",
+									},
+									{
+										"name":"Производитель:",
+										"value":"Россия",
+									},
+								],
+								"size":[
+									{
+										"name":"S",
+									},
+									{
+										"name":"M",
+									},
+									{
+										"name":"L",
+									},
+									{
+										"name":"XL",
+									},
+									{
+										"name":"XXL",
+									},
+								],
+								"color":[
+									{
+										"name":"Orange",
+										"color":"orange",
+									},
+									{
+										"name":"Yellow",
+										"color":"yellow",
+									},
+									{
+										"name":"Green",
+										"color":"green",
+									},
+									{
+										"name":"Blue",
+										"color":"blue",
+									},
+									{
+										"name":"Purple",
+										"color":"purple",
+									},
+								],
+								"cost_list":[
+									{
+										"name":"От 500 шт.",
+										"value":"7 900 ₽",
+									},
+									{
+										"name":"От 1 000 шт.",
+										"value":"6 900 ₽",
+									},
+									{
+										"name":"От 1 500 шт.",
+										"value":"5 900 ₽",
+									},
+								],
+								"qty":"5",
+								"qty_color":"#EB5757",
+								"btn": "В корзину"
+							},
+							{					
+								"link":"#",
+								"id":"2",
+								"img": [path.img,"/default/catalog-lock.jpg"].join(""), 	 
+								"heading":"Регистрация ИП",
+								"code":"051456",
+								"decs":[
+									{
+										"name":"Гарантия:",
+										"value":"1 год",
+									},
+									{
+										"name":"Срок службы:",
+										"value":"5 лет",
+									},
+								],
+								"size":[
+									{
+										"name":"S",
+									},
+									{
+										"name":"M",
+									},
+									{
+										"name":"L",
+									},
+									{
+										"name":"XL",
+									},
+									{
+										"name":"XXL",
+									},
+								],
+								"cost_list":[
+									{
+										"name":"От 500 шт.",
+										"value":"7 900 ₽",
+									},
+									{
+										"name":"От 1 000 шт.",
+										"value":"6 900 ₽",
+									},
+									{
+										"name":"От 1 500 шт.",
+										"value":"5 900 ₽",
+									},
+								],
+								"qty":"100", 
+								"qty_color":"#219653",
+								"btn": "В корзине 15 шт"
+							},
+							{					
+								"link":"#",
+								"id":"3",
+								"img": [path.img,"/default/catalog-lock.jpg"].join(""), 	 
+								"heading":"Услуги по ликвидации юридического лица",
+								"code":"051456",
+								"decs":[
+									{
+										"name":"Гарантия:",
+										"value":"1 год",
+									},
+									{
+										"name":"Срок службы:",
+										"value":"5 лет",
+									},
+									{
+										"name":"Производитель:",
+										"value":"Россия",
+									},
+								],
+								"size":[
+									{
+										"name":"S",
+									},
+									{
+										"name":"M",
+									},
+									{
+										"name":"L",
+									},
+									{
+										"name":"XL",
+									},
+									{
+										"name":"XXL",
+									},
+								],
+								"cost": "5 900 ₽",
+								"cost_old": "6 900 ₽",
+								"qty":"50", 
+								"btn": "В корзине"
+							},
+							{					
+								"link":"#",
+								"id":"4",
+								"img": [path.img,"/default/catalog-lock.jpg"].join(""), 	 
+								"heading":"Услуги по ликвидации юридического лица",
+								"code":"051456",
+								"decs":[
+									{
+										"name":"Гарантия:",
+										"value":"1 год",
+									},
+									{
+										"name":"Срок службы:",
+										"value":"5 лет",
+									},
+									{
+										"name":"Производитель:",
+										"value":"Россия",
+									},
+								],
+								"size":[
+									{
+										"name":"S",
+									},
+									{
+										"name":"M",
+									},
+									{
+										"name":"L",
+									},
+									{
+										"name":"XL",
+									},
+									{
+										"name":"XXL",
+									},
+								],
+								"cost": "5 900 ₽",
+								"cost_old": "6 900 ₽",
+								"qty":"50", 
+								"btn": "В корзине"
+							},
+							{					
+								"link":"#",
+								"id":"5",
+								"img": [path.img,"/default/catalog-lock.jpg"].join(""), 	 
+								"heading":"Услуги по ликвидации юридического лица",
+								"code":"051456",
+								"decs":[
+									{
+										"name":"Гарантия:",
+										"value":"1 год",
+									},
+									{
+										"name":"Срок службы:",
+										"value":"5 лет",
+									},
+									{
+										"name":"Производитель:",
+										"value":"Россия",
+									},
+								],
+								"size":[
+									{
+										"name":"S",
+									},
+									{
+										"name":"M",
+									},
+									{
+										"name":"L",
+									},
+									{
+										"name":"XL",
+									},
+									{
+										"name":"XXL",
+									},
+								],
+								"cost": "5 900 ₽",
+								"cost_old": "6 900 ₽",
+								"qty":"50", 
+								"btn": "В корзине"
+							}, 
+						]
+					} %}
+				</div>
+			</div>
+
+			<div class="grid__row" style="grid-template-columns: repeat(3, 1fr); max-width: 1010px; grid-gap: 30px; margin-bottom: 30px;">				
+				{% include "../common/card/card.twig" with {
+					view:"catalog",
+					prefix:"card__", 
+					mod:"is--catalog", 
+					group:"is--view-card", 
+					list: [
+						{					
+							"link":"#",
+							"id":"1",
+							"img": [path.img,"/default/catalog-lock.jpg"].join(""), 	 
+							"heading":"Услуги по ликвидации юридического лица",
+							"code":"051456",
+							"decs":[
+								{
+									"name":"Гарантия:",
+									"value":"1 год",
+								},
+								{
+									"name":"Срок службы:",
+									"value":"5 лет",
+								},
+								{
+									"name":"Производитель:",
+									"value":"Россия",
+								},
+							],
+							"size":[
+								{
+									"name":"S",
+								},
+								{
+									"name":"M",
+								},
+								{
+									"name":"L",
+								},
+								{
+									"name":"XL",
+								},
+								{
+									"name":"XXL",
+								},
+							],
+							"color":[
+								{
+									"name":"Orange",
+									"color":"orange",
+								},
+								{
+									"name":"Yellow",
+									"color":"yellow",
+								},
+								{
+									"name":"Green",
+									"color":"green",
+								},
+								{
+									"name":"Blue",
+									"color":"blue",
+								},
+								{
+									"name":"Purple",
+									"color":"purple",
+								},
+							],
+							"cost_list":[
+								{
+									"name":"От 500 шт.",
+									"value":"7 900 ₽",
+								},
+								{
+									"name":"От 1 000 шт.",
+									"value":"6 900 ₽",
+								},
+								{
+									"name":"От 1 500 шт.",
+									"value":"5 900 ₽",
+								},
+							],
+							"qty":"5",
+							"qty_color":"#EB5757",
+							"btn": "В корзину"
+						},
+						{					
+							"link":"#",
+							"id":"2",
+							"img": [path.img,"/default/catalog-lock.jpg"].join(""), 	 
+							"heading":"Регистрация ИП",
+							"code":"051456",
+							"decs":[
+								{
+									"name":"Гарантия:",
+									"value":"1 год",
+								},
+								{
+									"name":"Срок службы:",
+									"value":"5 лет",
+								},
+							],
+							"size":[
+								{
+									"name":"S",
+								},
+								{
+									"name":"M",
+								},
+								{
+									"name":"L",
+								},
+								{
+									"name":"XL",
+								},
+								{
+									"name":"XXL",
+								},
+							],
+							"cost_list":[
+								{
+									"name":"От 500 шт.",
+									"value":"7 900 ₽",
+								},
+								{
+									"name":"От 1 000 шт.",
+									"value":"6 900 ₽",
+								},
+								{
+									"name":"От 1 500 шт.",
+									"value":"5 900 ₽",
+								},
+							],
+							"qty":"100", 
+							"qty_color":"#219653",
+							"btn": "В корзине 15 шт"
+						},
+						{					
+							"link":"#",
+							"id":"3",
+							"img": [path.img,"/default/catalog-lock.jpg"].join(""), 	 
+							"heading":"Услуги по ликвидации юридического лица",
+							"code":"051456",
+							"decs":[
+								{
+									"name":"Гарантия:",
+									"value":"1 год",
+								},
+								{
+									"name":"Срок службы:",
+									"value":"5 лет",
+								},
+								{
+									"name":"Производитель:",
+									"value":"Россия",
+								},
+							],
+							"size":[
+								{
+									"name":"S",
+								},
+								{
+									"name":"M",
+								},
+								{
+									"name":"L",
+								},
+								{
+									"name":"XL",
+								},
+								{
+									"name":"XXL",
+								},
+							],
+							"cost": "5 900 ₽",
+							"cost_old": "6 900 ₽",
+							"qty":"50", 
+							"btn": "В корзине"
+						},
+					]
+				} %}
+			</div>
+		</div>
+		<div style="margin-bottom: 50px;">
+			<h2 class="page-header__heading  is--uikit" style="margin-bottom: 60px;">Каталог - Список</h2>
+			<div class="section__grid  grid__row  is--page-catalog  is--list">
+				{% include "../common/card/card.twig" with {
+					view:"catalog",
+					prefix:"card__", 
+					mod:"is--catalog", 
+					group:"is--view-list",
+					list: [
+						{					
+							"link":"#",
+							"id":"1",
+							"img": [path.img,"/default/catalog-lock.jpg"].join(""), 	 
+							"heading":"Услуги по ликвидации юридического лица",
+							"code":"051456",
+							"decs":[
+								{
+									"name":"Гарантия:",
+									"value":"1 год",
+								},
+								{
+									"name":"Срок службы:",
+									"value":"5 лет",
+								},
+								{
+									"name":"Производитель:",
+									"value":"Россия",
+								},
+							],
+							"size":[
+								{
+									"name":"S",
+								},
+								{
+									"name":"M",
+								},
+								{
+									"name":"L",
+								},
+								{
+									"name":"XL",
+								},
+								{
+									"name":"XXL",
+								},
+							],
+							"color":[
+								{
+									"name":"Orange",
+									"color":"orange",
+								},
+								{
+									"name":"Yellow",
+									"color":"yellow",
+								},
+								{
+									"name":"Green",
+									"color":"green",
+								},
+								{
+									"name":"Blue",
+									"color":"blue",
+								},
+								{
+									"name":"Purple",
+									"color":"purple",
+								},
+							],
+							"cost_list":[
+								{
+									"name":"От 500 шт.",
+									"value":"7 900 ₽",
+								},
+								{
+									"name":"От 1 000 шт.",
+									"value":"6 900 ₽",
+								},
+								{
+									"name":"От 1 500 шт.",
+									"value":"5 900 ₽",
+								},
+							],
+							"qty":"5",
+							"qty_color":"#EB5757",
+							"btn": "В корзину"
+						},
+						{					
+							"link":"#",
+							"id":"2",
+							"img": [path.img,"/default/catalog-lock.jpg"].join(""), 	 
+							"heading":"Регистрация ИП",
+							"code":"051456",
+							"decs":[
+								{
+									"name":"Гарантия:",
+									"value":"1 год",
+								},
+								{
+									"name":"Срок службы:",
+									"value":"5 лет",
+								},
+							],
+							"color":[
+								{
+									"name":"Orange",
+									"color":"orange",
+								},
+								{
+									"name":"Yellow",
+									"color":"yellow",
+								},
+								{
+									"name":"Green",
+									"color":"green",
+								},
+								{
+									"name":"Blue",
+									"color":"blue",
+								},
+								{
+									"name":"Purple",
+									"color":"purple",
+								},
+							],
+							"cost_list":[
+								{
+									"name":"От 500 шт.",
+									"value":"7 900 ₽",
+								},
+								{
+									"name":"От 1 000 шт.",
+									"value":"6 900 ₽",
+								},
+							],
+							"qty":"100", 
+							"qty_color":"#219653",
+							"btn": "В корзине 15 шт"
+						},
+						{					
+							"link":"#",
+							"id":"3",
+							"img": [path.img,"/default/catalog-lock.jpg"].join(""), 	 
+							"heading":"Услуги по ликвидации юридического лица",
+							"decs":[
+								{
+									"name":"Гарантия:",
+									"value":"1 год",
+								},
+								{
+									"name":"Срок службы:",
+									"value":"5 лет",
+								},
+								{
+									"name":"Производитель:",
+									"value":"Россия",
+								},
+							],
+							"size":[
+								{
+									"name":"S",
+								},
+								{
+									"name":"M",
+								},
+								{
+									"name":"L",
+								},
+								{
+									"name":"XL",
+								},
+								{
+									"name":"XXL",
+								},
+							],
+							"cost": "5 900 ₽",
+							"cost_old": "6 900 ₽",
+							"qty":"50", 
+							"btn": "В корзине"
+						},
+						{					
+							"link":"#",
+							"id":"4",
+							"img": [path.img,"/default/catalog-lock.jpg"].join(""), 	 
+							"heading":"Услуги по ликвидации юридического лица",
+							"decs":[
+								{
+									"name":"Гарантия:",
+									"value":"1 год",
+								},
+								{
+									"name":"Срок службы:",
+									"value":"5 лет",
+								},
+								{
+									"name":"Производитель:",
+									"value":"Россия",
+								},
+							],
+							"cost": "5 900 ₽",
+							"btn": "В корзине"
+						},
+					]
+				} %}
+			</div>
+		</div>
+		<div style="margin-bottom: 50px;">
+			<h2 class="page-header__heading  is--uikit" style="margin-bottom: 60px;">Каталог - Подкатегории</h2>
+			<div class="section__grid  grid__row  is--page-catalog  is--card">
+				{% include "../common/card/card.twig" with {
+					view:"catalog",
+					prefix:"card__", 
+					mod:"is--catalog", 
+					group:"is--view-cat", 
+					list: [
+						{					
+							"link":"#",
+							"id":"1",
+							"img": [path.img,"/default/catalog-lock.jpg"].join(""), 	 
+							"heading":"Услуги по ликвидации юридического лица",
+							"code":"051456",
+							"decs":[
+								{
+									"name":"Гарантия:",
+									"value":"1 год",
+								},
+								{
+									"name":"Срок службы:",
+									"value":"5 лет",
+								},
+								{
+									"name":"Производитель:",
+									"value":"Россия",
+								},
+							],
+							"size":[
+								{
+									"name":"S",
+								},
+								{
+									"name":"M",
+								},
+								{
+									"name":"L",
+								},
+								{
+									"name":"XL",
+								},
+								{
+									"name":"XXL",
+								},
+							],
+							"color":[
+								{
+									"name":"Orange",
+									"color":"orange",
+								},
+								{
+									"name":"Yellow",
+									"color":"yellow",
+								},
+								{
+									"name":"Green",
+									"color":"green",
+								},
+								{
+									"name":"Blue",
+									"color":"blue",
+								},
+								{
+									"name":"Purple",
+									"color":"purple",
+								},
+							],
+							"cost_list":[
+								{
+									"name":"От 500 шт.",
+									"value":"7 900 ₽",
+								},
+								{
+									"name":"От 1 000 шт.",
+									"value":"6 900 ₽",
+								},
+								{
+									"name":"От 1 500 шт.",
+									"value":"5 900 ₽",
+								},
+							],
+							"qty":"5",
+							"qty_color":"#EB5757",
+							"btn": "В корзину"
+						},
+						{					
+							"link":"#",
+							"id":"2",
+							"img": [path.img,"/default/catalog-lock.jpg"].join(""), 	 
+							"heading":"Регистрация ИП",
+							"code":"051456",
+							"decs":[
+								{
+									"name":"Гарантия:",
+									"value":"1 год",
+								},
+								{
+									"name":"Срок службы:",
+									"value":"5 лет",
+								},
+							],
+							"size":[
+								{
+									"name":"S",
+								},
+								{
+									"name":"M",
+								},
+								{
+									"name":"L",
+								},
+								{
+									"name":"XL",
+								},
+								{
+									"name":"XXL",
+								},
+							],
+							"cost_list":[
+								{
+									"name":"От 500 шт.",
+									"value":"7 900 ₽",
+								},
+								{
+									"name":"От 1 000 шт.",
+									"value":"6 900 ₽",
+								},
+								{
+									"name":"От 1 500 шт.",
+									"value":"5 900 ₽",
+								},
+							],
+							"qty":"100", 
+							"qty_color":"#219653",
+							"btn": "В корзине 15 шт"
+						},
+						{					
+							"link":"#",
+							"id":"3",
+							"img": [path.img,"/default/catalog-lock.jpg"].join(""), 	 
+							"heading":"Услуги по ликвидации юридического лица",
+							"code":"051456",
+							"decs":[
+								{
+									"name":"Гарантия:",
+									"value":"1 год",
+								},
+								{
+									"name":"Срок службы:",
+									"value":"5 лет",
+								},
+								{
+									"name":"Производитель:",
+									"value":"Россия",
+								},
+							],
+							"size":[
+								{
+									"name":"S",
+								},
+								{
+									"name":"M",
+								},
+								{
+									"name":"L",
+								},
+								{
+									"name":"XL",
+								},
+								{
+									"name":"XXL",
+								},
+							],
+							"cost": "5 900 ₽",
+							"cost_old": "6 900 ₽",
+							"qty":"50", 
+							"btn": "В корзине"
+						},
+						{					
+							"link":"#",
+							"id":"4",
+							"img": [path.img,"/default/catalog-lock.jpg"].join(""), 	 
+							"heading":"Смена наименования организации",
+							"code":"051456",
+							"cost": "5 900 ₽",
+							"btn": "В корзине"
+						},
+					]
+				} %}
+			</div>
+		</div>
+		<div style="margin-bottom: 50px;">
+			<h2 class="page-header__heading  is--uikit" style="margin-bottom: 60px;">Товары в корзине</h2>
+			<div class="grid__row" style="grid-template-columns: repeat(1, 1fr); max-width: 1130px; grid-gap: 10px;">
+				{% include "../common/card/card.twig" with {
+					view:"basket",
+					prefix:"card__", 
+					mod:"is--basket", 
+					group:"is--view-card", 
+					list: [
+						{					
+							"link":"#",
+							"img": [path.img,"/default/catalog-lock.jpg"].join(""), 	 
+							"heading":"Услуги по ликвидации юридического лица",
+							"decs":'S, жёлтый',
+							"cost":'19 000 ₽',
+							"qty":"19",
+						},
+						{					
+							"link":"#",
+							"img": [path.img,"/default/catalog-lock.jpg"].join(""), 	 
+							"heading":"Регистрация ИП",
+							"decs":'S, жёлтый',
+							"cost":'500 ₽',
+							"qty":"19",
+						},
+					]
+				} %}
+			</div>
+		</div>
+		<div style="margin-bottom: 50px;">
+			<h2 class="page-header__heading  is--uikit" style="margin-bottom: 60px;">Товары в заказе</h2>
+			<div class="grid__row" style="grid-template-columns: repeat(1, 1fr); max-width: 549px; grid-gap: 10px;">
+				{% include "../common/card/card.twig" with {
+					view:"basket",
+					prefix:"card__", 
+					mod:"is--basket", 
+					group:"is--view-order", 
+					list: [
+						{					
+							"link":"#",
+							"img": [path.img,"/default/catalog-lock.jpg"].join(""), 	 
+							"heading":"Услуги по ликвидации юридического&nbsp;лица",
+							"decs":'S, жёлтый',
+							"cost":'19 000 ₽',
+							"qty":"19",
+						},
+						{					
+							"link":"#",
+							"img": [path.img,"/default/catalog-lock.jpg"].join(""), 	 
+							"heading":"Регистрация ИП",
+							"decs":'S, жёлтый',
+							"cost":'500 ₽',
+							"qty":"19",
+						},
+					]
+				} %}
+			</div>
+		</div>
+		<div style="margin-bottom: 50px;">
+			<h2 class="page-header__heading  is--uikit" style="margin-bottom: 60px;">Информеры</h2>
+			<div style="margin-bottom: 30px">
+				<h2 style="margin-bottom: 10px;">Для товаров</h2>
+				{% include "../common/informer/tpl.twig" with {
+					prefix:"informer__", 
+					status:"is--open",  
+					mod:"is--catalog",  
+					name:"Выбрано 2 товара",
+					btn_link:"#", 
+					btn_name:"Удалить", 
+					btn_mod:"is--sm", 
+				} %}
+			</div>
+			<div style="margin-bottom: 30px">
+				<h2 style="margin-bottom: 10px;">Для корзины</h2>
+			</div>
+			<div style="margin-bottom: 30px">
+				<h2 style="margin-bottom: 10px;">Для Оформление заказа</h2>
+			</div>
+		</div>
+	</div>
+</section>

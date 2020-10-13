@@ -1,0 +1,464 @@
+//===== url =====//
+@url-site 					: 	'';
+@url-path 					: 	'/wp-content/themes/azbn7theme'; 
+@url-path 					: 	'';
+@url-path-css 				: 	'@{url-path}/css';
+@url-path-fonts 			: 	'@{url-path}/fonts';
+@url-path-img 				: 	'@{url-path}/img';
+@url-path-js 				: 	'@{url-path}/js';
+
+//===== color =====//
+//= social
+@color-vk 					: 	#4d7198;
+@color-yb 					: 	#bb0000;
+@color-skype 				: 	#4d7198;
+@color-viber 				: 	#7F40BD;
+@color-whatsapp 			: 	#7AD06D;
+@color-ok 					: 	#ee8208;
+@color-fb 					: 	#3b5998;
+@color-tw 					: 	#1faee9;
+@color-be 					: 	#4176fa;
+@color-pint 				:	#cd1f28;
+@color-inst 				: 	#f26798;
+@color-drb 					: 	#f26798;
+@color-pdf 					:	#bb0706;
+@color-doc 					:	#2186fa;
+@color-xls 					:	#23a565;
+@color-ppt 					:	#cd4b33;
+@color-jpg 					:	#208895;
+@color-zip 					:	#f2e295;
+@color-txt 					:	#6fbbcc;
+
+@white-eb 					:	#EBEAEA;
+@black-33 					: 	#333;
+@black-2b 					: 	#2B2A29;
+@black-b5 					: 	#B5B5BD;
+@orange 					:	#FF7D05;
+@yellow 					:	#FF8E26;
+@gray 						:	#545C60;
+@blue 						:	#42A7E0;
+@blue-dark 					:	#1F3448;
+
+//= default
+@white 						:	#fff;
+@black 						: 	#000;
+@black-34 					: 	#343A40;
+@green 						: 	#56C8C8;
+@gray1 						:	#F6F7F8;
+@gray2 						:	#E9ECEF;
+@gray3 						:	#DEE2E6;
+@gray4 						:	#ADB5BD;
+@red 						:	#EB5757;
+
+
+@primary 					:	@green;
+@default 					:	@black-34;
+@warning 					:	@gray1;
+@success 					:	@gray2;
+@info 						:	@gray3;
+@danger 					:	@gray4;
+@custom 					: 	@red;
+
+
+//===== fonts =====//
+@inter 						:	inter-400;
+@inter-600					:	inter-600;
+@inter-700					:	inter-700;
+
+
+@magistral 					:	magistral-400;
+@magistral-700 				:	magistral-700;
+@magistral-900 				:	magistral-900; 
+
+@roboto 					:	roboto-400; 
+@roboto-700 				:	roboto-700; 
+
+//===== base =====//
+@xs 						:	0px;
+@sm 						:	575px;
+@md 						:	768px;
+@lg 						:	992px;
+@xl 						:	1200px;
+@xxl 						:	1700px;
+
+@site_ff 					: 	@inter;
+@site_fs 					: 	14px;
+@site_lh 					: 	143%; //20px
+@site_br 					: 	4px;
+
+@b-color 					:	@default; 
+@b-color-a 					:	@primary; 
+@b-color-a-hover 			:	@success; 
+@b-color-h 					:	@warning; 
+@b-block-bg 				:	@info;
+
+@b-html-bg 					:	@white; 
+@b-body-bg 					:	@white; 
+@b-ff 						:	@inter;
+@b-ff-2 					:	@inter;
+@b-italic 					:	@b-ff;
+@b-bold 					:	@b-ff; 		
+@b-fs 						: 	18px;
+@b-lh 						: 	24px;
+@trs-site 					: 	all 0.35s ease; 
+@trs-option 				: 	0.35s ease; 
+@b_rad 						: 	5px; 
+
+@container_gap 				:	20px;
+@container  				:	1550px;
+@container_default  		:	1035px;
+
+
+//===== breadcrumb =====//
+@bread_color 				: 	@default;
+@bread_gutter 				: 	13px;
+@bread_color_active 		: 	@danger;
+//===== end's breadcrumb =====//
+
+//===== tabs =====//
+@tabs_panel_bg 		 		:	@warning;
+@tabs_panel_radius 		 	:	@site_br;
+
+@tabs_color 				:	@default;
+@tabs_bg 		 			:	fadeout(@white, 100%);
+
+@tabs_hover_color 			: 	fadeout(@default, 50%);
+
+@tabs_active_color 			:	@default;
+@tabs_active_bg 			:	@white;
+@tabs_active_shadow 		:	0px 3px 7px fadeout(@black, 90%);
+//===== end's tabs =====//
+
+//===== button =====//
+@btn_radius 				:	@site_br;
+@btn_color 					:	@default;
+@btn_bg 					:	@info;
+
+@btn_hover_color 			:	fadeout(@default, 0%);
+@btn_hover_bg 				:	fadeout(@info, 50%);
+
+@btn_focus_shadow 			:	inset 0px 4px 4px fadeout(@black, 75%);	
+//===== end's button =====//
+
+//===== button next =====//
+@next_radius 				:	@site_br;
+@next_width 				:	42px;
+@next_height 				:	22px;
+@next_color 				: 	@white;
+@next_bg 					:	@primary;
+
+@next_hover_bg 				:	fadeout(@primary, 50%);
+//===== end's button next =====//
+
+//===== button icon =====//
+@icon_radius 				:	@site_br;
+@icon_width 				:	50px;
+@icon_height 				:	50px;
+@icon_bg 					:	@warning;
+@icon_border_width 			:	2px;
+@icon_border_color			:	@warning;
+@icon_color					:	@danger;
+
+@icon_hover_color			:	@primary;
+
+@icon_focus_shadow 			: 	0px 2px 4px fadeout(@black, 75%);
+//===== end's button icon =====//
+
+//===== button more =====//
+@more_width 				:	25px;
+@more_height 				:	25px;
+@more_color 				: 	@default;
+
+@more_menu_shadow 			: 	10px 10px 30px fadeout(@default, 90%);
+@more_menu_radius 			: 	@site_br;
+@more_menu_pos_left 		: 	10px;
+@more_menu_pos_right 		: 	~"calc(100% - (@{more_width} - 10px))";
+
+@more_hover_color			:	fadeout(@default, 50%);
+@more_open_color			:	fadeout(@default, 70%);
+//===== end's button more =====//
+
+//===== button view =====//
+@view_color					:	@default;
+@view_gutter				:	10px;
+
+@view_hover_color			:	fadeout(@default, 50%);
+@view_active_color			:	fadeout(@default, 70%);
+//===== end's button view =====//
+
+//===== input =====//	
+@input_bg					:	@white;
+@input_height				:	52px;
+@input_height_textarea		:	95px;
+@input_radius				:	@site_br;
+@input_border_color			:	@info;
+@input_border_width			:	2px;
+@input_color				:	@default;
+@input_plh_color			:	@danger;
+
+@input_focus_border_color	:	@default;
+
+@input_error_border_color	:	@custom;
+@input_error_color			:	@custom;
+
+@input_disabled_border_color:	@success;
+@input_disabled_bg			:	@warning;
+@input_disabled_color		:	fadeout(@input_color, 50%);
+//===== end's input =====//
+
+//===== checkbox =====//
+@check_fs					:	@site_fs;
+@check_lh					:	@site_lh;
+@check_size					:	26px;
+@check_color				:	@default;
+@check_border_width			:	2px;
+@check_border_color			:	@info;
+@check_bg					:	@white;
+@check_radius				:	@site_br;
+
+@check_focus_shadow 		: 	0px 2px 4px fadeout(@black, 75%);
+
+@check_active_border_color	:	@primary;
+@check_active_bg			:	@primary;
+//===== end's checkbox =====//	
+
+//===== radio panel =====//	
+@radio_panel_radius 				: 		@site_br;
+@radio_panel_border_color 			: 		@info;
+@radio_panel_border_width 			: 		2px;
+@radio_panel_bg 					: 		@white;
+
+@radio_panel_hover_shadow 			: 		10px 10px 30px fadeout(@default, 90%);
+@radio_panel_hover_border_color 	: 		@white;
+
+@radio_panel_checked_border_color 	: 		@primary;
+//===== end's radio panel =====//
+
+//===== qty =====//
+@qty_radius 						: 		@site_br;
+@qty_border_color 					: 		@info;
+@qty_border_width 					: 		2px;
+@qty_btn_width 						: 		52px;
+@qty_btn_height 					: 		52px;	
+//===== end's qty =====//	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//old
+//===== footer =====//
+@footer_color 				:	@white; 
+@footer_color_hover 		:	@white; 
+@footer_bg 					:	@success;
+@footer_ff 					:	@b-ff; 
+@footer_fs 					:	@b-fs; 
+@footer_lh 					:	@b-lh; 
+
+//= logotip
+@footer_logo_color 			: 	@white;
+@footer_logo_widht 			: 	148px;
+@footer_logo_height 		: 	42px;
+
+//= size
+/*@footer_xs 				:	75px;*/
+@footer_sm 					:	84px;
+@footer_device_sm_p 		:	131px;
+@footer_device_sm_l 		:	92px;
+@footer_screen 				:	92px;
+@footer_screen_md 			:	@footer_screen;
+@footer_screen_lg 			:	@footer_screen;
+@footer_screen_xxl 			:	@footer_screen;
+//===== end's footer =====//
+
+
+
+//===== form  =====//
+
+@range_height 				: 	40px;
+@range_line_bg 				: 	@primary;
+@range_line_bg_hover 		: 	@success;
+
+@range_btn_bg 				: 	@success;
+@range_btn_bg_hover 		: 	@primary;
+@range_btn_color 			: 	@white;
+
+//=== radio ===
+@radio_gutter 				: 	4px;
+@radio_bg 					: 	@primary;
+@radio_bg_hover 			: 	@success;
+@radio_bg_active 			: 	@b-color;
+
+//=== error ===
+@form_error_bg 				: 	@primary;
+@form_error_bg_pass 		: 	@success;
+@form_error_bg_load 		: 	@default;
+@form_error_text_color 		: 	@white;
+@form_error_border_color 	: 	@primary;
+@form_error_border_width 	: 	0px;
+@form_error_fs 				: 	@b-fs - 6;
+@form_error_lh 				: 	@b-lh - 6;
+@form_error_radius 			: 	0;
+
+
+//=== radio ===
+@radio_color 				: 	@default;
+@radio_size 				: 	18px;
+@radio_gutter 				: 	4px;
+@radio_bg 					: 	@white;
+@radio_border_width 		: 	1px;
+@radio_border_color 		: 	@default;
+@radio_icon 				: 	transparent;
+@radio_radius 				: 	50%;
+
+//= disabled =
+@radio_disabled_icon		:	@white;
+@radio_disabled_bg			: 	fadeout(@default, 30%);
+
+//= focus =
+@radio_focus_color 			: 	@primary;
+@radio_focus_bg 			: 	@primary;
+@radio_focus_shadow	 		:	@success;
+@radio_focus_border_color	: 	@primary;
+@radio_focus_icon 			: 	@white;
+
+//== white ==
+@check_w_color				:	@white;
+@check_w_bg					:	transparent;
+@check_w_border_color 		: 	@white;
+@check_w_icon				:	transparent;
+//= focus =
+@check_w_focus_bg 			: 	@primary;
+@check_w_focus_border_color : 	@primary;
+@check_w_focus_shadow	 	:	@white;
+@check_w_focus_icon			:	@white;
+
+//= disabled =
+@check_w_disabled_bg 		: 	fadeout(@white, 30%);
+@check_w_disabled_border_color : 	fadeout(@white, 30%);
+@check_w_disabled_icon 		: 	@primary;
+
+//=== file ===
+@file_color					:	@primary;
+@file_icon					:	@primary;
+@file_size					:	18px;
+@file_border_color			:	currentColor;
+//= focus =
+@file_focus_color 			: 	@success;
+@file_focus_border_color 	: 	transparent;
+
+//=== reset ===
+@reset_color				:	@info;
+@reset_fs					:	@b-fs;
+@reset_lh					:	@b-lh;
+@reset_size					:	22px;
+@reset_border_width			:	2px;
+@reset_border_color			:	@info;
+@reset_bg_color				:	fadeout(@info, 50%);
+//= focus =
+@reset_focus_border_color	:	transparent;
+@reset_focus_bg_color		:	@primary;
+@reset_focus_color			:	@primary;
+
+//===== end's form =====//
+//===== table =====//
+@table_color 				:	@b-color;
+@table_border_color 		:	@info;
+@table_bg_colspan 			:	@white;
+@table_padding 				:	10px 12px;
+
+@table_head_color 			:	@b-color;
+@table_head_bg 				:	@info;
+@table_head_padding 		:	12px;
+@table_head_border_color 	:	@info;
+//===== end's table =====//
+
+//===== pagination =====//
+@pagin_gutter 				:	2px;
+@pagin_color 				: 	@default;
+@pagin_color_hover 			: 	@default;
+@pagin_color_active 		: 	@b-color;
+@pagin_bg 					:	@b-color;
+@pagin_bg_hover 			: 	@success;
+@pagin_bg_active 			: 	@primary;
+//===== end's pagination =====//
+
+
+//===== modals =====//
+@modal_backdrop 			:	@default;
+@modal_backdrop_fade 		:	0.9;
+@modal_bg 					:	@white;
+@modal_border_rad 			:	0px;
+@modal_width 				:	550px;
+@modal_width_device 		:	650px;
+@modal_btn_width 			: 	34px;
+@modal_btn_border_rad 		:	0;
+@modal_btn_color 			:	@primary;
+@modal_btn_bg 				:	@info;
+@modal_btn_border 			:	0px;
+@modal_btn_border_color 	:	@primary;
+@modal_btn_color_hover 		:	@white;
+@modal_btn_bg_hover 		:	@primary;
+@modal_btn_border_color_hover:	@success;
+//===== end's modals =====//
+
+//===== map =====//
+@map_popup_bg 				:	@white;
+@map_popup_color 			:	@primary;
+//===== end's map =====//
+
+//===== continfo =====//
+@continfo_color 			:	@warning;
+@continfo_icon_bg 			:	@white;
+@continfo_icon_color 		:	@primary;
+@continfo_icon_width 		:	32px;
+@continfo_icon_padding 		:	6px;
+@continfo_icon_border 		:	2px;
+@continfo_icon_border_color	:	@primary;
+@continfo_icon_radius		:	5px;
+//===== end's continfo =====//
+
+//===== social =====//
+@soc_size 					: 	32px;
+@soc_border_radius 			: 	50%;
+@soc_border 				: 	@success;
+@soc_bg 					: 	@success;
+@soc_bg_hover 				: 	@primary;
+@soc_color 					: 	@primary;
+@soc_color_hover 			: 	@white;
+@soc_color_contacts  		:	@b-color;
+@soc_gutter 				:	5px; 
+//===== end's  social =====//
+
+//===== slider slick =====//
+@slider_btn_width 			: 	40px;
+@slider_btn_padding 		: 	0px;
+@slider_btn_color 			: 	@default;
+@slider_btn_bg 				: 	@white;
+@slider_btn_border 			: 	0px;
+@slider_btn_border_color 	: 	@primary;
+@slider_btn_radius 			: 	0;
+
+@slider_btn_color_hover 	: 	@white;
+@slider_btn_bg_hover 		: 	@primary;
+@slider_btn_border_color_hover:	@primary;
+
+@slider_dots_bottom 		: 	1.5vw;
+@slider_dots_width 			: 	10px;
+@slider_dots_gutter 		: 	10px;
+@slider_dots_bg 			: 	@success;
+@slider_dots_radius 		: 	50%;
+
+@slider_dots_bg_active 		: 	@primary;
+//===== end's slider slick =====//

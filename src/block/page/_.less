@@ -1,0 +1,111 @@
+.section__{
+	&wrap{
+		flex: 1 1 0;
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		height: 100%;
+		.media-breakpoint-up(@xl; {
+			padding-left: @aside_size;
+		});
+	}
+	&content{
+		overflow: hidden;
+	}
+	&container{
+		padding-top: 40px;
+		padding-bottom: 20px;
+		.media-breakpoint-down(@md; {
+			&.is--breadcrumb{
+				padding-top: 20px;
+			}
+		});
+		.media-breakpoint-up(@lg; {
+			padding-top: 60px;
+			padding-bottom: 40px;
+			&.container{
+				padding-left: @container_gap + 10px;
+				padding-right: @container_gap + 20px;		
+			}
+		});
+	}
+	&inner{
+	}
+	&section{
+		&.is--page{
+			&-catalog{
+				margin-bottom: 40px;
+				&:last-child{
+					margin-bottom: 0;
+				}
+				.card__item{
+					//max-width: 317px;
+				}
+			}
+		}
+	}
+	&grid{
+		&.is--page{
+			&-catalog{
+				&.is--card{
+					grid-gap: 10px;
+					.media-breakpoint-up(@sm; {
+						grid-gap: 20px 10px;
+						grid-template-columns: repeat(2, 1fr);
+					});
+					.media-breakpoint-up(@lg; {
+						grid-template-columns: repeat(3, 1fr);
+					});
+				}
+				&.is--list{
+					grid-gap: 10px;
+					.media-breakpoint-up(@sm; {
+						grid-gap: 20px 10px;
+						grid-template-columns: repeat(2, 1fr);
+					});
+					.media-breakpoint-up(@lg; {
+						grid-template-columns: repeat(3, 1fr);
+					});
+					.media-breakpoint-up(@xl; {
+						grid-gap: 10px;
+						grid-template-columns: 100%;
+					});
+					
+				}
+			}
+		}
+	}
+	&row{
+		&.is--page{
+			&-catalog{
+				margin-bottom: 40px;
+				&.is--heading{
+					margin-bottom: 20px;
+				}
+				& > .cols{
+					&.is--search{
+						flex: 1 1 0;
+					}
+					&.is--slick-nav{
+						margin-left: auto;
+						align-self: center;
+					}
+					&.is--view{
+						margin-left: auto;
+						align-self: center;
+					}
+				}
+			}
+		}
+	}
+	&slick{
+	}
+	&card{
+	}
+	&img{
+	}
+	&hr{
+	}
+	&btn{
+	}
+}
