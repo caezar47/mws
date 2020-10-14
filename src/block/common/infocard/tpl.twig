@@ -1,0 +1,37 @@
+<div class="{{prefix}}panel">
+	<div class="{{prefix}}header">		
+		{% if preview %}
+		<picture class="{{prefix}}preview">
+			<img src="{{preview}}" class="img-responsive" alt="">
+		</picture>		
+		{% endif %}
+		<p class="{{prefix}}heading">{{heading}}</p>
+		
+		<div class="{{prefix}}more">
+			{% include "../button/btn.twig" with {
+				view:"more",
+				prefix:"btn__", 
+				mod:more_mod,  
+				link:"#",
+				list: more_list
+			} %}
+		</div>
+	</div>
+	<dl class="{{prefix}}list">
+		{% for l in list %}
+		<div class="{{prefix}}list-item {% if l.preview %}is--preview{% endif %}">
+			{% if l.preview %}
+			<picture class="{{prefix}}preview">
+				<img src="{{l.preview}}" class="img-responsive" alt="">
+			</picture>
+			<div>
+			{% endif %}
+	  		<dt class="{{prefix}}list-term">{{l.term}}</dt>
+	  		<dd class="{{prefix}}list-def">{{l.def}}</dd>
+			{% if l.preview %}
+			</div>
+			{% endif %}
+		</div>
+		{% endfor %}
+	</dl>
+</div>

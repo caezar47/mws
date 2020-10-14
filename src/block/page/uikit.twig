@@ -56,6 +56,28 @@
 					<button type="button" class="btn__item  is--focus">Отменить</button>
 				</div>
 			</div>
+			<div class="row  is--gutter"  style="margin-bottom: 20px;">
+				<div class="cols">
+					{% include "../common/button/btn.twig" with {
+						view:"btn",
+						prefix:"btn__", 
+						attr:'data-toggle="modal" data-target="#modal-edit"',
+						mod:"is--full",  
+						icon:"icon-add",  
+						name:"Реквизиты"
+					} %}
+				</div>
+				<div class="cols">
+					{% include "../common/button/btn.twig" with {
+						view:"btn",
+						prefix:"btn__", 
+						attr:'data-toggle="modal" data-target="#modal-edit"',
+						mod:"is--full  is--primary",  
+						icon:"icon-add",  
+						name:"Реквизиты"
+					} %}
+				</div>
+			</div>
 		</div> 
 		<div style="margin-bottom: 50px;">
 			<h2 class="page-header__heading  is--uikit" style="margin-bottom: 60px;">Кнопки перехода</h2>
@@ -422,6 +444,93 @@
 						"link":page.catalog_cat,
 					},
 				]
+			} %}
+		</div>
+		<div style="margin-bottom: 50px;">
+			<h2 class="page-header__heading  is--uikit" style="margin-bottom: 40px;">Таблицы</h2>
+			{% include "../common/table/tpl.twig" with {
+				prefix:"table",
+				mod: "",
+				head:[
+					{
+						"name":"Название",
+						"mod":"is--account-name",
+					},
+					{
+						"name":"Детально",
+						"mod":"",
+					},
+					{
+						"name":"Сумма",
+						"mod":"",
+					}, 
+					{
+						"name":"Статус",
+						"mod":"is--status",
+					},
+				],
+				body:[
+					{
+						"tr":[
+							{
+								"td":[
+									{"name": 'Счёт №30 от 12.01.2020'},
+									{"name": 'Заказ №108'},
+									{"name": '8 180 ₽'},
+									{"name": 'Не оплачен'},
+								],
+							}
+						],
+					},
+					{
+						"tr":[
+							{
+								"td":[
+									{"name": 'Счёт №30 от 12.01.2020'},
+									{"name": 'Заказ №108'},
+									{"name": '8 180 ₽'},
+									{"name": 'Не оплачен'},
+								],
+							}
+						],
+					},
+					{
+						"tr":[
+							{
+								"td":[
+									{"name": 'Счёт №30 от 12.01.2020'},
+									{"name": 'Заказ №108'},
+									{"name": '8 180 ₽'},
+									{"name": 'Не оплачен'},
+								],
+							}
+						],
+					},
+					{
+						"tr":[
+							{
+								"td":[
+									{"name": 'Счёт №30 от 12.01.2020'},
+									{"name": 'Заказ №108'},
+									{"name": '8 180 ₽'},
+									{"name": 'Не оплачен'},
+								],
+							}
+						],
+					},
+					{
+						"tr":[
+							{
+								"td":[
+									{"name": 'Счёт №30 от 12.01.2020'},
+									{"name": 'Заказ №108'},
+									{"name": '8 180 ₽'},
+									{"name": 'Не оплачен'},
+								],
+							}
+						],
+					},
+				],
 			} %}
 		</div>
 		<div style="margin-bottom: 50px;">
@@ -1354,9 +1463,148 @@
 			</div>
 			<div style="margin-bottom: 30px">
 				<h2 style="margin-bottom: 10px;">Для корзины</h2>
+					{% include "../common/informer/tpl.twig" with {
+					prefix:"informer__", 
+					status:"",  
+					mod:"is--basket",  
+					name:"Итого: <span>21 580 ₽</span>",
+					btn_link:page.order, 
+					btn_name:"Перейти к оформлению", 
+					btn_mod:"is--primary", 
+				} %}
 			</div>
 			<div style="margin-bottom: 30px">
 				<h2 style="margin-bottom: 10px;">Для Оформление заказа</h2>
+			</div>
+		</div>
+		<div style="margin-bottom: 50px;">
+			<h2 class="page-header__heading  is--uikit" style="margin-bottom: 60px;">Карточка менеджера</h2>
+			<div style="margin-bottom: 30px">
+				<h2 style="margin-bottom: 10px;">Вариант 1</h2>
+				{% include "../common/manager/tpl.twig" with {
+					view:"company", 
+					prefix:"manager__", 
+					mod:"is--company",  
+					heading: 'Ответственный менеджер',
+					preview: [path.img,"/default/catalog-lock.jpg"].join(""),
+					name: 'Мария Вишневская',
+					phone: '+79991234567',
+					email: 'wishnewsky@gmail.com',
+				} %}
+			</div>
+			<div style="margin-bottom: 30px">
+				<h2 style="margin-bottom: 10px;">Вариант 2</h2>
+				{% include "../common/manager/tpl.twig" with {
+					view:"aside", 
+					prefix:"manager__", 
+					mod:"is--aside",  
+					heading: 'Ваш менеджер',
+					preview: [path.img,"/default/catalog-lock.jpg"].join(""),
+					name: 'Максим Грудев',
+					phone: '+79636925026',
+					email: 'm.grudev@playhard.agency',
+				} %}
+			</div>
+		</div>
+		<div style="margin-bottom: 50px;">
+			<h2 class="page-header__heading  is--uikit" style="margin-bottom: 60px;">Карточка реквизитов</h2>
+			<div style="margin-bottom: 30px">
+				<h2 style="margin-bottom: 10px;">Вариант 1</h2>
+				{% include "../common/infocard/tpl.twig" with {
+					prefix:"infocard__", 
+					heading: 'Грудев Максим Андреевич',
+					more_mod: 'is--right',
+					more_list: [
+						{
+							"name":"Повторить", 
+							"tag":"button", 
+							"attr":'type="button"  data-toggle="modal" data-target="#modal-edit"',
+							"class":'btn__item  is--primary  is--sm',
+						},
+						{
+							"name":"Отменить", 
+							"tag":"button", 
+							"attr":'type="button"',
+							"class":'btn__item  is--sm',
+						},
+					],
+					list: [
+						{
+							"term":"ИНН", 
+							"def":"032625174652"
+						},
+						{
+							"term":"ОГРНИП", 
+							"def":"316032700050157"
+						},
+						{
+							"term":"ОКПО", 
+							"def":"0200885960"
+						},
+						{
+							"term":"ОКВЭД", 
+							"def":"62.01"
+						},
+						{
+							"term":"Дата регистрации", 
+							"def":"13.01.2016 в 00:00:00+03:00"
+						},
+						{
+							"term":"Сокращённое название организации", 
+							"def":"MWS Agency"
+						},
+					]
+				} %}
+			</div>
+			<div style="margin-bottom: 30px">
+				<h2 style="margin-bottom: 10px;">Вариант 2</h2>
+				{% include "../common/infocard/tpl.twig" with {
+					prefix:"infocard__", 
+					heading: 'Банковские реквизиты',
+					preview: [path.img,"/default/catalog-lock.jpg"].join(""),
+					more_mod: 'is--right',
+					more_list: [
+						{
+							"name":"Повторить", 
+							"tag":"button", 
+							"attr":'type="button"  data-toggle="modal" data-target="#modal-edit"',
+							"class":'btn__item  is--primary  is--sm',
+						},
+						{
+							"name":"Отменить", 
+							"tag":"button", 
+							"attr":'type="button"',
+							"class":'btn__item  is--sm',
+						},
+					],
+					list: [
+						{
+							"term":"Наименование банка", 
+							"def":"Альфабанк",
+							"preview": [path.img,"/default/catalog-lock.jpg"].join(""),
+						},
+						{
+							"term":"Адрес банка", 
+							"def":"АО «Альфа-банк» г. Москва"
+						},
+						{
+							"term":"Расчётный счёт", 
+							"def":"4080 2810 5026 8000 0412"
+						},
+						{
+							"term":"Валюта счёта", 
+							"def":"RUB"
+						},
+						{
+							"term":"БИК", 
+							"def":"044525593"
+						},
+						{
+							"term":"Кор. счёт", 
+							"def":"3010 1810 2000 0000 0593"
+						},
+					]
+				} %}
 			</div>
 		</div>
 	</div>

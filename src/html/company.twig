@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html dir="ltr" lang="ru-RU"> 
 	<head>	
-    	{% include "../block/common/head/head.twig" with {title:"Каталог"}  %}
+    	{% include "../block/common/head/head.twig" with {title:"Корзина"}  %}
 	</head>
 	<body>
         {% include "../block/common/navbar/navbar.twig" with {
@@ -17,19 +17,19 @@
             prefix:"navbar__",
             collapse:"",  
             mod:"",            
-            active:page.catalog,
+            active:page.company,
         } %} 
 
         <main class="{{prefix.section}}wrap">
-            {% include "../block/page/catalog.twig" with {
+            {% include "../block/page/company.twig" with {
                 view:"page", 
                 content_prefix:prefix.section, 
-                content_mod:"is--page-catalog", 
+                content_mod:"is--page-company", 
                 heading_group:"", 
                 heading_attr:"",
-                heading_mod:"is--page-default", 
+                heading_mod:"", 
                 heading_level:"h1", 
-                heading:"Каталог",              
+                heading:"Мои компании",              
             } %}
         </main>
 

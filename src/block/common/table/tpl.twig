@@ -1,0 +1,24 @@
+<div class="table-responsive">
+	<table class="table  {{mod}}">
+		{% if head %}
+		<thead>
+			<tr>
+				{% for h in head %}
+				<th {% if h.mod %}class="{{h.mod}}"{% endif %}>{{h.name}}</th>
+				{% endfor %}
+			</tr>
+		</thead> 
+		{% endif %}
+		<tbody> 
+			{% for b in body %}	
+				{% for tr in b.tr %}	
+				<tr> 
+					{% for td in tr.td %}
+					<td>{{td.name}}</td>
+					{% endfor %}
+				</tr>
+				{% endfor %}
+			{% endfor %}
+		</tbody>
+	</table>
+</div>

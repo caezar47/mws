@@ -10,12 +10,28 @@
 	margin-left: -(@container_gap - 10);
 	margin-right: -(@container_gap - 10);
 	&.is--gutter{
-		margin-top: -20px;
-		& > .cols{
-			padding-top: 20px;
+		&{
+			margin-top: -20px;
+			& > .cols{
+				padding-top: 20px;
+			}
+		}
+		&-sm{
+			margin-top: -(@container_gap - 10);
+			& > .cols{
+				padding-top: @container_gap - 10;
+			}
 		}
 	}
 	&.is--gap{
+		&-lg{			
+			margin-left: -(@container_gap - 5);
+			margin-right: -(@container_gap - 5);
+			& > .cols{				
+				padding-left: @container_gap - 5px;
+				padding-right: @container_gap - 5px;
+			}
+		}
 		&-xs{
 			margin-left: -(@container_gap - 15);
 			margin-right: -(@container_gap - 15);

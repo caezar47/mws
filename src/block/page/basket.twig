@@ -1,0 +1,100 @@
+{% if view == "page" %}
+	<section class="{{content_prefix}}content">
+		<div class="{{content_prefix}}container container">			
+			<div class="{{content_prefix}}row  row  {{content_mod}}  is--heading">
+				<div class="cols">
+					{% include "../common/page-header/elem.twig" with {
+						prefix:"page-header__", 
+						mod:heading_mod,
+						attr:heading_attr, 
+						level:heading_level, 
+						heading:heading
+					} %}
+				</div>
+				<div class="cols  is--more  hidden--md">				
+					{% include "../common/button/btn.twig" with {
+						view:"more",
+						prefix:"btn__", 
+						mod:"is--right",  
+						link:"#",
+						list: [
+							{
+								"name":"Повторить", 
+								"tag":"button", 
+								"attr":'type="button"',
+								"class":'btn__item  is--primary  is--sm',
+							},
+							{
+								"name":"Отменить", 
+								"tag":"button", 
+								"attr":'type="button"',
+								"class":'btn__item  is--sm',
+							},
+						]
+					} %}
+				</div>
+			</div>
+
+			<div class="{{content_prefix}}grid  grid__row  {{content_mod}}">	
+				{% include "../common/card/card.twig" with {
+					view:"basket",
+					prefix:"card__", 
+					mod:"is--basket", 
+					group:"is--view-card", 
+					list: [
+						{					
+							"link":"#",
+							"img": [path.img,"/default/catalog-lock.jpg"].join(""), 	 
+							"heading":"Услуги по ликвидации юридического лица",
+							"decs":'S, жёлтый',
+							"cost":'19 000 ₽',
+							"qty":"19",
+						},
+						{					
+							"link":"#",
+							"img": [path.img,"/default/catalog-lock.jpg"].join(""), 	 
+							"heading":"Регистрация ИП",
+							"decs":'S, жёлтый',
+							"cost":'500 ₽',
+							"qty":"19",
+						},
+						{					
+							"link":"#",
+							"img": [path.img,"/default/catalog-lock.jpg"].join(""), 	 
+							"heading":"Услуги по ликвидации юридического лица",
+							"decs":'S, жёлтый',
+							"cost":'19 000 ₽',
+							"qty":"19",
+						},
+						{					
+							"link":"#",
+							"img": [path.img,"/default/catalog-lock.jpg"].join(""), 	 
+							"heading":"Регистрация ИП",
+							"decs":'S, жёлтый',
+							"cost":'500 ₽',
+							"qty":"19",
+						},
+						{					
+							"link":"#",
+							"img": [path.img,"/default/catalog-lock.jpg"].join(""), 	 
+							"heading":"Регистрация ИП",
+							"decs":'S, жёлтый',
+							"cost":'500 ₽',
+							"qty":"19",
+						},
+					]
+				} %}
+			</div>
+
+			{% include "../common/informer/tpl.twig" with {
+				prefix:"informer__", 
+				status:"",  
+				mod:"is--basket",  
+				name:"Итого: <span>21 580 ₽</span>",
+				btn_link:page.order, 
+				btn_name:"Перейти к оформлению", 
+				btn_mod:"is--primary", 
+			} %}
+		</div>
+	</section>
+{% endif %}

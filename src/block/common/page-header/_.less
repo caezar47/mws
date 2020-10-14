@@ -1,9 +1,36 @@
 .page-header__{
 	&heading{
+		.btn__link-back + &{
+			padding-top: 15px;
+			.media-breakpoint-up(@md; {
+				padding-top: 3px;
+			});
+		}
 		&.is--page{
 			&-default{				
 				margin-bottom: 20px;
+				&-lg{
+					margin-bottom: 20px;
+					.media-breakpoint-up(@md; {
+						margin-bottom: 40px;
+					});
+				}
+				&-sm{
+					margin-bottom: 20px;
+					.media-breakpoint-up(@md; {
+						margin-bottom: 13px;
+					});
+				}
 			}
+		}
+		&.is--modal{
+			margin-bottom: 20px;
+			padding-right: 30px;
+			.media-breakpoint-up(@md; {
+				margin-bottom: 40px;
+				padding-right: 0;
+
+			});
 		}
 		&.is--uikit{
 			font-size: 2.571em;

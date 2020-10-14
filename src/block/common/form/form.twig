@@ -1,3 +1,113 @@
+{% if view == "infocard_edit" %}
+	<form action="#" class="{{prefix}}panel  {{mod}}">
+		{% include "../page-header/elem.twig" with {
+			prefix:"page-header__", 
+			mod:heading_mod,
+			attr:heading_attr, 
+			level:heading_level, 
+			heading:heading
+		} %}
+		<div class="{{prefix}}grid  grid__row  {{mod}}">
+			{% include "elem.twig" with {
+				view: "input", 
+				prefix:'form__', 
+				mod:'', 
+				color:'', 
+				list: [
+					{
+						"form_id":ID, 
+						"id":"text1", 
+						"name":"text1", 
+						"type":"text", 
+						"required": "required", 
+						"error": "Обязательно к заполнению",
+						"label":"Название",
+						"placeholder":"Название"
+					},
+					{
+						"form_id":ID, 
+						"id":"text2", 
+						"name":"text2", 
+						"type":"text", 
+						"required": "required", 
+						"error": "Обязательно к заполнению",
+						"label":"Наименование банка",
+						"placeholder":"Наименование банка"
+					},
+					{
+						"form_id":ID, 
+						"id":"text3", 
+						"name":"text3", 
+						"type":"text", 
+						"required": "required", 
+						"error": "Обязательно к заполнению",
+						"label":"Адрес банка",
+						"placeholder":"Адрес банка"
+					},
+					{
+						"form_id":ID, 
+						"id":"text4", 
+						"name":"text4", 
+						"type":"text", 
+						"required": "required", 
+						"error": "Обязательно к заполнению",
+						"label":"Расчётный счёт",
+						"placeholder":"Расчётный счёт"
+					},
+					{
+						"form_id":ID, 
+						"id":"text5", 
+						"name":"text5", 
+						"type":"text", 
+						"required": "required", 
+						"error": "Обязательно к заполнению",
+						"label":"Валюта счёта",
+						"placeholder":"Валюта счёта"
+					},
+					{
+						"form_id":ID, 
+						"id":"text6", 
+						"name":"text6", 
+						"type":"text", 
+						"required": "required", 
+						"error": "Обязательно к заполнению",
+						"label":"БИК",
+						"placeholder":"БИК"
+					},
+					{
+						"form_id":ID, 
+						"id":"text7", 
+						"name":"text7", 
+						"type":"text", 
+						"required": "required", 
+						"error": "Обязательно к заполнению",
+						"label":"Кор. счёт",
+						"placeholder":"Кор. счёт"
+					}
+			]} %}
+		</div>
+		<div class="{{prefix}}row  row  is--gutter-sm  is--gap-lg  {{mod}}">
+			<div class="cols">				
+				{% include "../button/btn.twig" with {
+					view:"btn", 
+					type:"submit", 
+					prefix:"btn__", 
+					mod:'is--full  is--primary', 
+					name:'Сохранить' 
+				} %}
+			</div>
+			<div class="cols">				
+				{% include "../button/btn.twig" with {
+					view:"btn", 
+					type:"button", 
+					prefix:"btn__", 
+					mod:'is--full', 
+					name:'Отменить' 
+				} %}
+			</div>
+		</div>
+	</form>
+{% endif %}
 {% if view == "enter" %}
 <section class="{{prefix}}block  {{mod}}" style="background-image: url({{bg}})">
 	<div class="{{prefix}}container container  {{mod}}">

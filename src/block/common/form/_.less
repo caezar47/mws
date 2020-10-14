@@ -5,9 +5,21 @@
 	}
 	&container{		
 	}
-	&row{
+	&grid{
+		&.is--modal{
+			grid-gap: 21px 20px;
+			margin-bottom: 40px;
+		}
 	}
-	&cols{
+	&row{
+		&.is--modal{
+			& > .cols{
+				flex: 1 1 100%;
+				.media-breakpoint-up(@md; {
+					flex: 1 1 0;
+				});
+			}
+		}
 	}
 	&item{
 		display: block;
@@ -33,7 +45,6 @@
 		font-weight: 600;
 		margin-bottom: 5px;
 	}
-
 	&control{
 		width: 100%;
 		font-weight: 400;

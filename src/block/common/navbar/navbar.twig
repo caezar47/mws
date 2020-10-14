@@ -77,7 +77,7 @@
 										{
 											"icon":"icon-company", 
 											"name":"Мои компании", 
-											"link":page.company, 
+											"link":page.company_card, 
 											"mod":""
 										},
 										{
@@ -166,19 +166,16 @@
 						</div>
 					</div>
 					<div class="{{prefix}}aside-cols cols  is--manager">
-						<div class="{{prefix}}aside-manager">
-							<div class="{{prefix}}aside-manager-header">
-								<div class="{{prefix}}aside-manager-photo">
-									<img src="https://via.placeholder.com/150x150" class="img-responsive" alt="">
-								</div>
-								<div>								
-									<p class="{{prefix}}aside-manager-title">Ваш менеджер</p>
-									<p class="{{prefix}}aside-manager-name">Максим Грудев</p>
-								</div>
-							</div>
-							<p class="{{prefix}}aside-manager-contacts"><a href="tel:+79636925026">+79636925026</a></p>
-							<p class="{{prefix}}aside-manager-contacts"><a href="email:m.grudev@playhard.agency">m.grudev@playhard.agency</a></p>
-						</div>
+						{% include "../manager/tpl.twig" with {
+							view:"aside", 
+							prefix:"manager__", 
+							mod:"is--aside",  
+							heading: 'Ваш менеджер',
+							preview: [path.img,"/default/catalog-lock.jpg"].join(""),
+							name: 'Максим Грудев',
+							phone: '+79636925026',
+							email: 'm.grudev@playhard.agency',
+						} %}
 					</div>
 				</div>
 			</div>

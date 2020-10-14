@@ -28,9 +28,12 @@
 	"page":{
 		"index":"./",
 		"projects":"./projects.html",
+		"company":"./company.html",
+		"company_card":"./company-card.html",
 		"catalog":"./catalog.html",
 		"catalog_cat":"./catalog-cat.html",
-		"catalog_cat_list":"./catalog-cat-list.html"
+		"catalog_cat_list":"./catalog-cat-list.html",
+		"basket":"./basket.html"
 	},
 	"prefix":{
 		"section":"section__",

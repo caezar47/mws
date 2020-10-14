@@ -5,7 +5,9 @@
 		border-radius: @btn_radius;
 		font-weight: 700;
 		position: relative;	
-		display: inline-block; 	
+		display: inline-flex;
+		align-items: center; 
+		justify-content: center;	
 		background-color: @btn_bg; 
 		text-align: center;	
 		color: @btn_color;
@@ -34,8 +36,16 @@
 				background-color: fadeout(@primary, 50%);
 			}
 		}
+		svg{
+			width: 16px;
+			height: 16px;
+			margin-right: 10px;
+		}
 		&.is--sm{
 			padding: 10px 30px;
+		}
+		&.is--full{
+			width: 100%;
 		}
 	}
 	&next{

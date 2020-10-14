@@ -1,0 +1,75 @@
+.manager__{
+	&panel{
+		.heading6();
+		&.is--company{
+			background-color: @warning;
+			border-radius: @site_br;
+			padding: 20px;
+			.media-breakpoint-up(@md; {
+				max-width: 435px;
+			});
+		}			
+		&.is--aside{			
+			background: @white;
+			margin-top: 20px;
+			margin-bottom: 20px;
+			.media-breakpoint-up(@xl; {
+				margin-top: 0;
+				background: fadeout(@white, 100%);				
+			});
+		}
+	}
+	&heading{
+		font-weight: 700;
+		&.is--company{
+			.heading2();
+			margin-bottom: 15px;
+		}
+		&.is--aside{
+			margin-bottom: 3px;
+		}
+	}
+	&group{
+		display: flex;
+		&.is--aside{
+			margin-bottom: 15px;
+		}
+	}
+	&preview{
+		display: block;
+		border-radius: @site_br;
+		overflow: hidden;
+		img{
+			width: 100%;
+			height: 100%;
+			object-position: center;
+			object-fit: cover;
+		}
+		&.is--aside{			
+			width: 40px;
+			height: 40px;
+			margin-right: 11px;
+		}
+		&.is--company{
+			width: 60px;
+			height: 60px;
+			margin-right: 20px;
+		}
+	}
+	&name{
+		letter-spacing: 1px;
+		text-transform: uppercase;
+		&.is--company{
+			margin-bottom: 10px;
+		}
+		&.is--aside{
+			letter-spacing: 0.8px;
+		}
+	}
+	&contacts{
+		font-weight: 600;
+		a{
+			color: @default;
+		}
+	}	
+}

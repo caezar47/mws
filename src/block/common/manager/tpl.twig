@@ -1,0 +1,26 @@
+{% if view == "company" %}
+<div class="{{prefix}}panel  {{mod}}">
+	<p class="{{prefix}}heading  {{mod}}">{{heading}}</p>
+	<div class="{{prefix}}group  {{mod}}">
+		<picture class="{{prefix}}preview  {{mod}}"><img src="{{preview}}" class="img-responsive" alt="{{name}}"></picture>
+		<div>			
+			<p class="{{prefix}}name  {{mod}}">{{name}}</p>
+			<p class="{{prefix}}contacts  {{mod}}"><a href="tel:{{phone}}">{{phone}}</a></p>
+			<p class="{{prefix}}contacts  {{mod}}"><a href="email:{{email}}">{{email}}</a></p>
+		</div>
+	</div>
+</div>
+{% endif %}
+{% if view == "aside" %}
+<div class="{{prefix}}panel  {{mod}}">
+	<div class="{{prefix}}group  {{mod}}">
+		<picture class="{{prefix}}preview  {{mod}}"><img src="{{preview}}" class="img-responsive" alt="{{name}}"></picture>
+		<div>			
+			<p class="{{prefix}}heading  {{mod}}">{{heading}}</p>
+			<p class="{{prefix}}name  {{mod}}">{{name}}</p>
+		</div>
+	</div>
+	<p class="{{prefix}}contacts  {{mod}}"><a href="tel:{{phone}}">{{phone}}</a></p>
+	<p class="{{prefix}}contacts  {{mod}}"><a href="email:{{email}}">{{email}}</a></p>
+</div>
+{% endif %}

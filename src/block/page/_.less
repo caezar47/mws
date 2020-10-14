@@ -13,7 +13,8 @@
 		overflow: hidden;
 	}
 	&container{
-		padding-top: 40px;
+		//padding-top: 40px;
+		padding-top: 20px;
 		padding-bottom: 20px;
 		.media-breakpoint-down(@md; {
 			&.is--breadcrumb{
@@ -42,10 +43,62 @@
 					//max-width: 317px;
 				}
 			}
+			&-company{
+				&{}
+				&-card{
+					padding-bottom: 35px;
+					&:last-child{
+						padding-bottom: 0;
+					}
+					& > .btn__item{
+						margin-bottom: 10px;
+					}
+				}				
+			}
 		}
 	}
 	&grid{
 		&.is--page{
+			&-company{
+				&{}
+				&-card{
+					grid-template-columns: 100%;
+					& > [data-grid-heading]{
+						grid-row: 1;
+					} 
+					& > [data-grid-manager]{
+						grid-row: 2;
+						margin-bottom: 20px;
+					} 
+					& > [data-grid-content]{
+						grid-row: 3;
+					} 
+					.media-breakpoint-down(@xl; {
+						& > [data-grid-heading]{
+							.page-header__heading{
+								margin-bottom: 0;
+							}
+						} 
+					});
+					.media-breakpoint-up(@xl; {
+						grid-template-columns: 7.25fr 4.75fr;
+						grid-gap: 20px 30px;
+						& > [data-grid-heading]{
+							grid-column: 1;
+							grid-row: 1;
+						} 
+						& > [data-grid-manager]{
+							grid-column: 2;
+							grid-row: ~"1/3";
+							margin-bottom: 0;
+						} 
+						& > [data-grid-content]{
+							grid-column: 1;
+							grid-row: 2;
+						} 
+					});
+				}
+			}
 			&-catalog{
 				&.is--card{
 					grid-gap: 10px;
@@ -73,6 +126,9 @@
 					
 				}
 			}
+			&-basket{
+				grid-gap: 10px;
+			}
 		}
 	}
 	&row{
@@ -91,6 +147,20 @@
 						align-self: center;
 					}
 					&.is--view{
+						margin-left: auto;
+						align-self: center;
+					}
+				}
+			}
+			&-basket{
+				&.is--heading{
+					margin-bottom: 30px;
+					.media-breakpoint-up(@md; {
+						margin-bottom: 20px;
+					});
+				}
+				& > .cols{
+					&.is--more{
 						margin-left: auto;
 						align-self: center;
 					}
