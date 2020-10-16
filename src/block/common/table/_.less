@@ -19,6 +19,9 @@
 		margin-right: -@container_gap;
 		margin-left: -@container_gap;
 		width: ~"calc(100% + @{container_gap} + @{container_gap})"; 
+	});
+	.media-breakpoint-down(@lg; {
+		width: 100%; 
 		overflow-y: hidden;
 		-ms-overflow-style: -ms-autohiding-scrollbar;
 	});
@@ -90,7 +93,7 @@
 				padding-left: 0;	
 			});	
 			.table-responsive &{
-				.media-breakpoint-down(@md; {
+				.media-breakpoint-down(@lg; {
 					white-space: nowrap;					
 				});	
 			}
