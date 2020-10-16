@@ -22,6 +22,9 @@
 		overflow-y: hidden;
 		-ms-overflow-style: -ms-autohiding-scrollbar;
 	});
+	&.is--scroll{
+		overflow-y: hidden;
+	}
 } 
 .table{ 
 	width: 100%;
@@ -61,10 +64,17 @@
 				&.is--status{
 					width: 14%;
 				}
+				.btn__sort{
+					transform: translateY(2px);
+				}
 			}
 		}
 	}
 	tr{	
+		&[onclick] td,
+		&[onclick] th{
+			cursor: pointer;
+		}
 		td, th{
 			border: 0;
 			vertical-align: middle;
@@ -83,6 +93,9 @@
 				.media-breakpoint-down(@md; {
 					white-space: nowrap;					
 				});	
+			}
+			.is--scroll &{
+				white-space: nowrap;
 			}
 		}
 		&:last-child{

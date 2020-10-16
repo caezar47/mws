@@ -1,0 +1,54 @@
+<div class="{{prefix}}block">
+	<div class="{{prefix}}body">
+		{% for value in chat %}
+		<div class="{{prefix}}card">
+			{% if value.day %}
+			<div class="{{prefix}}date">
+				<span>{{value.day}}</span>
+			</div>
+			{% endif %}
+			{% for m in value.message %}
+			<div class="{{prefix}}message  is--{{m.status}}" {% if m.info %}data-info="{{m.info}}"{% endif %}>
+				<div class="{{prefix}}message-header is--{{m.status}}">
+					<p>{{m.name}}</p>
+					<p>{{m.time}}</p>
+				</div>
+				<div class="{{prefix}}message-note  is--{{m.status}}">
+					{{m.note}}
+					{% if m.docs %}
+					<div class="{{prefix}}message-docs">
+						{% include "../docs/tpl.twig" with {
+							prefix:"docs__", 
+							mod: '',
+							list: m.docs
+						} %}
+					</div>
+					{% endif %}
+				</div>
+			</div>
+			{% endfor %}
+		</div>
+		{% endfor %}
+	</div>
+	<div class="{{prefix}}control">
+		<div class="{{prefix}}control-flex">
+			<label class="{{prefix}}file-btn">
+				<input type="file" class="{{prefix}}file-input">
+				{% include "../svg-sprite/svg.twig" with {icon:"icon-docs-add"} %}
+			</label>	
+			<div class="{{prefix}}textarea" placeholder="Новое сообщение" contenteditable="true"></div>
+			<button type="button" class="{{prefix}}submit">			
+				{% include "../svg-sprite/svg.twig" with {icon:"icon-submit"} %} 
+			</button>
+		</div>
+		{% if docs %}
+		<div class="{{prefix}}control-docs">
+			{% include "../docs/tpl.twig" with {
+				prefix:"docs__", 
+				mod: '',
+				list: docs
+			} %}
+		</div>
+		{% endif %}
+	</div>
+</div>

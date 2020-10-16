@@ -1,5 +1,23 @@
 {% include "tpl.twig" with {
 	prefix:"modal__", 
 	mod:"", 
-	ID: "modal-edit" 
+	ID: "modal-events", 
+	list: events_list,
+	heading_level: 'h2',
+	heading_mod: 'is--h1  is--modal',
+	heading: 'Лента событий',
 } %}
+{% include "tpl.twig" with {
+	prefix:"modal__", 
+	mod:"is--chat", 
+	ID: "modal-chat", 
+	heading_level: 'h2',
+	heading_mod: 'is--h1  is--modal',
+	heading: 'Чат с менеджером',
+	chat: chat
+} %}
+{% include "tpl.twig" with {
+	prefix:"modal__", 
+	mod:"", 
+	ID: "modal-edit" 
+} %} 

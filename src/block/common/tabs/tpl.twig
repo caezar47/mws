@@ -9,10 +9,21 @@
 	</ul>
 </div>
 {% for value in list %}
-{% if value.text %}
 <div class="{{prefix}}pane  {{value.status}}" id="{{value.id}}">
 	{{value.text}}
+	{% if value.type == "events" %}
+		{% include "../events/tpl.twig" with {
+			prefix:"events__", 
+			mod: '',
+			list: value.list 
+		} %}	
+	{% endif %}
+	{% if value.type == "chat" %}
+		{% include "../chat/tpl.twig" with {
+			prefix:"chat__",
+			chat: chat
+		} %}	
+	{% endif %}
 </div>
-{% endif %}
 {% endfor %}
 {% endif %}

@@ -1,7 +1,6 @@
 {% if view == "modal" %}
 <button type="button" class="{{prefix}}item  {{mod}}" data-toggle="modal" data-target="#{{target}}" data-modal-heading="{{m_heading}}" data-modal-heading-small="{{m_heading_sm}}" data-btn-heading="{{m_btn}}">
-	
-	<span class="{{prefix}}name">{{name}}</span>
+	<span>{{name}}</span>
 </button>
 {% endif %}
 
@@ -10,13 +9,13 @@
 	{% if icon %}
 		{% include "../svg-sprite/svg.twig" with {icon:icon} %}
 	{% endif %}
-	{{name}}
+	<span>{{name}}</span>
 </button>
 {% endif %}
 
 {% if view == "link" %}
 <a href="{{link}}" class="{{prefix}}item  {{mod}}">
-	<span class="{{prefix}}name">{{name}}</span>
+	<span>{{name}}</span>
 </a>  
 {% endif %}
 

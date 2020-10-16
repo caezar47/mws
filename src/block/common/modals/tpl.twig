@@ -4,7 +4,7 @@
 			<button type="button" class="{{prefix}}btn-close  modal-close" data-dismiss="modal" aria-hidden="true">
 				{% include "../svg-sprite/svg.twig" with {icon:"icon-close"} %}
 			</button>
-			<div class="{{prefix}}content  {{mod}}">
+			{# <div class="{{prefix}}content  {{mod}}"> #}
 				{% if ID == "modal-edit" %}
 					{% include "../form/form.twig" with {
 						view: 			"infocard_edit", 
@@ -18,7 +18,34 @@
 						heading_mod:	"is--h1  is--modal",
 					} %}
 				{% endif %}
-			</div> 
+				{% if ID == "modal-events" %}
+					{% include "../page-header/elem.twig" with {
+						prefix:"page-header__", 
+						mod:heading_mod,
+						attr:heading_attr, 
+						level:heading_level, 
+						heading:heading
+					} %}
+					{% include "../events/tpl.twig" with {
+						prefix:"events__", 
+						mod: '',
+						list: list 
+					} %}
+				{% endif %}
+				{% if ID == "modal-chat" %}
+					{% include "../page-header/elem.twig" with {
+						prefix:"page-header__", 
+						mod:heading_mod,
+						attr:heading_attr, 
+						level:heading_level, 
+						heading:heading
+					} %}
+					{% include "../chat/tpl.twig" with {
+						prefix:"chat__",
+						chat: chat
+					} %}
+				{% endif %}
+			{# </div>  #}
 		</div>
 	</div>
 </div>

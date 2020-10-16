@@ -75,7 +75,7 @@
 						<div class="navbar__aside-cols cols  is--nav">
 							<nav class="navbar__aside-nav">
 								<li class="navbar__aside-nav-item      ">
-	<a href="./projects.html" class="navbar__aside-nav-link  ">
+	<a href="./project.html" class="navbar__aside-nav-link  ">
 					<div class="navbar__aside-nav-icon">
 				<svg class="icon-svg icon-icon-projects" role="img">
 	<use xlink:href="./img/svg/sprite.svg#icon-projects"></use>
@@ -84,7 +84,7 @@
 	</a>  
 	</li>
 <li class="navbar__aside-nav-item      ">
-	<a href="" class="navbar__aside-nav-link  ">
+	<a href="./orders.html" class="navbar__aside-nav-link  ">
 					<div class="navbar__aside-nav-icon">
 				<svg class="icon-svg icon-icon-orders" role="img">
 	<use xlink:href="./img/svg/sprite.svg#icon-orders"></use>
@@ -99,6 +99,15 @@
 	<use xlink:href="./img/svg/sprite.svg#icon-company"></use>
 </svg>			</div>
 				<span>Мои компании</span>		
+	</a>  
+	</li>
+<li class="navbar__aside-nav-item      ">
+	<a href="./requests.html" class="navbar__aside-nav-link  ">
+					<div class="navbar__aside-nav-icon">
+				<svg class="icon-svg icon-icon-requests" role="img">
+	<use xlink:href="./img/svg/sprite.svg#icon-requests"></use>
+</svg>			</div>
+				<span>Мои обращения</span>		
 	</a>  
 	</li>
 <li class="navbar__aside-nav-item dropdown     is--active">
@@ -167,7 +176,7 @@
 	</div>
 	</li>
 <li class="navbar__aside-nav-item      ">
-	<a href="" class="navbar__aside-nav-link  ">
+	<a href="./settings.html" class="navbar__aside-nav-link  ">
 					<div class="navbar__aside-nav-icon">
 				<svg class="icon-svg icon-icon-settings" role="img">
 	<use xlink:href="./img/svg/sprite.svg#icon-settings"></use>
@@ -1686,14 +1695,54 @@
 
         </main>
 
-        <div class="modal__block modals  fade  " id="modal-edit" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal__block modals  fade  " id="modal-events" tabindex="-1" role="dialog" aria-hidden="true">
 	<div class="modal__dialog  ">
 		<div class="modal__body  " >
 			<button type="button" class="modal__btn-close  modal-close" data-dismiss="modal" aria-hidden="true">
 				<svg class="icon-svg icon-icon-close" role="img">
 	<use xlink:href="./img/svg/sprite.svg#icon-close"></use>
 </svg>			</button>
-			<div class="modal__content  ">
+			
+													<h2 class="page-header__heading  is--h1  is--modal  " >Лента событий</h2>																
+		</div>
+	</div>
+</div><div class="modal__block modals  fade  is--chat" id="modal-chat" tabindex="-1" role="dialog" aria-hidden="true">
+	<div class="modal__dialog  is--chat">
+		<div class="modal__body  is--chat" >
+			<button type="button" class="modal__btn-close  modal-close" data-dismiss="modal" aria-hidden="true">
+				<svg class="icon-svg icon-icon-close" role="img">
+	<use xlink:href="./img/svg/sprite.svg#icon-close"></use>
+</svg>			</button>
+			
+																	<h2 class="page-header__heading  is--h1  is--modal  " >Чат с менеджером</h2>					<div class="chat__block">
+	<div class="chat__body">
+			</div>
+	<div class="chat__control">
+		<div class="chat__control-flex">
+			<label class="chat__file-btn">
+				<input type="file" class="chat__file-input">
+				<svg class="icon-svg icon-icon-docs-add" role="img">
+	<use xlink:href="./img/svg/sprite.svg#icon-docs-add"></use>
+</svg>			</label>	
+			<div class="chat__textarea" placeholder="Новое сообщение" contenteditable="true"></div>
+			<button type="button" class="chat__submit">			
+				<svg class="icon-svg icon-icon-submit" role="img">
+	<use xlink:href="./img/svg/sprite.svg#icon-submit"></use>
+</svg> 
+			</button>
+		</div>
+			</div>
+</div>							
+		</div>
+	</div>
+</div><div class="modal__block modals  fade  " id="modal-edit" tabindex="-1" role="dialog" aria-hidden="true">
+	<div class="modal__dialog  ">
+		<div class="modal__body  " >
+			<button type="button" class="modal__btn-close  modal-close" data-dismiss="modal" aria-hidden="true">
+				<svg class="icon-svg icon-icon-close" role="img">
+	<use xlink:href="./img/svg/sprite.svg#icon-close"></use>
+</svg>			</button>
+			
 										<form action="#" class="form__panel  is--modal">
 		<h2 class="page-header__heading  is--h1  is--modal  " >Расчётный счёт</h2>		<div class="form__grid  grid__row  is--modal">
 			
@@ -1751,7 +1800,7 @@
 			<div class="cols">				
 				
 <button type="submit" class="btn__item  is--full  is--primary" >
-		Сохранить
+		<span>Сохранить</span>
 </button>
 
 
@@ -1759,17 +1808,17 @@
 			<div class="cols">				
 				
 <button type="button" class="btn__item  is--full" >
-		Отменить
+		<span>Отменить</span>
 </button>
 
 
 			</div>
 		</div>
 	</form>
-							</div> 
+															
 		</div>
 	</div>
-</div>    	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+</div>     	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 <!--[if lt IE 9]>
 	<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
 	<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>

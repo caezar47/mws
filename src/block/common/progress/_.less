@@ -1,0 +1,56 @@
+.progress__{
+	&panel{
+		position: relative;
+		color: fadeout(@default, 50%);
+		progress{
+			.visually-hidden();
+		}
+		&.is--page{
+			&-project{
+				&-card{
+					.media-breakpoint-up(@md; {
+						margin-bottom: 20px;
+					}); 
+				}
+			}
+		}
+	}
+	&item{
+		border-radius: @site_br + 40px;
+		height: 10px;
+		background-color: @success;
+		overflow: hidden;
+		.progress__text + &{
+			margin-top: 10px;
+		}
+		.media-breakpoint-up(@md; {
+			height: 20px;		
+		});
+		&.is--xs{
+			height: 3px;
+			border-radius: 0;
+		}
+		&.is--table{
+			height: 10px;
+			max-width: 200px;
+			min-width: 180px;
+		}
+	}
+	&bar{		
+		background-color: @primary;
+		height: 100%;
+	}
+	&text{
+		.progress__item + &{
+			margin-top: 10px;
+			.media-breakpoint-up(@md; {
+				margin-top: 30px;				
+			});
+		}
+		span{
+			font-weight: 600;
+			color: @default;
+			margin-left: 6px;
+		}
+	}
+}

@@ -39,6 +39,9 @@
 		.modal__block.in &{
 			left: 0;
 		}
+		&.is--chat{
+			height: 100vh;
+		}
 		.media-breakpoint-up(@md; {
 			transform: translateY(~"calc(-50% - 60px)");				
 			left: inherit;			
@@ -47,14 +50,23 @@
 			}
 		});
 
-		top: 0%!important;
-		left: 0!important;
-		transform: translateY(0px)!important;
+		//top: 0%!important;
+		//left: 0!important;
+		//transform: translateY(0px)!important;
 	}
 	&body {
 		position: relative;
 		background-color: @modal_bg;
 		padding: 20px;
+		height: 100%;
+		&.is--chat{
+			display: flex;
+    		flex-direction: column;
+    		padding-bottom: 0;
+    		.page-header__heading.is--modal{
+    			margin-bottom: 5px;
+    		}
+		}
 		.media-breakpoint-up(@md; {
 			box-shadow: 20px 20px 30px fadeout(@default, 90%);
 			border-radius: @modal_border_rad;

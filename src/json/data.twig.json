@@ -30,9 +30,15 @@
 		"projects":"./projects.html",
 		"company":"./company.html",
 		"company_card":"./company-card.html",
+		"project":"./project.html",
+		"project_card":"./project-card.html",
 		"catalog":"./catalog.html",
 		"catalog_cat":"./catalog-cat.html",
 		"catalog_cat_list":"./catalog-cat-list.html",
+		"requests":"./requests.html",
+		"requests_empty":"./requests-empty.html",
+		"orders":"./orders.html",
+		"settings":"./settings.html",
 		"basket":"./basket.html"
 	},
 	"prefix":{

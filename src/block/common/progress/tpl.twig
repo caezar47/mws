@@ -1,0 +1,13 @@
+<div class="{{prefix}}panel  {{mod}}  {{group}}">
+	<progress max="100" value="{{completed}}"></progress>
+	{% if status %}
+	<p class="{{prefix}}text">Текущий статус: <span>{{status}}</span></p>
+	{% endif %}
+	<div class="{{prefix}}item  {{mod}}" {% if completed %}data-completed="{{completed}}"{% endif %}>
+		<div class="{{prefix}}bar" {% if completed %}style="width: {{completed}}%"{% endif %}></div>
+		<span class="sr-only">Выполнено на {{completed}}%</span>
+	</div>
+	{% if finish %}
+	<p class="{{prefix}}text">Дата окончания работ: <span>{{finish}}</span></p>
+	{% endif %}
+</div>
