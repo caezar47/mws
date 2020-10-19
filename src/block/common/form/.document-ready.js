@@ -17,6 +17,7 @@ input.on("input", function () {
 	$(this).siblings('.form__clear').addClass('is--active');
 });
 file.on('change', function(e) {
+	console.log($(this).val());
     $(this).siblings('.form__file-name').html($(this).val().replace(/.*(\/|\\)/, ''));
 });
 reset.on('click', function(e) {

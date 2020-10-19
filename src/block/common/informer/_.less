@@ -49,9 +49,16 @@
 					padding-left: 62px;
 				}
 			});
-			
 		}
 		&.is--order{
+			justify-content: space-between;
+			
+			.media-breakpoint-up(@md; {
+				box-shadow: none;
+				position: static;
+				padding: 35px 0 0px;
+				margin-bottom: 0;
+			});
 			
 		}
 	}
@@ -67,7 +74,8 @@
 				flex: inherit;				
 			});
 		}
-		&.is--basket{
+		&.is--basket,
+		&.is--order{
 			.heading2();
 			.media-breakpoint-up(@md; {
 				.heading1();
@@ -105,6 +113,28 @@
 				width: 100%;
 			}			
 		}
+		&.is--order{
+			flex: 1 1 100%;
+			.btn__item{
+				width: 100%;
+			}
+			.media-breakpoint-down(@md; {
+				.btn__item{
+					padding-top: 10px;
+					padding-bottom: 10px;
+				}
+			});
+			.media-breakpoint-up(@md; {
+				min-width: 266px;
+				flex: inherit;				
+			});			
+		}
 	}
-	&modal{}
+	&modal{
+		&.is--order{
+			.media-breakpoint-up(@md; {
+				display: none;
+			});
+		}
+	}
 }

@@ -1,6 +1,12 @@
 {% if view == "base" %}
-<div class="{{prefix}}panel">
-	<ul class="{{prefix}}nav  {{mod}}">
+<div class="{{prefix}}panel  {{group}}  {% if dropdown %}dropdown{% endif %}">
+	{% if dropdown %}
+		<a class="{{prefix}}dropdown" data-toggle="dropdown" href="#">
+			<span></span>
+		</a>
+	{% endif %}
+			
+	<ul class="{{prefix}}nav  {{mod}}  {% if dropdown %}is--dropdown{% endif %}">
 		{% for value in list %}
 		<li class="{{prefix}}item  {{mod}}  {{value.status}}">
 			<a class="{{prefix}}link  {{mod}}" href="#{{value.id}}" data-toggle="tab">{{value.name}}</a>
@@ -12,17 +18,53 @@
 <div class="{{prefix}}pane  {{value.status}}" id="{{value.id}}">
 	{{value.text}}
 	{% if value.type == "events" %}
-		{% include "../events/tpl.twig" with {
+		{# {% include "../events/tpl.twig" with {
 			prefix:"events__", 
 			mod: '',
 			list: value.list 
-		} %}	
+		} %}	 #}
+		{% include "../modals/tpl.twig" with {
+			prefix:			"modal__", 
+			mod:			"is--inline", 
+			ID: 			"modal-events", 
+			heading_level: 	'h2',
+			heading_mod: 	'is--h1  is--modal  visible--md',
+			heading: 		'Лента событий',
+			list: 			value.list,
+		} %}
 	{% endif %}
 	{% if value.type == "chat" %}
-		{% include "../chat/tpl.twig" with {
+		{# {% include "../chat/tpl.twig" with {
 			prefix:"chat__",
 			chat: chat
-		} %}	
+		} %} #}
+
+		{% include "../modals/tpl.twig" with {
+			prefix: 		"modal__", 
+			mod:			"is--inline  is--chat", 
+			ID: 			"modal-chat",	
+			heading: 		'Чат с менеджером',
+			heading_level: 	'h2',
+			heading_mod: 	'is--h1  is--modal  visible--md',
+			chat: 			chat,
+		} %} 	
+	{% endif %}
+	{% if value.type == "table" %}
+		{% include "../table/tpl.twig" with {
+			prefix:"table",
+			mod: "",
+			head:table_head,
+			body:table_body,
+		} %}
+	{% endif %}
+	{% if value.type == "form" %}
+		{% include "../form/form.twig" with {
+			view: 			value.form_view, 
+			prefix:			"form__",
+			ID: 			value.form_id,
+			mod:			value.form_mod, 
+			color:			value.form_color, 
+		} %}
 	{% endif %}
 </div>
 {% endfor %}

@@ -15,15 +15,15 @@
 .table-responsive{
 	overflow-x: auto;
 	min-height: 0.01%;
-	.media-breakpoint-down(@md; {
-		margin-right: -@container_gap;
-		margin-left: -@container_gap;
-		width: ~"calc(100% + @{container_gap} + @{container_gap})"; 
-	});
 	.media-breakpoint-down(@lg; {
 		width: 100%; 
 		overflow-y: hidden;
 		-ms-overflow-style: -ms-autohiding-scrollbar;
+	});
+	.media-breakpoint-down(@md; {
+		margin-right: -@container_gap;
+		margin-left: -@container_gap;
+		width: ~"calc(100% + @{container_gap} + @{container_gap})"; 
 	});
 	&.is--scroll{
 		overflow-y: hidden;
@@ -80,7 +80,7 @@
 		}
 		td, th{
 			border: 0;
-			vertical-align: middle;
+			vertical-align: top;
 			background-color: @white;
 			color: @table_color;
 			padding: @table_padding_tb @table_padding_lr+5px;

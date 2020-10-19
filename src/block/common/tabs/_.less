@@ -1,6 +1,45 @@
 .tabs__{ 
 	&panel{
 		margin-bottom: 10px;
+		&.is--page{
+			&-profile{
+				.media-breakpoint-up(@md; {
+					margin-bottom: 35px;
+				});
+			}
+		}
+		.is--page-basket-order &{
+			.media-breakpoint-down(@md; {
+				margin-top: -10px;
+				margin-bottom: 20px;
+			});
+		}
+		.section__section.is--tabs &{
+			.media-breakpoint-down(@md; {
+				display: none;
+			});
+		}
+	}
+	&dropdown{
+		border: 2px solid @info;
+		border-radius: @site_br;
+		color: @default;
+		display: none;
+		padding: 14px 36px 14px 18px;
+		.icon-drop-open();
+		background-position: right 18px center;
+		&:hover{
+			color: fadeout(@default, 50%);
+			.icon-drop-open(@c:'343a4080');
+		}
+		.open &{
+			color: fadeout(@default, 70%);
+			.icon-drop-close(@c:'343a404d');
+		}
+		.media-breakpoint-down(@md; {
+			display: block;
+		});
+		
 	}
 	&nav{
 		margin: 0;
@@ -11,9 +50,27 @@
 		position: relative;
 		background-color: @tabs_panel_bg;
 		border-radius: @tabs_panel_radius;
+		&.is--dropdown{
+			.media-breakpoint-down(@md; {
+				display: block;
+				margin-top: 5px;
+				position: absolute;
+			    top: 100%;
+			    left: 0;
+			    z-index: 900;
+			    display: none;
+			    right: 0;
+				.open &{
+					display: block;
+				}
+			});
+		}
 	}
 	&item{
 		&.is--base{
+			flex: 1 1 0;
+		}
+		&.is--sm{
 			flex: 1 1 0;
 		}	
 	}
@@ -22,7 +79,7 @@
 		position: relative;
 		display: block;
 		text-align: center;
-		.heading2();
+		.heading6();
 		color: @tabs_color;
 		padding: 15px 25px;
 		background-color: @tabs_bg;
@@ -34,6 +91,18 @@
 		}
 		&:hover{
 			color: @tabs_hover_color;			
+		}
+		.media-breakpoint-up(@md; {
+			.heading2();
+		});
+		&.is--sm{
+			.heading6();
+			padding: 10.5px 20px;
+		}
+		.is--dropdown &{
+			.media-breakpoint-down(@md; {
+				text-align: left;
+			});
 		}
 		.tabs__item.active &{
 			box-shadow: @tabs_active_shadow;
@@ -48,6 +117,11 @@
 		display: none;
 		&.active{
 			display: block;
+		}
+		.section__section.is--tabs &{
+			.media-breakpoint-down(@md; {
+				display: block;
+			});
 		}
 	}
 }

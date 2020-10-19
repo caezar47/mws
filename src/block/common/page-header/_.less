@@ -22,6 +22,22 @@
 					});
 				}
 			}
+			&-profile{
+				&{
+					.heading2();
+					.media-breakpoint-up(@md; {
+						.heading1();
+					});					
+				}
+				&-company{
+					padding-top: 5px;
+					color: fadeout(@default, 50%);
+					.heading2();
+					.media-breakpoint-up(@md; {
+						.heading1();
+					});
+				}
+			}
 		}
 		&.is--modal{
 			margin-bottom: 20px;
@@ -29,6 +45,9 @@
 			.media-breakpoint-up(@md; {
 				margin-bottom: 40px;
 				padding-right: 0;
+				&.is--page-basket-order{
+					margin-bottom: 13px;
+				}
 			});
 		}
 		&.is--uikit{

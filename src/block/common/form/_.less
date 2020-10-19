@@ -2,6 +2,17 @@
 	&block{		
 	}
 	&panel{
+		&.is--page{
+			&-basket{
+				&-order{
+					.media-breakpoint-up(@md; {
+						background-color: @warning;
+						border-radius: @site_br;
+						padding: 40px;							
+					});
+				}
+			}
+		}
 	}
 	&container{		
 	}
@@ -213,6 +224,10 @@
 				border-radius: @radio_panel_radius;
 				padding: 18px;
 				transition: @trs-site;
+				.media-breakpoint-down(@md; {
+					.heading6();
+					padding: 13px 18px;
+				});
 				.form__radio-input:focus ~ &,
 				&.is--hover,
 				&:hover{
@@ -284,7 +299,9 @@
 		}
 		&-note{
 			display: block;
-			margin-top: 5px;
+			.media-breakpoint-up(@md; {
+				margin-top: 5px;
+			});
 		}
 	}
 	&qty{
@@ -337,6 +354,102 @@
 			&::-webkit-outer-spin-button {
 				-webkit-appearance: none;
 				margin: 0;
+			}
+		}
+	}
+	&photo{
+		&{
+			position: relative;
+			border-radius: @site_br;
+			justify-content: center;
+			align-items: center;
+			display: flex;
+			flex-direction: column;
+			width: 100%;
+			height: 60px;
+			border: 2px solid @info;
+			padding: 20px 15px;
+			color: fadeout(@default, 50%);
+			.heading6();
+			text-align: center;
+			cursor: pointer;
+			.media-breakpoint-up(@md; {
+				height: 200px;
+			});
+			&.is--hidden{
+				display: none;
+			}			
+		}
+		&-input{
+			.visually-hidden();			
+		}
+		&-icon{
+			width: 28px;
+			height: 20px;
+			.media-breakpoint-up(@md; {
+				width: 55px;
+				height: 40px;
+			});
+		}
+		&-name{
+			display: none;
+			.media-breakpoint-up(@md; {
+				display: block;
+				margin-top: 10px;
+			});
+		}
+		&-result{
+			position: relative;
+			overflow: hidden;
+			border-radius: @site_br;
+			display: none;
+			height: 60px;
+			.media-breakpoint-up(@md; {
+				height: 200px;
+			});
+			&.is--visible{
+				display: block;
+			}			
+			img{
+				width: 100%;
+				height: 100%;
+				object-position: center;
+				object-fit: cover;
+			}
+		}
+		&-edit{
+			&{
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				width: 100%;
+				height: 50%;
+				background-color: fadeout(#F6F7F8, 70%);
+				color: @white;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				transition: @trs-site;
+				cursor: pointer;
+				svg{
+					width: 20px;
+					height: 20px;
+				}
+				.media-breakpoint-up(@md; {
+					background-color: fadeout(#F6F7F8, 0%);
+					color: @danger;
+					border-radius: @site_br;
+					width: 52px;
+					height: 52px;
+					bottom: 10px;
+					left: 10px;
+					&:hover{
+						color: @default;
+					}
+				});
+			}
+			&-input{
+				.visually-hidden();			
 			}
 		}
 	}

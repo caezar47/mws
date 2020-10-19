@@ -12,7 +12,7 @@
 		text-align: center;	
 		color: @btn_color;
 		//padding: 15px 57px;
-		padding: 15px 30px;
+		padding: 15px 20px;
 		&.is--hover,
 		&:hover{	
 			color: @btn_hover_color;		
@@ -42,7 +42,7 @@
 			margin-right: 10px;
 		}
 		&.is--sm{
-			padding: 10px 30px;
+			padding: 10px 20px;
 		}
 		&.is--full{
 			width: 100%;
@@ -56,7 +56,7 @@
 				display: none;
 			}
 			.media-breakpoint-up(@md; {
-				padding: 10px 30px;
+				padding: 10px 20px;
 				min-width: 200px;
 				svg{
 					margin-right: 10px;
@@ -140,9 +140,13 @@
 	&more{
 		&{
 			display: block;
-			width: @more_width;
-			height: @more_height;
+			width: @more_width - 5;
+			height: @more_height - 5;
 			color: @more_color;
+			.media-breakpoint-up(@md; {
+				width: @more_width;
+				height: @more_height;				
+			});
 			&:hover{
 				color: @more_hover_color;
 			}

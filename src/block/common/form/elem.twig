@@ -16,7 +16,7 @@
 	{% for value in list %}
 	<div class="{{prefix}}item  {{mod}}  {{group}}">
 		<label class="{{prefix}}radio  {{mod}}  {{color}}">
-			<input class="{{prefix}}radio-input" type="radio" id="{{value.form_id}}[{{value.id}}]" name="f[{{value.name}}]" {{value.status}}>
+			<input class="{{prefix}}radio-input" type="radio" id="{{value.form_id}}[{{value.id}}]" name="f[{{value.form_id}}]" {{value.status}}>
 			<p class="{{prefix}}radio-wrap  {{mod}} {{value.mod}}">
 				{% if value.type == "button" %}
 				<span class="{{prefix}}radio-icon  {{mod}}"></span>
@@ -62,6 +62,29 @@
 			<button type="button" {{status}} class="{{prefix}}qty-btn  is--minus"></button>		
 			<input type="number" {{status}} class="{{prefix}}qty-input" {% if value %}value="19"{% endif %}>
 			<button type="button" {{status}} class="{{prefix}}qty-btn  is--plus"></button>		
+		</div>
+	</div>
+{% endif %}
+
+{% if view == "photo" %}
+	<div class="{{prefix}}item  {{mod}}">
+		<label class="{{prefix}}photo  {{mod}}">
+			<input class="{{prefix}}photo-input  {{mod}}  {{color}}" type="file" id="{{form_id}}[{{id}}]" data-upload name="f[{{name}}]">
+			{% if icon %}
+			<span class="{{prefix}}photo-icon  {{mod}}  {{color}}">
+				{% include "../svg-sprite/svg.twig" with {icon:icon} %}
+			</span> 
+			{% endif %}
+			{% if name %}
+			<span class="{{prefix}}photo-name  {{mod}}  {{color}}">{{name}}</span>
+			{% endif %}
+		</label>
+		<div class="{{prefix}}photo-result  {{mod}}">
+			<label class="{{prefix}}photo-edit  {{mod}}">
+				<input class="{{prefix}}photo-edit-input  {{mod}}  {{color}}" type="file" data-upload>
+				{% include "../svg-sprite/svg.twig" with {icon:'icon-edit'} %}
+			</label>
+			<img src="#" class="{{prefix}}photo-img  {{mod}}  {{color}}"  alt="">
 		</div>
 	</div>
 {% endif %}

@@ -1,21 +1,20 @@
 <div class="{{prefix}}block modals  fade  {{mod}}" id="{{ID}}" tabindex="-1" role="dialog" aria-hidden="true">
 	<div class="{{prefix}}dialog  {{mod}}">
 		<div class="{{prefix}}body  {{mod}}" >
-			<button type="button" class="{{prefix}}btn-close  modal-close" data-dismiss="modal" aria-hidden="true">
+			<button type="button" class="{{prefix}}btn-close  {{mod}}" data-dismiss="modal" aria-hidden="true">
 				{% include "../svg-sprite/svg.twig" with {icon:"icon-close"} %}
 			</button>
 			{# <div class="{{prefix}}content  {{mod}}"> #}
-				{% if ID == "modal-edit" %}
+				{% if view == "form" %}
 					{% include "../form/form.twig" with {
-						view: 			"infocard_edit", 
+						view: 			form_view, 
 						prefix:			"form__",
 						mod:			"is--modal", 
 						color:			"", 
-						ID: 			"fm_edit",
-						heading:		"Расчётный счёт", 
-						heading_level:	"h2", 
-						heading_group:	"", 
-						heading_mod:	"is--h1  is--modal",
+						ID: 			form_id,
+						heading:		heading, 
+						heading_level:	heading_level, 
+						heading_mod:	heading_mod,
 					} %}
 				{% endif %}
 				{% if ID == "modal-events" %}
@@ -44,6 +43,93 @@
 						prefix:"chat__",
 						chat: chat
 					} %}
+				{% endif %}
+				{% if view == "basket_order" %}
+					{% include "../page-header/elem.twig" with {
+						prefix:"page-header__", 
+						mod:heading_mod,
+						attr:heading_attr, 
+						level:heading_level, 
+						heading:heading
+					} %}
+					<div class="{{content_prefix}}section  {{content_mod}}  is--order">
+						<div class="{{content_prefix}}card  {{content_mod}}">
+							<div class="grid__row  is--gap-sm">
+								{% include "../card/card.twig" with {
+									view:"basket",
+									prefix:"card__", 
+									mod:"is--basket", 
+									group:"is--view-order", 
+									list: [
+										{					
+											"link":"#",
+											"img": [path.img,"/default/catalog-lock.jpg"].join(""), 	 
+											"heading":"Услуги по ликвидации юридического&nbsp;лица",
+											"decs":'S, жёлтый',
+											"cost":'19 000 ₽',
+											"qty":"19",
+										},
+										{					
+											"link":"#",
+											"img": [path.img,"/default/catalog-lock.jpg"].join(""), 	 
+											"heading":"Регистрация ИП",
+											"decs":'S, жёлтый',
+											"cost":'500 ₽',
+											"qty":"19",
+										},
+										{					
+											"link":"#",
+											"img": [path.img,"/default/catalog-lock.jpg"].join(""), 	 
+											"heading":"Услуги по ликвидации юридического&nbsp;лица",
+											"decs":'S, жёлтый',
+											"cost":'19 000 ₽',
+											"qty":"19",
+										},
+										{					
+											"link":"#",
+											"img": [path.img,"/default/catalog-lock.jpg"].join(""), 	 
+											"heading":"Регистрация ИП",
+											"decs":'S, жёлтый',
+											"cost":'500 ₽',
+											"qty":"19",
+										},
+										{					
+											"link":"#",
+											"img": [path.img,"/default/catalog-lock.jpg"].join(""), 	 
+											"heading":"Услуги по ликвидации юридического&nbsp;лица",
+											"decs":'S, жёлтый',
+											"cost":'19 000 ₽',
+											"qty":"19",
+										},
+										{					
+											"link":"#",
+											"img": [path.img,"/default/catalog-lock.jpg"].join(""), 	 
+											"heading":"Регистрация ИП",
+											"decs":'S, жёлтый',
+											"cost":'500 ₽',
+											"qty":"19",
+										},
+										{					
+											"link":"#",
+											"img": [path.img,"/default/catalog-lock.jpg"].join(""), 	 
+											"heading":"Услуги по ликвидации юридического&nbsp;лица",
+											"decs":'S, жёлтый',
+											"cost":'19 000 ₽',
+											"qty":"19",
+										},
+										{					
+											"link":"#",
+											"img": [path.img,"/default/catalog-lock.jpg"].join(""), 	 
+											"heading":"Регистрация ИП",
+											"decs":'S, жёлтый',
+											"cost":'500 ₽',
+											"qty":"19",
+										},
+									]
+								} %}
+							</div>
+						</div>
+					</div>
 				{% endif %}
 			{# </div>  #}
 		</div>

@@ -1,8 +1,8 @@
 .container {
 	width: 100%;
 	max-width: @container;
-	padding-left: @container_gap;
-	padding-right: @container_gap;
+	padding-left: @container_gap; //20px
+	padding-right: @container_gap; //20px;
 }
 .row {
 	display: flex;
@@ -11,9 +11,9 @@
 	margin-right: -(@container_gap - 10);
 	&.is--gutter{
 		&{
-			margin-top: -20px;
+			margin-top: -@container_gap;
 			& > .cols{
-				padding-top: 20px;
+				padding-top: @container_gap;
 			}
 		}
 		&-sm{
@@ -24,6 +24,14 @@
 		}
 	}
 	&.is--gap{
+		&-xl{			
+			margin-left: -@container_gap;
+			margin-right: -@container_gap;
+			& > .cols{				
+				padding-left: @container_gap;
+				padding-right: @container_gap;
+			}
+		}
 		&-lg{			
 			margin-left: -(@container_gap - 5);
 			margin-right: -(@container_gap - 5);
@@ -49,7 +57,12 @@
 .grid__{
 	&row{
 		display: grid;
-		grid-gap: @container_gap;		
+		grid-gap: @container_gap;
+		&.is--gap{
+			&-sm{
+				grid-gap: @container_gap - 10;
+			}
+		}	
 	}
 	&cols{
 		&.is--mla{

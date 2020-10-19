@@ -25,6 +25,13 @@
 		//display: block;
 		//opacity: 1;
 		//background: @black;
+		.media-breakpoint-up(@md; {
+			&.is--inline{
+				display: block!important;
+				position: initial;
+				opacity: 1;
+			}
+		});
 	}
 	&dialog {
 		transition: all 0.5s;
@@ -69,6 +76,15 @@
 			.modal__block.in &{
 				left: inherit;
 			}
+			&.is--inline{
+				max-height: initial;
+				height: initial;
+				box-shadow: initial;
+				top: initial;
+				transform: initial;
+				background-color: initial;
+				overflow: initial;
+			}
 		});
 
 		//top: 0%!important;
@@ -100,6 +116,11 @@
 			border-radius: @modal_border_rad;
 			//margin: 60px 0;
 			padding: 60px 115px;
+			&.is--inline{
+				box-shadow: initial;
+				border-radius: initial;
+				padding: initial;
+			}
 		});
 	}
 	&btn-close{
@@ -125,7 +146,10 @@
 		}
 		.media-breakpoint-up(@md; {
 			top: 12px;
-			right: 10px;
+			right: 10px;			
+			&.is--inline{
+				display: none;
+			}
 		});
 	}
 	&content{

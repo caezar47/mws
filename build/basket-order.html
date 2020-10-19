@@ -207,30 +207,216 @@
         <main class="section__wrap">
             	<section class="section__content">
 		<div class="section__container container">			
-			<div class="section__row  row  is--page-basket  is--heading">
-				<div class="cols">
-					<h1 class="page-header__heading    " >В вашей корзине 26 товаров</h1>				</div>
-				<div class="cols  is--more  hidden--md">				
+			<div class="section__grid  grid__row  is--page-basket-order">
+				<div>
 					
 
 
-<div class="btn__more-dropdown  dropdown">
-	<a class="btn__more" data-toggle="dropdown" href="#">
-		<svg class="icon-svg icon-icon-more" role="img">
-	<use xlink:href="./img/svg/sprite.svg#icon-more"></use>
-</svg>	</a>
-	<ul class="btn__more-menu  dropdown-menu  is--right">
-				<li>
-			<button type="button" class="btn__item  is--primary  is--sm">Очистить</button>
+<a href="./basket.html" class="btn__link-back  ">
+	<svg class="icon-svg icon-icon-back" role="img">
+	<use xlink:href="./img/svg/sprite.svg#icon-back"></use>
+</svg>	<span>К корзине</span>
+</a>  
+					<h1 class="page-header__heading  is--page-default  " >Оформление заказа</h1>					<div class="section__section  is--page-basket-order">
+						<h2 class="page-header__heading  is--page-default-sm">Плательщик</h2>
+
+						<div class="tabs__panel  is--page-basket-order  ">
+				
+	<ul class="tabs__nav  is--base  ">
+				<li class="tabs__item  is--base  active">
+			<a class="tabs__link  is--base" href="#tabs1" data-toggle="tab">Физ. лицо</a>
+		</li>
+				<li class="tabs__item  is--base  ">
+			<a class="tabs__link  is--base" href="#tabs2" data-toggle="tab">Юр. лицо</a>
 		</li>
 			</ul>
 </div>
+<div class="tabs__pane  active" id="tabs1">
+	
+							<div class="form__panel  is--page-basket-order">
+		<div class="form__grid  grid__row  is--page-basket-order">
+			
+
+		
+	<label class="form__item    "  data-error="Обязательно к заполнению">
+					<p class="form__label    ">Фамилия, имя и отчество</p>
+				<input type="text" class="form__control            "   required placeholder="Фамилия, имя и отчество"  >
+	</label>
+		
+	<label class="form__item    "  data-error="Обязательно к заполнению">
+					<p class="form__label    ">Город</p>
+				<input type="text" class="form__control            "   required placeholder="Город"  >
+	</label>
+		
+	<label class="form__item    "  data-error="Обязательно к заполнению">
+					<p class="form__label    ">Расчётный счёт</p>
+				<input type="text" class="form__control            "   required placeholder="Расчётный счёт"  >
+	</label>
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+		</div>
+	</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</div>
+<div class="tabs__pane  " id="tabs2">
+	
 				</div>
-			</div>
+					</div>
+					<div class="section__section  is--page-basket-order">
+						<h2 class="page-header__heading  is--page-default-sm">Доставка</h2>
+							<div class="form__panel  is--page-basket-order">
+		<div class="form__grid  grid__row  is--page-basket-order  is--gap-sm">
+			
+		<div class="form__item  is--panel  ">
+		<label class="form__radio  is--panel  ">
+			<input class="form__radio-input" type="radio" id="f_order[radio1]" name="f[f_order]" >
+			<p class="form__radio-wrap  is--panel ">
+												<span class="form__radio-name">Самовывоз</span>
+												<span class="form__radio-note">Со склада, на следующий день, бесплатно</span>
+							</p>
+		</label>
+	</div>
+		<div class="form__item  is--panel  ">
+		<label class="form__radio  is--panel  ">
+			<input class="form__radio-input" type="radio" id="f_order[radio2]" name="f[f_order]" >
+			<p class="form__radio-wrap  is--panel ">
+												<span class="form__radio-name">Курьером</span>
+												<span class="form__radio-note">В любую точку, 5 дней, 550 ₽</span>
+							</p>
+		</label>
+	</div>
+		<div class="form__item  is--panel  ">
+		<label class="form__radio  is--panel  ">
+			<input class="form__radio-input" type="radio" id="f_order[radio3]" name="f[f_order]" >
+			<p class="form__radio-wrap  is--panel ">
+												<span class="form__radio-name">Почтой</span>
+												<span class="form__radio-note">По России, от 2 до 4 дней, 350 ₽</span>
+							</p>
+		</label>
+	</div>
+	
 
-			<div class="section__grid  grid__row  is--page-basket">	
-						
-	<table class="card__item  is--basket  is--view-card">
+
+
+
+
+
+
+
+
+
+
+
+
+
+		</div>
+	</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+					</div>
+					<div class="section__section  is--page-basket-order">
+						<h2 class="page-header__heading  is--page-default-sm">Оплата</h2>
+							<div class="form__panel  is--page-basket-order">
+		<div class="form__grid  grid__row  is--page-basket-order  is--gap-sm">
+			
+		<div class="form__item  is--panel  ">
+		<label class="form__radio  is--panel  ">
+			<input class="form__radio-input" type="radio" id="f_order[radio1]" name="f[f_order]" >
+			<p class="form__radio-wrap  is--panel ">
+												<span class="form__radio-name">Картой</span>
+											</p>
+		</label>
+	</div>
+		<div class="form__item  is--panel  ">
+		<label class="form__radio  is--panel  ">
+			<input class="form__radio-input" type="radio" id="f_order[radio2]" name="f[f_order]" >
+			<p class="form__radio-wrap  is--panel ">
+												<span class="form__radio-name">Наличными или картой курьеру</span>
+											</p>
+		</label>
+	</div>
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		</div>
+	</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+					</div>
+				</div>
+				<div data-grid-order>
+
+					<div class="modal__block modals  fade  is--inline" id="modal-order" tabindex="-1" role="dialog" aria-hidden="true">
+	<div class="modal__dialog  is--inline">
+		<div class="modal__body  is--inline" >
+			<button type="button" class="modal__btn-close  is--inline" data-dismiss="modal" aria-hidden="true">
+				<svg class="icon-svg icon-icon-close" role="img">
+	<use xlink:href="./img/svg/sprite.svg#icon-close"></use>
+</svg>			</button>
+			
+																					<h2 class="page-header__heading  is--h1  is--modal  is--page-basket-order  " >Ваш заказ</h2>					<div class="section__section  is--page-basket-order  is--order">
+						<div class="section__card  is--page-basket-order">
+							<div class="grid__row  is--gap-sm">
+										
+	<table class="card__item  is--basket  is--view-order">
 		<tr>			
 			<td class="card__wrap  is--prev  is--basket">
 				<picture class="card__preview  is--basket">
@@ -238,7 +424,7 @@
 				</picture>
 			</td>
 			<td class="card__wrap  is--heading  is--basket">
-				<h5 class="card__heading  is--basket">Услуги по ликвидации юридического лица</h5>
+				<h5 class="card__heading  is--basket">Услуги по ликвидации юридического&nbsp;лица</h5>
 			</td>
 			<td class="card__wrap  is--decs  is--basket">
 				<p class="card__decs  is--basket">S, жёлтый</p>
@@ -287,7 +473,7 @@
 		</tr>
 	</table>
 		
-	<table class="card__item  is--basket  is--view-card">
+	<table class="card__item  is--basket  is--view-order">
 		<tr>			
 			<td class="card__wrap  is--prev  is--basket">
 				<picture class="card__preview  is--basket">
@@ -344,7 +530,7 @@
 		</tr>
 	</table>
 		
-	<table class="card__item  is--basket  is--view-card">
+	<table class="card__item  is--basket  is--view-order">
 		<tr>			
 			<td class="card__wrap  is--prev  is--basket">
 				<picture class="card__preview  is--basket">
@@ -352,7 +538,7 @@
 				</picture>
 			</td>
 			<td class="card__wrap  is--heading  is--basket">
-				<h5 class="card__heading  is--basket">Услуги по ликвидации юридического лица</h5>
+				<h5 class="card__heading  is--basket">Услуги по ликвидации юридического&nbsp;лица</h5>
 			</td>
 			<td class="card__wrap  is--decs  is--basket">
 				<p class="card__decs  is--basket">S, жёлтый</p>
@@ -401,7 +587,7 @@
 		</tr>
 	</table>
 		
-	<table class="card__item  is--basket  is--view-card">
+	<table class="card__item  is--basket  is--view-order">
 		<tr>			
 			<td class="card__wrap  is--prev  is--basket">
 				<picture class="card__preview  is--basket">
@@ -458,7 +644,178 @@
 		</tr>
 	</table>
 		
-	<table class="card__item  is--basket  is--view-card">
+	<table class="card__item  is--basket  is--view-order">
+		<tr>			
+			<td class="card__wrap  is--prev  is--basket">
+				<picture class="card__preview  is--basket">
+					<img src="./img/default/catalog-lock.jpg" class="img-responsive" alt="">
+				</picture>
+			</td>
+			<td class="card__wrap  is--heading  is--basket">
+				<h5 class="card__heading  is--basket">Услуги по ликвидации юридического&nbsp;лица</h5>
+			</td>
+			<td class="card__wrap  is--decs  is--basket">
+				<p class="card__decs  is--basket">S, жёлтый</p>
+			</td>	
+			<td class="card__wrap  is--cost  is--basket">
+								<p class="card__cost-value  is--basket">
+					19 000 ₽					
+				</p>
+					
+			</td>
+			<td class="card__wrap  is--qty  is--basket">
+				
+
+
+
+	<div class="form__item  is--qty">
+		<div class="form__qty">
+			<button type="button"  class="form__qty-btn  is--minus"></button>		
+			<input type="number"  class="form__qty-input" value="19">
+			<button type="button"  class="form__qty-btn  is--plus"></button>		
+		</div>
+	</div>
+
+
+
+
+
+
+
+
+
+
+
+
+			</td>	
+			<td class="card__wrap  is--del  is--basket">
+				
+
+
+<a href="#" class="btn__icon  is--outline">
+	<svg class="icon-svg icon-icon-del" role="img">
+	<use xlink:href="./img/svg/sprite.svg#icon-del"></use>
+</svg></a>  
+				
+			</td>
+		</tr>
+	</table>
+		
+	<table class="card__item  is--basket  is--view-order">
+		<tr>			
+			<td class="card__wrap  is--prev  is--basket">
+				<picture class="card__preview  is--basket">
+					<img src="./img/default/catalog-lock.jpg" class="img-responsive" alt="">
+				</picture>
+			</td>
+			<td class="card__wrap  is--heading  is--basket">
+				<h5 class="card__heading  is--basket">Регистрация ИП</h5>
+			</td>
+			<td class="card__wrap  is--decs  is--basket">
+				<p class="card__decs  is--basket">S, жёлтый</p>
+			</td>	
+			<td class="card__wrap  is--cost  is--basket">
+								<p class="card__cost-value  is--basket">
+					500 ₽					
+				</p>
+					
+			</td>
+			<td class="card__wrap  is--qty  is--basket">
+				
+
+
+
+	<div class="form__item  is--qty">
+		<div class="form__qty">
+			<button type="button"  class="form__qty-btn  is--minus"></button>		
+			<input type="number"  class="form__qty-input" value="19">
+			<button type="button"  class="form__qty-btn  is--plus"></button>		
+		</div>
+	</div>
+
+
+
+
+
+
+
+
+
+
+
+
+			</td>	
+			<td class="card__wrap  is--del  is--basket">
+				
+
+
+<a href="#" class="btn__icon  is--outline">
+	<svg class="icon-svg icon-icon-del" role="img">
+	<use xlink:href="./img/svg/sprite.svg#icon-del"></use>
+</svg></a>  
+				
+			</td>
+		</tr>
+	</table>
+		
+	<table class="card__item  is--basket  is--view-order">
+		<tr>			
+			<td class="card__wrap  is--prev  is--basket">
+				<picture class="card__preview  is--basket">
+					<img src="./img/default/catalog-lock.jpg" class="img-responsive" alt="">
+				</picture>
+			</td>
+			<td class="card__wrap  is--heading  is--basket">
+				<h5 class="card__heading  is--basket">Услуги по ликвидации юридического&nbsp;лица</h5>
+			</td>
+			<td class="card__wrap  is--decs  is--basket">
+				<p class="card__decs  is--basket">S, жёлтый</p>
+			</td>	
+			<td class="card__wrap  is--cost  is--basket">
+								<p class="card__cost-value  is--basket">
+					19 000 ₽					
+				</p>
+					
+			</td>
+			<td class="card__wrap  is--qty  is--basket">
+				
+
+
+
+	<div class="form__item  is--qty">
+		<div class="form__qty">
+			<button type="button"  class="form__qty-btn  is--minus"></button>		
+			<input type="number"  class="form__qty-input" value="19">
+			<button type="button"  class="form__qty-btn  is--plus"></button>		
+		</div>
+	</div>
+
+
+
+
+
+
+
+
+
+
+
+
+			</td>	
+			<td class="card__wrap  is--del  is--basket">
+				
+
+
+<a href="#" class="btn__icon  is--outline">
+	<svg class="icon-svg icon-icon-del" role="img">
+	<use xlink:href="./img/svg/sprite.svg#icon-del"></use>
+</svg></a>  
+				
+			</td>
+		</tr>
+	</table>
+		
+	<table class="card__item  is--basket  is--view-order">
 		<tr>			
 			<td class="card__wrap  is--prev  is--basket">
 				<picture class="card__preview  is--basket">
@@ -515,19 +872,40 @@
 		</tr>
 	</table>
 	
-			</div>
+							</div>
+						</div>
+					</div>
+							
+		</div>
+	</div>
+</div> 
+					
 
-			<div class="informer__panel  is--basket  ">
-	<p class="informer__name  is--basket">Итого: <span>21 580 ₽</span></p>
-		<div class="informer__btn  is--basket">
+					<div class="informer__panel  is--order  ">
+	<p class="informer__name  is--order">Итого: <span>21 580 ₽</span></p>
+		<div class="informer__modal  is--order">		
+		
+<button type="" class="link__item  " type="button" data-toggle="modal" data-target="#modal-order">
+		<span>Ваш заказ</span>
+</button>
+
+
+	</div>
+		<div class="informer__btn  is--order">
 		
 
-<a href="./basket-order.html" class="btn__item  is--primary">
-	<span>Перейти к оформлению</span>
+<a href="#" class="btn__item  is--primary">
+	<span>Оформить заказ</span>
 </a>  
 
 	</div>
-</div>		</div>
+</div>					
+				</div>
+			</div>
+	
+
+			
+		</div>
 	</section>
         </main>
 

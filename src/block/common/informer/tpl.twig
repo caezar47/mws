@@ -1,7 +1,15 @@
 <div class="{{prefix}}panel  {{mod}}  {{status}}">
 	<p class="{{prefix}}name  {{mod}}">{{name}}</p>
 	{% if modal %}
-	<div class="{{prefix}}modal  {{mod}}"></div>
+	<div class="{{prefix}}modal  {{mod}}">		
+		{% include "../button/btn.twig" with {
+			view:"btn",
+			prefix:"link__", 
+			attr:modal_attr,
+			mod:modal_mod,  
+			name:modal
+		} %}
+	</div>
 	{% endif %}
 	<div class="{{prefix}}btn  {{mod}}">
 		{% include "../button/btn.twig" with {
