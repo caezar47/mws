@@ -215,12 +215,7 @@
     	{% include "../block/common/script/script.twig"%}
         <script>
             var photo = $('[data-upload]');  
-            var photo_img = $('.form__photo-img');  
-            photo.on('change', function(e) {
-                console.log($(this).val());
-                //$(this).siblings('.form__file-name').html($(this).val().replace(/.*(\/|\\)/, ''));
-            });  
-
+            var photo_img = $('.form__photo-img');
             function readURL(input) {
                 if (input.files && input.files[0]) {
                     var reader = new FileReader();

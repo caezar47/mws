@@ -6,7 +6,7 @@
 		</a>
 	{% endif %}
 			
-	<ul class="{{prefix}}nav  {{mod}}  {% if dropdown %}is--dropdown{% endif %}">
+	<ul class="{{prefix}}nav  {{mod}}  {% if dropdown %}is--dropdown{% endif %}  {% if scroll %}nav-tabs{% endif %}">
 		{% for value in list %}
 		<li class="{{prefix}}item  {{mod}}  {{value.status}}">
 			<a class="{{prefix}}link  {{mod}}" href="#{{value.id}}" data-toggle="tab">{{value.name}}</a>

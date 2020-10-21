@@ -12,10 +12,6 @@ h6{
 //p{margin: 0 0 10px;}
 i, em{font-style: italic;}
 b, strong{font-weight: 700}
-.page_header(){
-	font-family: @page_header_ff;
-	color: @page_header_color;
-}
 h1,
 .is--h1{
 	.heading1();	
@@ -50,41 +46,6 @@ ul{
 		li{
 			margin-bottom: 10px; 
 			&:last-child{margin-bottom: 0;}			
-		}
-	}
-}
-.align--{
-	&left{
-		text-align: left;
-	}
-	&right{
-		text-align: right;
-	}
-	&center{
-		text-align: center;
-	}
-	&center-notsmart{
-		@media @media-point-notsmart {
-			text-align: center;
-		}
-	}
-}
-.justify--{
-	&start{
-		justify-content: flex-start;
-	}
-	&end{
-		justify-content: flex-end;
-	}
-	&center{
-		justify-content: center;
-	}
-	&between{
-		justify-content: space-between;
-	}
-	&center-notsmart{
-		@media @media-point-notsmart {
-			justify-content: center;
 		}
 	}
 }

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html dir="ltr" lang="ru-RU"> 
 	<head>	
-    	{% include "../block/common/head/head.twig" with {title:"Корзина"}  %}
+    	{% include "../block/common/head/head.twig" with {title:"Ваш заказ оформлен!"}  %}
 	</head>
 	<body>
         {% include "../block/common/navbar/navbar.twig" with {
@@ -21,26 +21,25 @@
         } %} 
 
         <main class="{{prefix.section}}wrap">
-            {% include "../block/page/basket.twig" with {
-                view:"page", 
+            {% include "../block/page/empty.twig" with {
+                view:"empty", 
                 content_prefix:prefix.section, 
-                content_mod:"is--page-basket", 
+                content_mod:"is--page-empty", 
                 heading_group:"", 
                 heading_attr:"",
                 heading_mod:"", 
                 heading_level:"h1", 
-                heading:"В вашей корзине 26 товаров",              
+                heading:"Ваш заказ оформлен!",  
+                bg: [path.img,"/default/basket-order-empty.svg"].join(""),
+                btn_view:'link',             
+                btn_name:'Мои заказы',             
+                btn_link:page.order,             
+                btn_attr:'',             
+                btn_mod:'is--primary', 
             } %}
         </main>
 
         {% include "../block/common/modals/include.twig"%}
     	{% include "../block/common/script/script.twig"%}
-        <script>
-            var del = $('[data-del]');
-            del.on('click', function(e) {
-                e.preventDefault();
-                $(this).closest('.card__item.is--basket').remove();
-            });
-        </script>
 	</body>
 </html> 

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html dir="ltr" lang="ru-RU"> 
 	<head>	
-    	{% include "../block/common/head/head.twig" with {title:"Корзина"}  %}
+    	{% include "../block/common/head/head.twig" with {title:"Настройки"}  %}
 	</head>
 	<body>
         {% include "../block/common/navbar/navbar.twig" with {
@@ -17,30 +17,23 @@
             prefix:"navbar__",
             collapse:"",  
             mod:"",            
-            active:page.basket,
+            active:page.settings,
         } %} 
 
         <main class="{{prefix.section}}wrap">
-            {% include "../block/page/basket.twig" with {
+            {% include "../block/page/settings.twig" with {
                 view:"page", 
                 content_prefix:prefix.section, 
-                content_mod:"is--page-basket", 
+                content_mod:"is--page-settings", 
                 heading_group:"", 
                 heading_attr:"",
-                heading_mod:"", 
-                heading_level:"h1", 
-                heading:"В вашей корзине 26 товаров",              
+                heading_mod:"is--page-default-xs", 
+                heading_level:"h1",
+                heading:"Настройки",           
             } %}
         </main>
 
         {% include "../block/common/modals/include.twig"%}
     	{% include "../block/common/script/script.twig"%}
-        <script>
-            var del = $('[data-del]');
-            del.on('click', function(e) {
-                e.preventDefault();
-                $(this).closest('.card__item.is--basket').remove();
-            });
-        </script>
 	</body>
-</html> 
+</html>

@@ -1,23 +1,60 @@
 <!DOCTYPE html>
 <html dir="ltr" lang="ru-RU"> 
 	<head>	
-    	{% include "../block/common/head/head.twig" with {title:"index"}  %}
+    	{% include "../block/common/head/head.twig" with {title:"Карта сайта"}  %}
 	</head>
 	<body>
         {% include "../block/common/navbar/navbar.twig" with {
             view: "header",
             prefix:"navbar__", 
-            mod:""
+            mod:"",
+            basket:"Корзина",
+            basket_qty:"999",
+            basket_cost:"15 900",
         } %}
         {% include "../block/common/navbar/navbar.twig" with {
             view: "aside",
             prefix:"navbar__",
             collapse:"",  
-            mod:""
+            mod:"",            
+            active:"",
         } %} 
-
+        
         <main class="{{prefix.section}}wrap">
-           
+            {% include "../block/page/uikit.twig" with {
+                view:"sitemap", 
+                content_prefix:prefix.section, 
+                content_mod:"", 
+                heading_group:"", 
+                heading_attr:"",
+                heading_mod:"is--page-default", 
+                heading_level:"h1", 
+                heading:"Карта сайта",
+                sitemap:[
+                    {"link":page.uikit, "name":"uikit",},
+                    {"link":page.project, "name":"Мои проекты",},
+                    {"link":page.project_card, "name":"Карточка проекта",},
+                    {"link":page.project_empty, "name":"Нет проектов",},
+                    {"link":page.order, "name":"Мои заказы",},
+                    {"link":page.company, "name":"Мои компании",},
+                    {"link":page.company_card, "name":"Карточка компании",},
+                    {"link":page.requests, "name":"Мои обращения",},
+                    {"link":page.requests_empty, "name":"Нет обращений",},
+                    {"link":page.catalog, "name":"Каталог",},
+                    {"link":page.catalog_cat, "name":"Категория каталога",},
+                    {"link":page.catalog_card, "name":"Карточка каталога",},
+                    {"link":page.settings, "name":"Настройки",},
+                    {"link":page.basket, "name":"Корзина",},
+                    {"link":page.basket_empty, "name":"Пустая корзина",},
+                    {"link":page.basket_order, "name":"Оформление заказа",},
+                    {"link":page.basket_order_empty, "name":"Заказ оформлен",},
+                    {"link":page.profile, "name":"Мой профиль",},
+                    {"link":"#","modal":"#modal-edit", "name":"Модальное окно: Расчётный счёт",},
+                    {"link":"#","modal":"#modal-profile-edit", "name":"Модальное окно: Редактировать данные",},
+                    {"link":"#","modal":"#modal-pass-edit", "name":"Модальное окно: Сменить пароль",},
+                    {"link":"#","modal":"#modal-add-basket", "name":"Модальное окно: Добавить товар в корзину",},
+                ],              
+            } %}
         </main>
 
         {% include "../block/common/modals/include.twig"%}

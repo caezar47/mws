@@ -20,7 +20,7 @@
 {% endif %}
 
 {% if view == "icon" %}
-<a href="{{link}}" class="{{prefix}}icon  {{mod}}">
+<a href="{{link}}" {{attr}} class="{{prefix}}icon  {{mod}}">
 	{% include "../svg-sprite/svg.twig" with {icon:icon} %}
 </a>  
 {% endif %}
@@ -43,7 +43,7 @@
 	<ul class="{{prefix}}more-menu  dropdown-menu  {{mod}}">
 		{% for value in list %}
 		<li>
-			<{{value.tag}} {{value.attr}} class="{{value.class}}">{{value.name}}</{{value.tag}}>
+			<{{value.tag}} {% if value.link %}href="{{value.link}}"{% endif %} {{value.attr}} class="{{value.class}}">{{value.name}}</{{value.tag}}>
 		</li>
 		{% endfor %}
 	</ul>

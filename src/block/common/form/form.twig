@@ -358,6 +358,242 @@
 		</div>
 	</div>
 {% endif %}
+{% if view == "settings" %}
+	<form action="#" class="{{prefix}}panel  {{mod}}">
+		<div class="{{prefix}}section  {{mod}}">
+			<h2 class="page-header__heading  is--page-default">Основное</h2>
+			<div class="{{prefix}}grid  grid__row  {{mod}}  is--cols-2">
+				{% include "elem.twig" with {
+					view: "selectize", 
+					prefix:'form__', 
+					mod:'', 
+					color:'', 
+					list: [
+						{
+							"form_id":ID, 
+							"id":"select1", 
+							"name":"text1", 
+							"type":"data-selectize-default", 
+							"required": "required", 
+							"error": "Обязательно к заполнению",
+							"label": "Отображать в меню",
+							"opt":[
+								{"name":"Да"},
+								{"name":"Нет"}
+							]
+						},
+						{
+							"form_id":ID, 
+							"id":"select2", 
+							"name":"text2", 
+							"type":"data-selectize-default", 
+							"required": "required", 
+							"error": "Обязательно к заполнению",
+							"label": "Название пункта меню",
+							"opt":[
+								{"name":"Каталог"},
+								{"name":"Как-то ещё"}
+							]
+						},
+						{
+							"form_id":ID, 
+							"id":"select3", 
+							"name":"text3", 
+							"type":"data-selectize-default", 
+							"required": "required", 
+							"error": "Обязательно к заполнению",
+							"label": "Создание новых элементов",
+							"opt":[
+								{"name":"Да"},
+								{"name":"Нет"}
+							]
+						},
+						{
+							"form_id":ID, 
+							"id":"select4", 
+							"name":"text4", 
+							"type":"data-selectize-default", 
+							"required": "required", 
+							"error": "Обязательно к заполнению",
+							"label": "Каталог для отображения",
+							"opt":[
+								{"name":"Товарный каталог CRM"},
+								{"name":"Как-то ещё"}
+							]
+						}
+				]} %}
+			</div>
+		</div>
+		<div class="{{prefix}}section  {{mod}}">
+			<h2 class="page-header__heading  is--page-default">Оформление</h2>
+			<div class="{{prefix}}grid  grid__row  {{mod}}  is--cols-2">
+				<div class="grid__row  is--gap-sm">
+					{% include "elem.twig" with {
+						view:"radio", 
+						prefix:'form__', 
+						mod:"is--panel", 
+						color:"", 
+						list: [
+							{
+								"mod":"", 
+								"type":"panel", 
+								"id":"radio1", 
+								"form_id":ID, 
+								"status":"", 
+								"name":"Плитки", 
+							},
+							{
+								"mod":"", 
+								"type":"panel", 
+								"id":"radio2", 
+								"form_id":ID, 
+								"status":"", 
+								"name":"Список", 
+							}
+						]
+					} %}
+				</div>
+			</div>
+		</div>
+		<div class="{{prefix}}section  {{mod}}">
+			<h2 class="page-header__heading  is--page-default">Оплата и доставка</h2>
+			<div class="{{prefix}}grid  grid__row  {{mod}}  is--cols-2">
+				{% include "elem.twig" with {
+					view: "selectize", 
+					prefix:'form__', 
+					mod:'', 
+					color:'', 
+					list: [
+						{
+							"form_id":ID, 
+							"id":"select5", 
+							"name":"select5", 
+							"type":"data-selectize-default", 
+							"required": "required", 
+							"error": "Обязательно к заполнению",
+							"label": "Платёжные системы для компаний",
+							"placeholder": "Выберите из списка",
+							"opt":[
+								{"name":"visa"},
+								{"name":"mastercard"},
+								{"name":"Мир"}
+							]
+						},
+						{
+							"form_id":ID, 
+							"id":"select6", 
+							"name":"select6", 
+							"type":"data-selectize-default", 
+							"required": "required", 
+							"error": "Обязательно к заполнению",
+							"label": "Платёжные системы для физических лиц",
+							"placeholder": "Выберите из списка",
+							"opt":[
+								{"name":"visa"},
+								{"name":"mastercard"},
+								{"name":"Мир"}
+							]
+						},
+				]} %}
+			</div>
+		</div>
+		<div class="{{prefix}}section  {{mod}}">
+			<h2 class="page-header__heading  is--page-default">Свойства</h2>
+			<div class="{{prefix}}grid  grid__row  {{mod}}  is--cols-2">
+				{% include "elem.twig" with {
+					view: "selectize", 
+					prefix:'form__', 
+					mod:'', 
+					color:'', 
+					list: [
+						{
+							"form_id":ID, 
+							"id":"select7", 
+							"name":"select7", 
+							"type":"data-selectize-default", 
+							"required": "required", 
+							"error": "Обязательно к заполнению",
+							"label": "В списке",
+							"placeholder": "Выберите из списка",
+							"opt":[
+								{"name":"Да"},
+								{"name":"Нет"}
+							]
+						},
+						{
+							"form_id":ID, 
+							"id":"select8", 
+							"name":"select8", 
+							"type":"data-selectize-default", 
+							"required": "required", 
+							"error": "Обязательно к заполнению",
+							"label": "Детальная карточка",
+							"placeholder": "Выберите из списка",
+							"opt":[
+								{"name":"Да"},
+								{"name":"Нет"}
+							]
+						},
+						{
+							"form_id":ID, 
+							"id":"select8", 
+							"name":"select8", 
+							"type":"data-selectize-default", 
+							"required": "required", 
+							"error": "Обязательно к заполнению",
+							"label": "Свойство «Артикул»",
+							"text": "Используется для отображения в карточке товара, в поиске по товарам, при экспорте и при добавлении в корзину из файла",
+							"placeholder": "Выберите из списка",
+							"opt":[
+								{"name":"Да"},
+								{"name":"Нет"}
+							]
+						},
+				]} %}
+			</div>
+		</div>
+		<div class="{{prefix}}section  {{mod}}">
+			<h2 class="page-header__heading  is--page-default">Поиск</h2>
+			<div class="{{prefix}}grid  grid__row  {{mod}}  is--cols-2">
+				{% include "elem.twig" with {
+					view: "selectize", 
+					prefix:'form__', 
+					mod:'', 
+					color:'', 
+					list: [
+						
+						{
+							"form_id":ID, 
+							"id":"select9", 
+							"name":"select9", 
+							"type":"data-selectize-default", 
+							"required": "required", 
+							"error": "Обязательно к заполнению",
+							"label": "Свойства для индексирования",
+							"placeholder": "Выберите из списка",
+							"opt":[
+								{"name":"Да"},
+								{"name":"Нет"}
+							]
+						},
+				]} %}
+			</div>
+		</div>
+		<div class="{{prefix}}row  row  is--gutter-sm  is--gap-lg  {{mod}}">
+			<div class="cols">				
+				{% include "../button/btn.twig" with {
+					view:"btn", 
+					type:"submit", 
+					prefix:"btn__", 
+					mod:'is--full  is--primary', 
+					name:'Сохранить' 
+				} %}
+			</div>
+			<div class="cols">	
+			</div>
+		</div>
+	</form>
+{% endif %}
 
 
 

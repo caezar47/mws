@@ -102,7 +102,13 @@
 				{% endif %}	
 			</td>
 			<td class="{{prefix}}wrap  is--modal  {{mod}}">
-				<button type="button" class="btn__item  is--primary">Выбрать</button>
+				{% include "../button/btn.twig" with {
+					view:"btn",
+					prefix:"btn__", 
+					attr:'data-toggle="modal" data-target="#modal-add-basket"',
+					mod:"is--primary",   
+					name:"Выбрать"
+				} %}
 			</td>	
 			<td class="{{prefix}}wrap  is--btn  {{mod}}">
 				<div class="{{prefix}}group  is--btn  {{mod}}">
@@ -116,6 +122,50 @@
 			</td>
 		</tr>
 	</table>
+	{% endfor %}
+{% endif %}
+{% if view == "catalog_modal" %}
+	{% for value in list %}	
+	<div class="{{prefix}}item  {{mod}}  {{group}}">
+		{% if value.size %}
+		<div class="{{prefix}}size-wrap  {{mod}}">
+			<p class="{{prefix}}size-heading  {{mod}}">Выберите размер</p>
+			<ul class="{{prefix}}size-list  {{mod}}">
+			{% for s in value.size %}
+				<li class="{{prefix}}size-item  {{mod}}">
+					<label class="{{prefix}}size-radio  {{mod}}">
+						<input type="radio" name="size_{{id}}" id="{{s.name}}" class="{{prefix}}size-input  {{mod}}">
+						<span class="{{prefix}}size-radio-name  {{mod}}">{{s.name}}</span>
+					</label>
+				</li>
+			{% endfor %}
+			</ul>
+		</div>
+		{% endif %}
+		{% if value.color %}
+		<div class="{{prefix}}color-wrap  {{mod}}">
+			<p class="{{prefix}}color-heading  {{mod}}">Выберите цвет</p>
+			<ul class="{{prefix}}color-list  {{mod}}">
+			{% for c in value.color %}
+				<li class="{{prefix}}color-item  {{mod}}">
+					<label class="{{prefix}}color-radio  {{mod}}" title="{{c.name}}">
+						<input type="radio" name="color_{{id}}" id="{{c.name}}" class="{{prefix}}color-input  {{mod}}">
+						<span class="{{prefix}}color-radio-view  {{mod}}" style="background-color: {{c.color}}"></span>
+					</label>
+				</li>
+			{% endfor %}
+			</ul>
+		</div>
+		{% endif %}
+		<div class="{{prefix}}group  is--btn  {{mod}}">
+			<button type="button" class="btn__item  is--primary">{{value.btn}}</button>
+			{% if value.qty %}
+			<p class="{{prefix}}qty  {{mod}}" style="color: {{value.qty_color}}">
+				В наличие {{value.qty}} шт.
+			</p>
+			{% endif %}
+		</div>
+	</div>
 	{% endfor %}
 {% endif %}
 {% if view == "basket" %}
@@ -153,6 +203,7 @@
 					prefix:"btn__", 
 					mod:"is--outline", 
 					icon:'icon-del', 
+					attr: value.btn_attr,
 					link:"#", 
 					name:"Удалить" 
 				} %}

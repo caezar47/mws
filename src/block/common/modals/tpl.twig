@@ -17,6 +17,67 @@
 						heading_mod:	heading_mod,
 					} %}
 				{% endif %}
+				{% if ID == "modal-add-basket" %}
+					{% include "../page-header/elem.twig" with {
+						prefix:"page-header__", 
+						mod:heading_mod,
+						attr:heading_attr, 
+						level:heading_level, 
+						heading:heading
+					} %}
+					{% include "../card/card.twig" with {
+						view:"catalog_modal",
+						prefix:"card__", 
+						mod:"is--catalog", 
+						group:"is--view-modal", 
+						list: [
+							{					
+								"size":[
+									{
+										"name":"S",
+									},
+									{
+										"name":"M",
+									},
+									{
+										"name":"L",
+									},
+									{
+										"name":"XL",
+									},
+									{
+										"name":"XXL",
+									},
+								],
+								"color":[
+									{
+										"name":"Orange",
+										"color":"orange",
+									},
+									{
+										"name":"Yellow",
+										"color":"yellow",
+									},
+									{
+										"name":"Green",
+										"color":"green",
+									},
+									{
+										"name":"Blue",
+										"color":"blue",
+									},
+									{
+										"name":"Purple",
+										"color":"purple",
+									},
+								],
+								"qty":"5",
+								"qty_color":"#EB5757",
+								"btn": "В корзину"
+							},
+						]
+					} %}
+				{% endif %}
 				{% if ID == "modal-events" %}
 					{% include "../page-header/elem.twig" with {
 						prefix:"page-header__", 

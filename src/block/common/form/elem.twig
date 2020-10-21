@@ -89,20 +89,26 @@
 	</div>
 {% endif %}
 
+{% if view == "selectize" %}
+	{% for value in list %}
+	<div class="{{prefix}}item  {{mod}}  {{group}}  {% if value.error == "true" %}is--error{% endif %}" {% if value.required == "required" %}data-error="Обязательно к заполнению"{% endif %}>
+		{% if value.label %}
+		<label class="{{prefix}}label  {{mod}}" for="{{value.form_id}}[{{value.id}}]">{{value.label}}</label>
+		{% endif %}
+		<select id="{{value.form_id}}[{{value.id}}]" {% if value.placeholder %}placeholder="{{value.placeholder}}"{% endif %} name="f[{{value.name}}]" {{value.type}} {{value.required}}> 
+			{% for opt in value.opt %}
+				<option>{{opt.name}}</option>
+			{% endfor %}	
+		</select> 
+		{% if value.text %}
+			<p class="{{prefix}}text  {{mod}}">{{value.text}}</p>
+		{% endif %}
+	</div>
+	{% endfor %}
+{% endif %}
+
 {# old #}
 
-{% if view == "selectize" %}
-	<p class="{{prefix}}item  {{mod}}  {{group}}  {% if error == "true" %}is--error{% endif %}" {% if required == "required" %}data-error="Обязательно к заполнению"{% endif %}>
-		{% if label %}
-		<label class="{{prefix}}label  {{mod}}" for="{{form_id}}[{{id}}]">{{label}}</label>
-		{% endif %}
-		<select id="{{form_id}}[{{id}}]" name="f[{{name}}]" {{attr}} {{required}} placeholder="{{name}}">
-			{% for value in list %}
-				<option value="{{value.val}}" {{value.status}}>{{value.name}}</option>
-			{% endfor %}	
-		</select>
-	</p>
-{% endif %}
 
 {% if view == "select" %}
 	<p class="{{prefix}}item  {{mod}}  {{group}}  {% if error == "true" %}is--error{% endif %}"  {% if required == "required" %}data-error="Обязательно к заполнению"{% endif %}>

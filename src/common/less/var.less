@@ -81,16 +81,15 @@
 @xl 						:	1200px;
 @xxl 						:	1700px;
 
+@site_bg 					: 	@white;
 @site_ff 					: 	@inter;
 @site_fs 					: 	14px;
 @site_lh 					: 	143%; //20px
 @site_br 					: 	4px;
+@site_color 				: 	@default;
+@site_color_a 				: 	@primary;
+@site_color_a_hover 		: 	fadeout(@primary, 50%);
 
-@b-color 					:	@default; 
-@b-color-a 					:	@primary; 
-@b-color-a-hover 			:	@success; 
-@b-color-h 					:	@warning; 
-@b-block-bg 				:	@info;
 
 @b-html-bg 					:	@white; 
 @b-body-bg 					:	@white; 
@@ -261,17 +260,29 @@
 //===== end's qty =====//	
 
 //===== modals =====//
-@modal_backdrop 			:	@default;
-@modal_backdrop_fade 		:	0.9;
-@modal_bg 					:	@white;
-@modal_border_rad 			:	@site_br;
-@modal_width 				:	665px;
+@modal_backdrop 					:	@default;
+@modal_backdrop_fade 				:	0.9;
+@modal_bg 							:	@white;
+@modal_border_rad 					:	@site_br;
+@modal_width 						:	665px;
 
-@modal_btn_width 			: 	32px;
-@modal_btn_color 			:	@default;
-@modal_btn_color_hover 		:	fadeout(@default, 50%);
+@modal_btn_width 					: 	32px;
+@modal_btn_color 					:	@default;
+@modal_btn_color_hover 				:	fadeout(@default, 50%);
 //===== end's modals =====//
 
+//===== table =====//
+@table_color 						:	@default;
+@table_border_color 				:	@warning;
+@table_padding_tb 					:	10px;
+@table_padding_lr					:	15px;
+
+@table_head_color 					:	fadeout(@default, 50%);
+@table_head_bg 						:	@info;
+@table_head_padding_tb 				:	5px;
+@table_head_padding_lr				:	15px;
+@table_head_border_color 			:	@warning;
+//===== end's table =====//
 
 
 
@@ -287,161 +298,8 @@
 
 
 
-//old
-//===== footer =====//
-@footer_color 				:	@white; 
-@footer_color_hover 		:	@white; 
-@footer_bg 					:	@success;
-@footer_ff 					:	@b-ff; 
-@footer_fs 					:	@b-fs; 
-@footer_lh 					:	@b-lh; 
-
-//= logotip
-@footer_logo_color 			: 	@white;
-@footer_logo_widht 			: 	148px;
-@footer_logo_height 		: 	42px;
-
-//= size
-/*@footer_xs 				:	75px;*/
-@footer_sm 					:	84px;
-@footer_device_sm_p 		:	131px;
-@footer_device_sm_l 		:	92px;
-@footer_screen 				:	92px;
-@footer_screen_md 			:	@footer_screen;
-@footer_screen_lg 			:	@footer_screen;
-@footer_screen_xxl 			:	@footer_screen;
-//===== end's footer =====//
 
 
-
-//===== form  =====//
-
-@range_height 				: 	40px;
-@range_line_bg 				: 	@primary;
-@range_line_bg_hover 		: 	@success;
-
-@range_btn_bg 				: 	@success;
-@range_btn_bg_hover 		: 	@primary;
-@range_btn_color 			: 	@white;
-
-//=== radio ===
-@radio_gutter 				: 	4px;
-@radio_bg 					: 	@primary;
-@radio_bg_hover 			: 	@success;
-@radio_bg_active 			: 	@b-color;
-
-//=== error ===
-@form_error_bg 				: 	@primary;
-@form_error_bg_pass 		: 	@success;
-@form_error_bg_load 		: 	@default;
-@form_error_text_color 		: 	@white;
-@form_error_border_color 	: 	@primary;
-@form_error_border_width 	: 	0px;
-@form_error_fs 				: 	@b-fs - 6;
-@form_error_lh 				: 	@b-lh - 6;
-@form_error_radius 			: 	0;
-
-
-//=== radio ===
-@radio_color 				: 	@default;
-@radio_size 				: 	18px;
-@radio_gutter 				: 	4px;
-@radio_bg 					: 	@white;
-@radio_border_width 		: 	1px;
-@radio_border_color 		: 	@default;
-@radio_icon 				: 	transparent;
-@radio_radius 				: 	50%;
-
-//= disabled =
-@radio_disabled_icon		:	@white;
-@radio_disabled_bg			: 	fadeout(@default, 30%);
-
-//= focus =
-@radio_focus_color 			: 	@primary;
-@radio_focus_bg 			: 	@primary;
-@radio_focus_shadow	 		:	@success;
-@radio_focus_border_color	: 	@primary;
-@radio_focus_icon 			: 	@white;
-
-//== white ==
-@check_w_color				:	@white;
-@check_w_bg					:	transparent;
-@check_w_border_color 		: 	@white;
-@check_w_icon				:	transparent;
-//= focus =
-@check_w_focus_bg 			: 	@primary;
-@check_w_focus_border_color : 	@primary;
-@check_w_focus_shadow	 	:	@white;
-@check_w_focus_icon			:	@white;
-
-//= disabled =
-@check_w_disabled_bg 		: 	fadeout(@white, 30%);
-@check_w_disabled_border_color : 	fadeout(@white, 30%);
-@check_w_disabled_icon 		: 	@primary;
-
-//=== file ===
-@file_color					:	@primary;
-@file_icon					:	@primary;
-@file_size					:	18px;
-@file_border_color			:	currentColor;
-//= focus =
-@file_focus_color 			: 	@success;
-@file_focus_border_color 	: 	transparent;
-
-//=== reset ===
-@reset_color				:	@info;
-@reset_fs					:	@b-fs;
-@reset_lh					:	@b-lh;
-@reset_size					:	22px;
-@reset_border_width			:	2px;
-@reset_border_color			:	@info;
-@reset_bg_color				:	fadeout(@info, 50%);
-//= focus =
-@reset_focus_border_color	:	transparent;
-@reset_focus_bg_color		:	@primary;
-@reset_focus_color			:	@primary;
-
-//===== end's form =====//
-
-//===== pagination =====//
-@pagin_gutter 				:	2px;
-@pagin_color 				: 	@default;
-@pagin_color_hover 			: 	@default;
-@pagin_color_active 		: 	@b-color;
-@pagin_bg 					:	@b-color;
-@pagin_bg_hover 			: 	@success;
-@pagin_bg_active 			: 	@primary;
-//===== end's pagination =====//
-
-
-
-//===== map =====//
-@map_popup_bg 				:	@white;
-@map_popup_color 			:	@primary;
-//===== end's map =====//
-
-//===== continfo =====//
-@continfo_color 			:	@warning;
-@continfo_icon_bg 			:	@white;
-@continfo_icon_color 		:	@primary;
-@continfo_icon_width 		:	32px;
-@continfo_icon_padding 		:	6px;
-@continfo_icon_border 		:	2px;
-@continfo_icon_border_color	:	@primary;
-@continfo_icon_radius		:	5px;
-//===== end's continfo =====//
-
-//===== social =====//
-@soc_size 					: 	32px;
-@soc_border_radius 			: 	50%;
-@soc_border 				: 	@success;
-@soc_bg 					: 	@success;
-@soc_bg_hover 				: 	@primary;
-@soc_color 					: 	@primary;
-@soc_color_hover 			: 	@white;
-@soc_color_contacts  		:	@b-color;
-@soc_gutter 				:	5px; 
-//===== end's  social =====//
 
 //===== slider slick =====//
 @slider_btn_width 			: 	40px;

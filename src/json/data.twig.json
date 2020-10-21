@@ -41,7 +41,10 @@
 		"settings":"./settings.html",
 		"profile":"./profile.html",
 		"basket":"./basket.html",
-		"basket_order":"./basket-order.html"
+		"basket_empty":"./basket-empty.html",
+		"basket_order":"./basket-order.html",
+		"basket_order_empty":"./basket-order-empty.html",
+		"uikit":"./uikit.html"
 	},
 	"prefix":{
 		"section":"section__",

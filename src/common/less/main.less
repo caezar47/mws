@@ -1,8 +1,8 @@
 *::selection{background: darken(@white, 20%);}
 body {
 	position: relative;
-	color: @b-color;
-	background-color: @b-body-bg;
+	color: @site_color;
+	background-color: @site_bg;
 	display: flex;
 	flex-direction: column;
 	min-height: 100vh;
@@ -39,20 +39,13 @@ body {
 	});
 }
 a{
-	color: @b-color-a;
+	color: @site_color_a;
 	transition: @trs-site;
 	&, &:focus, &:hover{
 		text-decoration: none;
 	}
 	&:hover{
-		color: @b-color-a-hover;
-	}
-	&[href^="mailto:"],
-	&[href^="tel:"]{
-		&, &:focus, &:hover{
-			//color: @b-color-a;
-			//text-decoration: none; 
-		}
+		color: @site_color_a_hover;
 	}
 }
 p{
