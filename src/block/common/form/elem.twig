@@ -18,6 +18,9 @@
 		<label class="{{prefix}}radio  {{mod}}  {{color}}">
 			<input class="{{prefix}}radio-input" type="radio" id="{{value.form_id}}[{{value.id}}]" name="f[{{value.form_id}}]" {{value.status}}>
 			<p class="{{prefix}}radio-wrap  {{mod}} {{value.mod}}">
+				{% if value.color %}
+				<span class="{{prefix}}radio-color  {{mod}}" style="background-color: {{value.color}}"></span>
+				{% endif %}
 				{% if value.type == "button" %}
 				<span class="{{prefix}}radio-icon  {{mod}}"></span>
 				{% endif %}
@@ -26,6 +29,9 @@
 				{% endif %}
 				{% if value.note %}
 				<span class="{{prefix}}radio-note">{{value.note}}</span>
+				{% endif %}
+				{% if value.qty %}
+				<span class="{{prefix}}radio-qty" {% if value.qty_color %}style="color: {{value.qty_color}}"{% endif %}>{{value.qty}}</span>
 				{% endif %}
 			</p>
 		</label>

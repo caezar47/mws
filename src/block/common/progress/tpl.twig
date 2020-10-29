@@ -6,6 +6,15 @@
 	<div class="{{prefix}}item  {{mod}}" {% if completed %}data-completed="{{completed}}"{% endif %}>
 		<div class="{{prefix}}bar" {% if completed %}style="width: {{completed}}%"{% endif %}></div>
 		<span class="sr-only">Выполнено на {{completed}}%</span>
+		{% if grid %}
+			<div class="{{prefix}}grid  {{mod}}">
+				{% for g in grid %}
+					<div>
+						<span class="sr-only">{{g.name}}%</span>
+					</div>
+				{% endfor %}
+			</div>
+		{% endif %}
 	</div>
 	{% if finish %}
 	<p class="{{prefix}}text">Дата окончания работ: <span>{{finish}}</span></p>

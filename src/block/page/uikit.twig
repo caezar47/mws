@@ -167,7 +167,7 @@
 					{% include "../common/tabs/tpl.twig" with {
 						view:"base", 
 						prefix:'tabs__', 
-						mod:"is--base",
+						mod:"",
 						list: [
 							{
 								"id":"tabs1",  
@@ -1538,12 +1538,46 @@
 						status:"",  
 						mod:"is--order",  
 						name:"Итого: <span>21 580 ₽</span>",
+						prefix_modal:"link__", 
 						modal:"Ваш заказ", 
 						modal_mod:"", 
 						modal_attr:'type="button" data-toggle="modal" data-target="#modal-order"',
 						btn_link:"#", 
 						btn_name:"Оформить заказ", 
 						btn_mod:"is--primary", 
+					} %}
+				</div>
+				<div style="margin-bottom: 30px">
+					<h2 style="margin-bottom: 10px;">Для карточки каталога - вариант 1</h2>
+					
+					{% include "../common/informer/tpl.twig" with {
+						prefix:"informer__", 
+						status:"is--open",  
+						mod:"is--catalog-card",  
+						btn_link:"#", 
+						btn_name:"В корзину", 
+						btn_mod:"is--primary",
+						modal:"Выбрать", 
+						modal_prefix:"btn__", 
+						modal_attr:'type="button" data-toggle="modal" data-target="#modal-select-basket"',
+						modal_mod:"is--primary  is--full",
+						cost_list_view:"catalog_cost_list",
+						cost_list_mod: "is--catalog-card",
+						cost_list:[
+							{
+								"name":"От 500 шт.",
+								"value":"7 900 ₽",
+							},
+							{
+								"name":"От 1 000 шт.",
+								"value":"6 900 ₽",
+							},
+							{
+								"name":"От 1 500 шт.",
+								"value":"5 900 ₽",
+							},
+						], 
+						qty:"5",
 					} %}
 				</div>
 			</div>
@@ -1691,12 +1725,44 @@
 					} %}
 				</div>
 				<div style="margin-bottom: 30px">
+					<h2 style="margin-bottom: 10px;">Вариант 1 - с сеткой</h2>
+					{% include "../common/progress/tpl.twig" with {
+						prefix:"progress__", 
+						mod:"",
+						group:content_mod,
+						completed:"50",
+						status: 'В работе',
+						finish: '30.10.2020',
+						grid: [
+							{"name": "Статус 1"},
+							{"name": "Статус 2"},
+							{"name": "Статус 3"},
+							{"name": "Статус 4"},
+						]
+					} %}
+				</div>
+				<div style="margin-bottom: 30px">
 					<h2 style="margin-bottom: 10px;">Вариант 2</h2>
 					{% include "../common/progress/tpl.twig" with {
 						prefix:"progress__", 
 						mod:"",
 						group:content_mod,
 						completed:"25",
+					} %}
+				</div>
+				<div style="margin-bottom: 30px">
+					<h2 style="margin-bottom: 10px;">Вариант 2 - с сеткой</h2>
+					{% include "../common/progress/tpl.twig" with {
+						prefix:"progress__", 
+						mod:"",
+						group:content_mod,
+						completed:"25",
+						grid: [
+							{"name": "Статус 1"},
+							{"name": "Статус 2"},
+							{"name": "Статус 3"},
+							{"name": "Статус 4"},
+						]
 					} %}
 				</div>
 				<div style="margin-bottom: 30px">
@@ -1709,12 +1775,43 @@
 					} %}
 				</div>
 				<div style="margin-bottom: 30px">
+					<h2 style="margin-bottom: 10px;">Вариант 3 - с сеткой</h2>
+					{% include "../common/progress/tpl.twig" with {
+						prefix:"progress__",  
+						mod:'is--table',
+						group:'',
+						completed:"40",
+						grid: [
+							{"name": "Статус 1"},
+							{"name": "Статус 2"},
+							{"name": "Статус 3"},
+							{"name": "Статус 4"},
+							{"name": "Статус 5"},
+						]
+					} %}
+				</div>
+				<div style="margin-bottom: 30px">
 					<h2 style="margin-bottom: 10px;">Вариант 4</h2>
 					{% include "../common/progress/tpl.twig" with {
 						prefix:"progress__",  
 						mod:'is--xs',
 						group:'',
 						completed:"25",
+					} %}
+				</div>
+				<div style="margin-bottom: 30px">
+					<h2 style="margin-bottom: 10px;">Вариант 4 - с сеткой</h2>
+					{% include "../common/progress/tpl.twig" with {
+						prefix:"progress__",  
+						mod:'is--xs',
+						group:'',
+						completed:"25",
+						grid: [
+							{"name": "Статус 1"},
+							{"name": "Статус 2"},
+							{"name": "Статус 3"},
+							{"name": "Статус 4"},
+						]
 					} %}
 				</div>
 			</div>

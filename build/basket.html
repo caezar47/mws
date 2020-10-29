@@ -60,7 +60,10 @@
 																								<span class="navbar__header-basket-cost">15 900 ₽</span>
 															</a>
 						</div>
-											</div>
+												<div class="navbar__header-flex-cols cols">
+							<button type="button" class="navbar__header-resize" data-resize></button>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -69,7 +72,7 @@
 		<div class="navbar__aside-inner">
 			<div class="navbar__aside-container container">
 				<div class="navbar__aside-row row">
-					<div class="navbar__aside-wrap-cols   is--nav">
+					<div class="navbar__aside-wrap-cols  is--nav" data-aside-nav>
 						<div class="navbar__aside-cols cols  is--nav">
 							<nav class="navbar__aside-nav">
 								<li class="navbar__aside-nav-item      ">
@@ -185,7 +188,7 @@
 							</nav> 	
 						</div>
 					</div>
-					<div class="navbar__aside-cols cols  is--manager">
+					<div class="navbar__aside-cols cols  is--manager" data-aside-manager>
 						<div class="manager__panel  is--aside">
 	<div class="manager__group  is--aside">
 		<picture class="manager__preview  is--aside"><img src="./img/default/catalog-lock.jpg" class="img-responsive" alt="Максим Грудев"></picture>
@@ -229,7 +232,11 @@
 			</div>
 
 			<div class="section__grid  grid__row  is--page-basket">	
-						
+				
+
+
+
+		
 	<table class="card__item  is--basket  is--view-card">
 		<tr>			
 			<td class="card__wrap  is--prev  is--basket">
@@ -523,8 +530,8 @@
 			</div>
 
 			<div class="informer__panel  is--basket  ">
-	<p class="informer__name  is--basket">Итого: <span>21 580 ₽</span></p>
-		<div class="informer__btn  is--basket">
+			<p class="informer__name  is--basket">Итого: <span>21 580 ₽</span></p>
+					<div class="informer__btn  is--basket">
 		
 
 <a href="./basket-order.html" class="btn__item  is--primary">
@@ -532,7 +539,7 @@
 </a>  
 
 	</div>
-</div>		</div>
+	</div>		</div>
 	</section>
         </main>
 
@@ -794,7 +801,10 @@
 	<use xlink:href="./img/svg/sprite.svg#icon-close"></use>
 </svg>			</button>
 			
-													<h2 class="page-header__heading  is--h1  is--modal  " >Услуги по ликвидации юридического лица</h2>							
+													<h2 class="page-header__heading  is--h1  is--modal  " >Услуги по ликвидации юридического лица</h2>					
+
+
+		
 	<div class="card__item  is--catalog  is--view-modal">
 				<div class="card__size-wrap  is--catalog">
 			<p class="card__size-heading  is--catalog">Выберите размер</p>
@@ -874,7 +884,20 @@
 					</div>
 	</div>
 	
+
 																			
+		</div>
+	</div>
+</div> 
+<div class="modal__block modals  fade  " id="modal-select-basket" tabindex="-1" role="dialog" aria-hidden="true">
+	<div class="modal__dialog  ">
+		<div class="modal__body  " >
+			<button type="button" class="modal__btn-close  " data-dismiss="modal" aria-hidden="true">
+				<svg class="icon-svg icon-icon-close" role="img">
+	<use xlink:href="./img/svg/sprite.svg#icon-close"></use>
+</svg>			</button>
+			
+																							
 		</div>
 	</div>
 </div> 

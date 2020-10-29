@@ -15,7 +15,7 @@
 	</ul>
 </div>
 {% for value in list %}
-<div class="{{prefix}}pane  {{value.status}}" id="{{value.id}}">
+<div class="{{prefix}}pane  {{value.status}}  {{group}}" id="{{value.id}}">
 	{{value.text}}
 	{% if value.type == "events" %}
 		{# {% include "../events/tpl.twig" with {
@@ -64,6 +64,14 @@
 			ID: 			value.form_id,
 			mod:			value.form_mod, 
 			color:			value.form_color, 
+		} %}
+	{% endif %}
+	{% if value.type == "card_desc" %}
+		{% include "../card/card.twig" with {
+			view: value.view,
+			prefix:"card__", 
+			mod:  value.mod, 
+			list: value.list
 		} %}
 	{% endif %}
 </div>

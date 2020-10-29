@@ -2,6 +2,7 @@
 	{% for value in list %}	
 	<table class="{{prefix}}item  {{mod}}  {{group}}">
 		<tr>
+			{% if checkbox %}
 			<td class="{{prefix}}wrap  is--checkbox  {{mod}}">
 				{% include "../form/elem.twig" with {
 					view:"checkbox", 
@@ -17,7 +18,8 @@
 						}
 					]
 				} %}
-			</td>			
+			</td>	
+			{% endif %}		
 			<td class="{{prefix}}wrap  is--prev  {{mod}}">
 				<picture class="{{prefix}}preview  {{mod}}">
 					<img src="{{value.img}}" class="img-responsive" alt="">
@@ -40,7 +42,7 @@
 				{% endif %}
 			</td>
 			<td class="{{prefix}}wrap  is--param  {{mod}}">
-				{% if value.size or value.color %}
+				{% if value.size or value.color or value.color_selected %}
 				<div class="{{prefix}}group  is--param  {{mod}}">
 					{% if value.size %}
 					<div class="{{prefix}}size-wrap  {{mod}}">
@@ -56,6 +58,14 @@
 						{% endfor %}
 						</ul>
 					</div>
+					{% endif %}
+					{% if value.color_selected %}
+					<div class="{{prefix}}color-wrap  {{mod}}">
+						<div class="{{prefix}}color-selected  {{mod}}">
+							<span class="{{prefix}}color-selected-icon  {{mod}}" {% if value.color_selected_bg %}style="background-color: {{value.color_selected_bg}}"{% endif %}></span>
+							{{value.color_selected}}
+						</div>
+					</div>					
 					{% endif %}
 					{% if value.color %}
 					<div class="{{prefix}}color-wrap  {{mod}}">
@@ -124,6 +134,29 @@
 	</table>
 	{% endfor %}
 {% endif %}
+
+{% if view == "catalog_cost_list" %}	
+	<dl class="{{prefix}}cost-list  {{mod}}">
+		{% for cl in list %}
+			<div class="{{prefix}}cost-item  {{mod}}">
+				<dt>{{cl.name}}</dt>
+				<dd>{{cl.value}}</dd>						
+			</div>
+		{% endfor %}
+	</dl>
+{% endif %}
+
+{% if view == "catalog_desc" %}
+	<dl class="{{prefix}}decs  {{mod}}">
+	{% for d in list %}
+		<div>
+			<dt>{{d.name}}</dt>
+			<dd>{{d.value}}</dd>
+		</div>
+	{% endfor %}
+	</dl>
+{% endif %}
+
 {% if view == "catalog_modal" %}
 	{% for value in list %}	
 	<div class="{{prefix}}item  {{mod}}  {{group}}">
@@ -168,6 +201,7 @@
 	</div>
 	{% endfor %}
 {% endif %}
+
 {% if view == "basket" %}
 	{% for value in list %}	
 	<table class="{{prefix}}item  {{mod}}  {{group}}">

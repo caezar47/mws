@@ -238,90 +238,6 @@
 								"qty":"50", 
 								"btn": "В корзине"
 							},
-							{					
-								"link":"#",
-								"id":"4",
-								"img": [path.img,"/default/catalog-lock.jpg"].join(""), 	 
-								"heading":"Услуги по ликвидации юридического лица",
-								"code":"051456",
-								"decs":[
-									{
-										"name":"Гарантия:",
-										"value":"1 год",
-									},
-									{
-										"name":"Срок службы:",
-										"value":"5 лет",
-									},
-									{
-										"name":"Производитель:",
-										"value":"Россия",
-									},
-								],
-								"size":[
-									{
-										"name":"S",
-									},
-									{
-										"name":"M",
-									},
-									{
-										"name":"L",
-									},
-									{
-										"name":"XL",
-									},
-									{
-										"name":"XXL",
-									},
-								],
-								"cost": "5 900 ₽",
-								"cost_old": "6 900 ₽",
-								"qty":"50", 
-								"btn": "В корзине"
-							},
-							{					
-								"link":"#",
-								"id":"5",
-								"img": [path.img,"/default/catalog-lock.jpg"].join(""), 	 
-								"heading":"Услуги по ликвидации юридического лица",
-								"code":"051456",
-								"decs":[
-									{
-										"name":"Гарантия:",
-										"value":"1 год",
-									},
-									{
-										"name":"Срок службы:",
-										"value":"5 лет",
-									},
-									{
-										"name":"Производитель:",
-										"value":"Россия",
-									},
-								],
-								"size":[
-									{
-										"name":"S",
-									},
-									{
-										"name":"M",
-									},
-									{
-										"name":"L",
-									},
-									{
-										"name":"XL",
-									},
-									{
-										"name":"XXL",
-									},
-								],
-								"cost": "5 900 ₽",
-								"cost_old": "6 900 ₽",
-								"qty":"50", 
-								"btn": "В корзине"
-							}, 
 						]
 					} %}
 				</div>
@@ -1038,6 +954,7 @@
 					prefix:"card__", 
 					mod:"is--catalog", 
 					group:"is--view-list", 
+					checkbox: "true", 
 					list: [
 						{					
 							"link":"#",
@@ -1231,6 +1148,130 @@
 				} %}
 			</div>
 
+		</div>
+	</section>
+{% endif %}
+
+{% if view == "card" %}
+	<section class="{{content_prefix}}content">
+		<div class="{{content_prefix}}container container">
+			{% include "../common/breadcrumb/tpl.twig" with {
+				prefix:prefix.breadcrumb, 
+				mod:bread_mod, 
+				bread:bread
+			} %}
+
+			<div class="{{content_prefix}}row  row  {{content_mod}}  is--heading">
+				<div class="cols">					
+					{% include "../common/page-header/elem.twig" with {
+						prefix:"page-header__", 
+						mod:heading_mod,
+						attr:heading_attr, 
+						level:heading_level, 
+						heading:heading
+					} %}
+				</div>
+				<div class="cols  is--code">
+					{% if code %}
+					<p class="{{prefix.card}}code  {{card_mod}}">{{code}}</p>
+					{% endif %}
+				</div>
+			</div>
+
+			<div class="{{content_prefix}}grid  grid__row  {{content_mod}}">
+				<div>
+					<div class="{{content_prefix}}slick  {{content_mod}}" data-slick-catalog-card>
+						{% for sl in slider %}
+						<picture class="{{prefix.card}}preview  {{card_mod}}">
+							<img src="{{sl.img}}" class="img-responsive" alt="">
+						</picture>
+						{% endfor %}
+					</div>
+
+					{% if slider_nav == "true" %}
+					<div class="{{content_prefix}}slick  {{content_mod}}" data-slick-catalog-card-nav>
+						{% for sl in slider %}
+						<picture class="{{prefix.card}}preview  {{card_mod}}-nav">
+							<img src="{{sl.img}}" class="img-responsive" alt="">
+						</picture>
+						{% endfor %}
+					</div>
+					{% endif %}
+
+					{% if note_short %}
+					<div class="{{prefix.card}}note  {{content_mod}}">{{note_short}}</div>
+					{% endif %}
+
+					{% if size %}
+					<div class="{{prefix.card}}size-wrap  {{content_mod}}  hidden--md">
+						<div class="form__grid  grid__row  {{content_mod}}">
+							{% include "../common/form/elem.twig" with {
+								view:"radio", 
+								prefix:'form__', 
+								mod:"is--panel  is--desc", 
+								color:"", 
+								list: size,
+							} %}
+						</div>
+					</div>
+					{% endif %}
+				</div>
+				<div>
+					<div>
+						{% include "../common/tabs/tpl.twig" with {
+							view:"base", 
+							prefix:'tabs__', 
+							mod:"",
+							group:tabs_group,
+							list: tabs,
+						} %}
+					</div>
+					{% if informer %}
+						{% include "../common/informer/tpl.twig" with {
+							prefix:"informer__", 
+							status:"",  
+							mod:informer_type,  
+							btn_link:"#", 
+							btn_name:"В корзину", 
+							btn_mod:"is--primary  is--full",
+							modal:"Выбрать", 
+							modal_prefix:"btn__", 
+							modal_attr:'type="button" data-toggle="modal" data-target="#modal-select-basket"',
+							modal_mod:"is--primary  is--full",
+							cost_list_view:"catalog_cost_list",
+							cost_list_mod: card_mod,
+							cost_list:[
+								{
+									"name":"От 500 шт.",
+									"value":"7 900 ₽",
+								},
+								{
+									"name":"От 1 000 шт.",
+									"value":"6 900 ₽",
+								},
+								{
+									"name":"От 1 500 шт.",
+									"value":"5 900 ₽",
+								},
+							], 
+							qty:"5",
+						} %}	
+					{% endif %}				
+				</div>
+				{% if options %}
+				<div class="is--full">	
+					<div class="{{content_prefix}}grid  grid__row  {{content_mod}}  is--options">						
+						{% include "../common/card/card.twig" with {
+							view:"catalog",
+							prefix:"card__", 
+							mod:"is--catalog", 
+							group:"is--view-list  is--options",
+							list: options,
+						} %}
+					</div>
+				</div>
+				{% endif %}
+			</div>
 		</div>
 	</section>
 {% endif %}

@@ -42,6 +42,9 @@
 							</a>
 						</div>
 						{% endif %}
+						<div class="{{prefix}}header-flex-cols cols">
+							<button type="button" class="{{prefix}}header-resize" data-resize></button>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -53,7 +56,7 @@
 		<div class="{{prefix}}aside-inner">
 			<div class="{{prefix}}aside-container container">
 				<div class="{{prefix}}aside-row row">
-					<div class="{{prefix}}aside-wrap-cols   is--nav">
+					<div class="{{prefix}}aside-wrap-cols  is--nav" data-aside-nav>
 						<div class="{{prefix}}aside-cols cols  is--nav">
 							<nav class="{{prefix}}aside-nav">
 								{% include "item.twig" with {
@@ -169,7 +172,7 @@
 							</nav> 	
 						</div>
 					</div>
-					<div class="{{prefix}}aside-cols cols  is--manager">
+					<div class="{{prefix}}aside-cols cols  is--manager" data-aside-manager>
 						{% include "../manager/tpl.twig" with {
 							view:"aside", 
 							prefix:"manager__", 

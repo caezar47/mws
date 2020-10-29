@@ -48,6 +48,11 @@
 					});
 				}
 			}
+			&-catalog{
+				&-card{
+					grid-gap: 10px;
+				}
+			}
 		}
 	}
 	&row{
@@ -297,6 +302,11 @@
 					border-color: @radio_panel_border_color;
 				}
 			}
+			&.is--desc{
+				display: flex;
+				align-items: center;
+				padding: 15px 18px;
+			}
 		}
 		&-input{
 			.visually-hidden();
@@ -345,6 +355,21 @@
 				//border-color: @check_disabled_border_color;
 			}
 		}*/
+		&-color{
+			display: block;
+			min-width: 24px;
+			width: 24px;
+			height: 24px;
+			border-radius: 50%;
+			margin-right: 10px;
+			overflow: hidden;
+			img{
+				width: 100%;
+				height: 100%;
+				object-position: center;
+				object-fit: cover;
+			}
+		}
 		&-name{
 			display: block;
 			font-weight: 600;
@@ -353,6 +378,14 @@
 			display: block;
 			.media-breakpoint-up(@md; {
 				margin-top: 5px;
+			});
+		}
+		&-qty{
+			display: none;
+			margin-left: auto;
+			padding-left: 10px;
+			.media-breakpoint-up(@md; {
+				display: block;
 			});
 		}
 	}

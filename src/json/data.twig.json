@@ -35,6 +35,7 @@
 		"catalog":"./catalog.html",
 		"catalog_cat":"./catalog-cat.html",
 		"catalog_cat_list":"./catalog-cat-list.html",
+		"catalog_card":"./catalog-card.html",
 		"requests":"./requests.html",
 		"requests_empty":"./requests-empty.html",
 		"orders":"./orders.html",
@@ -53,7 +54,7 @@
 		"btn":"btn__",
 		"link":"link__",
 		"breadcrumb":"breadcrumb__",
-		"card":"card-item__",
+		"card":"card__",
 		"btn-icon":"btn-icon__"
 	},	 
 	"path":{		                  

@@ -1,16 +1,34 @@
 <div class="{{prefix}}panel  {{mod}}  {{status}}">
+	{% if cost_list %}
+		{% include "../card/card.twig" with {
+			view: cost_list_view,
+			prefix:"card__", 
+			mod:  cost_list_mod, 
+			list: cost_list
+		} %} 
+	{% endif %}
+	{% if name %}
 	<p class="{{prefix}}name  {{mod}}">{{name}}</p>
+	{% endif %}
 	{% if modal %}
 	<div class="{{prefix}}modal  {{mod}}">		
 		{% include "../button/btn.twig" with {
 			view:"btn",
-			prefix:"link__", 
+			prefix:modal_prefix, 
 			attr:modal_attr,
 			mod:modal_mod,  
 			name:modal
 		} %}
 	</div>
 	{% endif %}
+	{% if qty %}
+		{% include "../form/elem.twig" with {
+			view:"qty", 
+			prefix:'form__',
+			value: qty
+		} %}
+	{% endif %}
+	{% if btn_name %}
 	<div class="{{prefix}}btn  {{mod}}">
 		{% include "../button/btn.twig" with {
 			view:"link",
@@ -20,4 +38,5 @@
 			name:btn_name,
 		} %}
 	</div>
+	{% endif %}
 </div>
