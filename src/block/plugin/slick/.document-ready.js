@@ -5,6 +5,7 @@ $(function() {
 	var dataNextArrow = $('[data-slick-catalog]').data('slick-next');
 	var catalog_card = $('[data-slick-catalog-card]');
 	var catalog_card_nav = $('[data-slick-catalog-card-nav]');
+	var catalog_card_table = $('[data-slick-catalog-card-table]');
 
 	//old		
 	var gallery = $('[data-slider-slick="slick-gallery"]');		
@@ -88,6 +89,25 @@ $(function() {
 		prevArrow: prevArrow,
 		nextArrow: nextArrow,
 		focusOnSelect: true
+	});
+	catalog_card_table.slick({
+		slidesToShow: 3,
+		slidesToScroll:1,
+		arrows: true,
+		dots: false,	
+		variableWidth: true,
+		infinite: false,
+		prevArrow: prevArrow,
+		nextArrow: nextArrow,
+		responsive: [
+		    {
+				breakpoint: 768,
+				settings: {
+					arrows: false,
+					slidesToShow: 1,
+				}
+		    }
+		]
 	});
 	/*
 	//old

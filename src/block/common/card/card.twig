@@ -19,14 +19,18 @@
 					]
 				} %}
 			</td>	
-			{% endif %}		
+			{% endif %}
+			{% if value.img %}
 			<td class="{{prefix}}wrap  is--prev  {{mod}}">
+				<a href="{{value.link}}">
 				<picture class="{{prefix}}preview  {{mod}}">
 					<img src="{{value.img}}" class="img-responsive" alt="">
 				</picture>
+				</a>
 			</td>
+			{% endif %}	
 			<td class="{{prefix}}wrap  is--decs  {{mod}}">
-				<h5 class="{{prefix}}heading  {{mod}}">{{value.heading}}</h5>
+				<a href="{{value.link}}"><h5 class="{{prefix}}heading  {{mod}}">{{value.heading}}</h5></a>
 				{% if value.code %}
 				<p class="{{prefix}}code  {{mod}}">Артикул: {{value.code}}</p>
 				{% endif %}
@@ -130,6 +134,18 @@
 					<button type="button" class="btn__item  is--primary">{{value.btn}}</button>
 				</div>
 			</td>
+			{% if value.notes %}
+				<td class="{{prefix}}wrap  is--notes  {{mod}}">
+					<dl class="{{prefix}}decs  {{mod}}">
+						{% for n in value.notes %}
+							<div>
+								<dt>{{n.name}}</dt>
+								<dd>{{n.value}}</dd>
+							</div>
+						{% endfor %}
+					</dl>
+				</td>
+			{% endif %}
 		</tr>
 	</table>
 	{% endfor %}

@@ -471,10 +471,18 @@
 						});
 					}
 					&[data-slick-catalog-card-nav]{
-						display: none;
+						display: none!important;
 						margin-bottom: 25px;
 						.media-breakpoint-up(@md; {
-							display: block;
+							display: block!important;
+						});
+					}
+					&[data-slick-catalog-card-table]{
+						margin-left: -@container_gap;
+						margin-right: -@container_gap;
+						padding-left: 10px;
+						.media-breakpoint-up(@xxl; {
+							padding-left: @container_gap;
 						});
 					}
 				}

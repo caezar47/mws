@@ -212,6 +212,34 @@
 			}
 
 		}
+		[data-slick-catalog-card-table] &{
+			position: absolute;
+			z-index: 2;
+			top: 155px;
+			box-shadow: 10px 10px 30px fadeout(@default, 90%);
+			&.is--prev{
+				right: 45px;
+			}
+			&.is--next{
+				right: 5px;
+			}
+			.media-breakpoint-up(@lg; {
+				&.is--prev{
+					right: 25px;
+				}
+				&.is--next{
+					right: -15px;
+				}
+			});
+			.media-breakpoint-up(@xxl; {				
+				&.is--prev{
+					right: 90px;
+				}
+				&.is--next{
+					right: 50px;
+				}
+			});
+		}
 	}
 	&-dots{
 		margin: 10px -2.5px 0;

@@ -54,10 +54,6 @@
 			}
 		}	
 		&-resize{
-			display: none;
-			.media-breakpoint-up(@xxl; {
-				display: block;
-			});
 			.btn-clearfix();
 			width: 40px;
 			height: 40px;
@@ -134,6 +130,12 @@
 					padding-left: @container_gap;
 					padding-right: @container_gap;
 				});*/
+				&.is--resize{				
+					display: none;
+					.media-breakpoint-up(@xxl; {
+						display: block;
+					});
+				}
 			}
 		}
 		&-basket{

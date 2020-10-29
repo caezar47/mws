@@ -36,6 +36,8 @@
 		"catalog_cat":"./catalog-cat.html",
 		"catalog_cat_list":"./catalog-cat-list.html",
 		"catalog_card":"./catalog-card.html",
+		"catalog_card2":"./catalog-card2.html",
+		"catalog_card3":"./catalog-card3.html",
 		"requests":"./requests.html",
 		"requests_empty":"./requests-empty.html",
 		"orders":"./orders.html",
