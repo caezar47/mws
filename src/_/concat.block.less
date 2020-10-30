@@ -5475,12 +5475,11 @@ blockquote {
 //===== end's slider slick =====//
 	&-btn{
 		.btn-clearfix();
-		background-position: center;	
-
+		background-position: center;
 		&.is--prev{
 			.icon-prev();
 			&:hover{				
-				.icon-prev(@c: '23343A40'); 
+				.icon-prev(@c: '56c8c8'); 
 			}
 			&.slick-disabled{
 				.icon-prev(@c: '23343A40'); 
@@ -5490,7 +5489,7 @@ blockquote {
 		&.is--next{
 			.icon-next();
 			&:hover{				
-				.icon-next(@c: '23343A40'); 
+				.icon-next(@c: '56c8c8'); 
 			} 
 			&.slick-disabled{
 				.icon-next(@c: '23343A40'); 
@@ -5512,8 +5511,8 @@ blockquote {
 			border-color: @slider_btn_border_color;
 			border-radius: @slider_btn_radius;
 			&:hover{
-				background-color: @slider_btn_bg_hover;
-				border-color: @slider_btn_border_color_hover;
+				//background-color: @slider_btn_bg_hover;
+				//border-color: @slider_btn_border_color_hover;
 				color: @slider_btn_color_hover;
 			}			
 		}
@@ -5536,7 +5535,6 @@ blockquote {
 			&:hover{
 				background-color: fadeout(@primary, 50%);
 			}
-
 		}
 		[data-slick-catalog-card-table] &{
 			position: absolute;
