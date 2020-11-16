@@ -27,6 +27,7 @@
 	},
 	"page":{
 		"index":"./",
+		"login":"./login.html",
 		"projects":"./projects.html",
 		"company":"./company.html",
 		"company_card":"./company-card.html",

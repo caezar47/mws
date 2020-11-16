@@ -2,6 +2,7 @@
 	<header class="{{prefix}}header">
 		<div class="{{prefix}}header-container container">
 			<div class="{{prefix}}header-row row">
+				{% if humb != "false" %}
 				<div class="{{prefix}}header-cols cols  is--hamburger">
 					<button class="{{prefix}}header-hamburger" data-hamburger>
 						<span class="{{prefix}}header-hamburger-inner">
@@ -11,23 +12,26 @@
 						</span>
 					</button>
 				</div>
+				{% endif %}
 				<div class="{{prefix}}header-cols cols  is--logotip">
 					<a class="{{prefix}}header-logotip" href="{{page.index}}">MWS Agency</a>
 				</div>
 				<div class="{{prefix}}header-cols cols  is--right">
 					<div class="{{prefix}}header-flex-row row">
+						{% if user %}
 						<div class="{{prefix}}header-flex-cols cols">
 							<div class="{{prefix}}header-user  dropdown">
 								<a class="{{prefix}}header-user-dropdown" data-toggle="dropdown" href="#">
-									<span>Семён Вишневский</span>
+									<span>{{user}}</span>
 									{% include "../svg-sprite/svg.twig" with {icon:"icon-user"} %}
 								</a>
 								<ul class="{{prefix}}header-user-menu  dropdown-menu">
 									<li><a href="{{page.profile}}">Мой профиль</a></li>
-									<li><a href="#" class="is--logout">Выйти</a></li>
+									<li><a href="{{page.login}}" class="is--logout">Выйти</a></li>
 								</ul>
 							</div>
 						</div>
+						{% endif %}
 						{% if basket %}
 						<div class="{{prefix}}header-flex-cols cols">
 							<a class="{{prefix}}header-basket" href="{{page.basket}}">

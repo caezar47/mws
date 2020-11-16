@@ -24,7 +24,7 @@
 			</div>
 			{% include "../common/table/tpl.twig" with {
 				prefix:"table",
-				mod: "",
+				mod: "is--fz-lg",
 				head:[
 					{
 						"name":"Название",
@@ -155,7 +155,6 @@
 				</div>
 
 				<div data-grid-content>
-
 					<div class="{{content_prefix}}section  {{content_mod}}">
 						<div class="{{content_prefix}}row  row  {{content_mod}}  is--section">
 							<div class="cols">
@@ -169,75 +168,93 @@
 									list: [
 										{
 											"name":"Списком", 
-											"link":"#",
+											"link":"#tabs_1",
+											"type":"tabs",
+											"status":"active", 
 										},
 										{
 											"name":"Гант", 
-											"link":"#1",
+											"link":"#tabs_2",
+											"type":"tabs", 
+											"status":"", 
 										},
 									]
 								} %}
 							</div>
 						</div>	
-						{% include "../common/table/tpl.twig" with {
-							prefix:"table",
-							mod: "",
-							head:[
+						{% include "../common/button/btn.twig" with {
+							view:"view_pane",
+							prefix:"tabs__", 
+							mod:"",  
+							list: [
 								{
-									"name":"Название",
-									"mod":"is--account-name",
-								},
-								{
-									"name":"Дата начала",
-									"mod":"",
-								},
-								{
-									"name":"Дата завершения",
-									"mod":"",
-								}, 
-								{
-									"name":"Статус",
-									"mod":"is--status",
-								},
-							],
-							body:[
-								{
-									"tr":[
+									"name":"Списком", 
+									"id":"tabs_1",
+									"status":"active", 
+									"type":"table",
+									"table_head":[
 										{
-											"td":[
-												{"name": 'Разработка сайта'},
-												{"name": '24.10.2020'},
-												{"name": '24.11.2020'},
-												{"name": ''},
+											"name":"Название",
+											"mod":"is--account-name",
+										},
+										{
+											"name":"Дата начала",
+											"mod":"",
+										},
+										{
+											"name":"Дата завершения",
+											"mod":"",
+										}, 
+										{
+											"name":"Статус",
+											"mod":"is--status",
+										},
+									],
+									"table_body":[
+										{
+											"tr":[
+												{
+													"td":[
+														{"name": 'Разработка сайта'},
+														{"name": '24.10.2020'},
+														{"name": '24.11.2020'},
+														{"name": ''},
+													],
+												}
 											],
-										}
+										},
+										{
+											"tr":[
+												{
+													"td":[
+														{"name": 'Концепт'},
+														{"name": '24.10.2020'},
+														{"name": '24.11.2020'},
+														{"name": ''},
+													],
+												}
+											],
+										},
+										{
+											"tr":[
+												{
+													"td":[
+														{"name": 'Дизайн'},
+														{"name": '24.10.2020'},
+														{"name": '24.11.2020'},
+														{"name": ''},
+													],
+												}
+											],
+										},
 									],
 								},
 								{
-									"tr":[
-										{
-											"td":[
-												{"name": 'Концепт'},
-												{"name": '24.10.2020'},
-												{"name": '24.11.2020'},
-												{"name": ''},
-											],
-										}
-									],
+									"name":"Гант", 
+									"id":"tabs_2",
+									"status":"", 
 								},
-								{
-									"tr":[
-										{
-											"td":[
-												{"name": 'Дизайн'},
-												{"name": '24.10.2020'},
-												{"name": '24.11.2020'},
-												{"name": ''},
-											],
-										}
-									],
-								},
-							],
+							]
 						} %}
 					</div>
 
@@ -375,6 +392,116 @@
 										}
 									],
 								},
+								{
+									"tr":[
+										{
+											"td":[
+												{"name": 'Представительство в суде'},
+												{"name": '1'},
+												{"name": '1500.00 ₽'},
+											],
+										}
+									],
+								},
+								{
+									"tr":[
+										{
+											"td":[
+												{"name": 'Представительство в суде'},
+												{"name": '1'},
+												{"name": '1500.00 ₽'},
+											],
+										}
+									],
+								},
+								{
+									"tr":[
+										{
+											"td":[
+												{"name": 'Представительство в суде'},
+												{"name": '1'},
+												{"name": '1500.00 ₽'},
+											],
+										}
+									],
+								},
+								{
+									"tr":[
+										{
+											"td":[
+												{"name": 'Представительство в суде'},
+												{"name": '1'},
+												{"name": '1500.00 ₽'},
+											],
+										}
+									],
+								},
+								{
+									"tr":[
+										{
+											"td":[
+												{"name": 'Представительство в суде'},
+												{"name": '1'},
+												{"name": '1500.00 ₽'},
+											],
+										}
+									],
+								},
+								{
+									"tr":[
+										{
+											"td":[
+												{"name": 'Представительство в суде'},
+												{"name": '1'},
+												{"name": '1500.00 ₽'},
+											],
+										}
+									],
+								},
+								{
+									"tr":[
+										{
+											"td":[
+												{"name": 'Представительство в суде'},
+												{"name": '1'},
+												{"name": '1500.00 ₽'},
+											],
+										}
+									],
+								},
+								{
+									"tr":[
+										{
+											"td":[
+												{"name": 'Представительство в суде'},
+												{"name": '1'},
+												{"name": '1500.00 ₽'},
+											],
+										}
+									],
+								},
+								{
+									"tr":[
+										{
+											"td":[
+												{"name": 'Представительство в суде'},
+												{"name": '1'},
+												{"name": '1500.00 ₽'},
+											],
+										}
+									],
+								},
+								{
+									"tr":[
+										{
+											"td":[
+												{"name": 'Представительство в суде'},
+												{"name": '1'},
+												{"name": '1500.00 ₽'},
+											],
+										}
+									],
+								},
 							],
 						} %}
 					</div>
@@ -415,28 +542,30 @@
 							</div>							
 						</div>
 					</div>
-					<div class="{{content_prefix}}section  {{content_mod}}-sm  is--tabs">	
-						{% include "../common/tabs/tpl.twig" with {
-							view:"base", 
-							prefix:'tabs__', 
-							mod:"",
-							list: [
-								{
-									"id":"tabs1",  
-									"status":"", 
-									"name":"Чат с менеджером", 
-									"type":"chat",  
-									"chat":chat,  
-								},
-								{
-									"id":"tabs2",  
-									"status":"active", 
-									"name":"Лента событий",  
-									"type":"events",  
-									"list":events_list
-								}
-							]
-						} %}				
+					<div class="{{content_prefix}}section  {{content_mod}}-sm  is--tabs">
+						<div data-sticky>	
+							{% include "../common/tabs/tpl.twig" with {
+								view:"base", 
+								prefix:'tabs__', 
+								mod:"",
+								list: [
+									{
+										"id":"tabs1",  
+										"status":"", 
+										"name":"Чат с менеджером", 
+										"type":"chat",  
+										"chat":chat,  
+									},
+									{
+										"id":"tabs2",  
+										"status":"active", 
+										"name":"Лента событий",  
+										"type":"events",  
+										"list":events_list
+									}
+								]
+							} %}				
+						</div>
 					</div>
 				</div>
 			</div>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="ru-RU"> 
+	<head>	
+    	{% include "../block/common/head/head.twig" with {title:"Авторизация"}  %}
+	</head>
+	<body>
+        {% include "../block/common/navbar/navbar.twig" with {
+            view: "header",
+            prefix:"navbar__", 
+            mod:"",
+            humb:"false",
+        } %}
+        <main class="{{prefix.section}}wrap  is--page-login">
+            {% include "../block/page/login.twig" with {
+                view:"page", 
+                content_prefix:prefix.section, 
+                content_mod:"is--page-login", 
+                heading_group:"", 
+                heading_attr:"",
+                heading_mod:"is--page-default-lg", 
+                heading_level:"h1", 
+                heading:"Авторизация",          
+            } %}
+        </main>
+
+        {% include "../block/common/modals/include.twig"%}
+    	{% include "../block/common/script/script.twig"%}
+	</body>
+</html> 

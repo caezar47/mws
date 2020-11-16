@@ -6,9 +6,9 @@
 	{% if value.gallery %}
 	<div class="{{prefix}}gallery-group  {{mod}}">
 		{% for g in value.gallery %}
-			<picture class="{{prefix}}gallery-item  {{mod}}">
+			<a href="{{g.preview}}" data-fancybox="event-gallery" class="{{prefix}}gallery-item  {{mod}}">
 				<img src="{{g.preview}}" class="img-responsive" alt="">
-			</picture>
+			</a>
 		{% endfor %}
 	</div>
 	{% endif %} 
@@ -19,6 +19,11 @@
 			mod: '',
 			list: value.docs 
 		} %}
+	</div>
+	{% endif %}
+	{% if value.note %}
+	<div class="{{prefix}}note  {{mod}}">
+		{{value.note}}
 	</div>
 	{% endif %}
 	{% if value.date %}

@@ -25,6 +25,11 @@
 	.media-breakpoint-up(@md; {
 		margin-bottom: 0;
 	});
+	.media-breakpoint-up(@xl; {
+		&.is--fz-lg{
+			.heading5();
+		}
+	});
 	@media print{
 		* {color: @black}
 	}

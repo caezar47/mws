@@ -11,6 +11,7 @@
             basket:"Корзина",
             basket_qty:"999",
             basket_cost:"15 900",
+            user: "Семён Вишневский",
         } %}
         {% include "../block/common/navbar/navbar.twig" with {
             view: "aside",
@@ -32,6 +33,7 @@
                 heading:"Карта сайта",
                 sitemap:[
                     {"link":page.uikit, "name":"uikit",},
+                    {"link":page.login, "name":"Авторизация",},
                     {"link":page.project, "name":"Мои проекты",},
                     {"link":page.project_card, "name":"Карточка проекта",},
                     {"link":page.project_empty, "name":"Нет проектов",},

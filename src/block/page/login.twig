@@ -1,0 +1,18 @@
+{% if view == "page" %}
+	<section class="{{content_prefix}}content  {{content_mod}}">
+		<div class="{{content_prefix}}container container  {{content_mod}}">	
+			{% include "../common/page-header/elem.twig" with {
+				prefix:"page-header__", 
+				mod:heading_mod,
+				attr:heading_attr, 
+				level:heading_level, 
+				heading:heading
+			} %} 
+			{% include "../common/form/form.twig" with {
+				view: 			"login", 
+				prefix:			"form__",
+				mod:			content_mod,  
+			} %}
+		</div> 
+	</section>
+{% endif %}

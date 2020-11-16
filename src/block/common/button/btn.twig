@@ -52,9 +52,23 @@
 {% if view == "view" %}
 <ul class="{{prefix}}view-list  {{mod}}">
 	{% for value in list %}
-	<li class="{{prefix}}view-item  {{mod}}">
-		<a href="{{value.link}}" class="{{prefix}}view  {% if value.link == catalog_view %}is--active{% endif %}">{{value.name}}</a>
+	<li class="{{prefix}}view-item  {{mod}}  {{value.status}}">
+		<a href="{{value.link}}" class="{{prefix}}view  {% if value.link == catalog_view %}is--active{% endif %}" {% if value.type == "tabs" %}data-toggle="tab"{% endif %}>{{value.name}}</a>
 	</li>
 	{% endfor %}
 </ul>
+{% endif %}
+{% if view == "view_pane" %}
+{% for value in list %}
+<div class="{{prefix}}pane  {{value.status}}  {{group}}" id="{{value.id}}">
+	{% if value.type == "table" %}
+		{% include "../table/tpl.twig" with {
+			prefix:"table",
+			mod: "",
+			head:value.table_head,
+			body:value.table_body,
+		} %}
+	{% endif %}
+</div>
+{% endfor %}
 {% endif %}
