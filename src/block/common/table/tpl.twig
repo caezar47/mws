@@ -19,14 +19,47 @@
 				{% for tr in b.tr %}	
 				<tr {% if tr.link %}onclick="window.location.href='{{tr.link}}'; return false"{% endif %}> 
 					{% for td in tr.td %}
-					<td>
-						{{td.name}}
+					<td {% if td.more %}class="is--more"{% endif %}>
+						
+						{% if td.tooltip %}
+						<span 
+							data-html="true" 
+							data-original-title='
+							<h6>Инструктор</h6>
+							<p>+79991234567</p>
+							<p>wishnewsky@gmail.com</p>
+							' data-placement="bottom" data-toggle="tooltip" >{{td.name}}</span>
+						{% else %}
+							{{td.name}}
+						{% endif %}
 						{% if td.progress %}
 							{% include "../progress/tpl.twig" with {
 								prefix:"progress__", 
 								mod:'is--table',
 								group:'',
 								completed:td.progress,
+							} %}
+						{% endif %}
+						{% if td.more %}
+							{% include "../button/btn.twig" with {
+								view:"more",
+								prefix:"btn__", 
+								mod:"is--right",  
+								link:"#",
+								list: [
+									{
+										"name":"Согласовать", 
+										"tag":"button", 
+										"attr":'type="button"',
+										"class":'btn__item  is--primary  is--sm',
+									},
+									{
+										"name":"Отклонить", 
+										"tag":"button", 
+										"attr":'type="button"',
+										"class":'btn__item  is--sm',
+									},
+								]
 							} %}
 						{% endif %}
 					</td>
@@ -37,3 +70,5 @@
 		</tbody>
 	</table>
 </div>
+
+

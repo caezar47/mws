@@ -1,4 +1,4 @@
-var container = $('.section__grid.is--page-catalog-card');
+var container = $('.section__container .section__grid.is--page-catalog-card');
 var informer = $(".informer__panel");
 //console.log(container.length);
 if(container.length > 0) {	

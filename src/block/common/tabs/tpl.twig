@@ -4,8 +4,7 @@
 		<a class="{{prefix}}dropdown" data-toggle="dropdown" href="#">
 			<span></span>
 		</a>
-	{% endif %}
-			
+	{% endif %}			
 	<ul class="{{prefix}}nav  {{mod}}  {% if dropdown %}is--dropdown{% endif %}  {% if scroll %}nav-tabs{% endif %}">
 		{% for value in list %}
 		<li class="{{prefix}}item  {{mod}}  {{value.status}}">
@@ -18,11 +17,6 @@
 <div class="{{prefix}}pane  {{value.status}}  {{group}}" id="{{value.id}}">
 	{{value.text}}
 	{% if value.type == "events" %}
-		{# {% include "../events/tpl.twig" with {
-			prefix:"events__", 
-			mod: '',
-			list: value.list 
-		} %}	 #}
 		{% include "../modals/tpl.twig" with {
 			prefix:			"modal__", 
 			mod:			"is--inline", 
@@ -31,6 +25,19 @@
 			heading_mod: 	'is--h1  is--modal  visible--md',
 			heading: 		'Лента событий',
 			list: 			value.list,
+		} %}
+	{% endif %}
+	{% if value.type == "events_null" %}
+		{% include "../modals/tpl.twig" with {
+			view:			"null", 
+			prefix:			"modal__", 
+			mod:			"is--inline", 
+			ID: 			"modal-events", 
+			heading_level: 	'h2',
+			heading_mod: 	'is--h1  is--modal  visible--md',
+			heading: 		'Лента событий',
+			list: 			value.list,
+			bg: 			[path.img,"/default/event-empty-xs.svg"].join(""),
 		} %}
 	{% endif %}
 	{% if value.type == "chat" %}

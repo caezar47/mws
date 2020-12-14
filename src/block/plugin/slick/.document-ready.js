@@ -1,5 +1,4 @@
-'use strict';
-$(function() { 	
+//$(function() { 	
 	var catalog = $('[data-slick-catalog]');
 	var dataPrevArrow = $('[data-slick-catalog]').data('slick-prev');
 	var dataNextArrow = $('[data-slick-catalog]').data('slick-next');
@@ -109,87 +108,10 @@ $(function() {
 		    }
 		]
 	});
-	/*
-	//old
-	gallery.slick({
-		slidesToShow: 5,
-		slidesToScroll: 5,
-		arrows: true,
-		infinite: true,
-		prevArrow: prevArrow,
-		nextArrow: nextArrow,
-		responsive: [
-		    {
-				breakpoint: 1600,
-				settings: {
-					slidesToShow: 3,
-					slidesToScroll: 3,
-				}
-		    },
-		    {
-				breakpoint: 768,
-				settings: {
-					slidesToShow: 2,
-					slidesToScroll: 2,
-				}
-		    },
-		    {
-				breakpoint: 565,
-				settings: {
-					slidesToShow: 1,
-					slidesToScroll: 1,
-				}
-		    }
-		]
-	});
-	partners.slick({
-		slidesToShow: 4,
-		slidesToScroll: 4,
-		arrows: true,
-		infinite: true,
-		prevArrow: prevArrow,
-		nextArrow: nextArrow,
-		responsive: [
-		    {
-				breakpoint: 1600,
-				settings: {
-					slidesToShow: 3,
-					slidesToScroll: 3,
-				}
-		    },
-		    {
-				breakpoint: 768,
-				settings: {
-					slidesToShow: 2,
-					slidesToScroll: 2,
-				}
-		    },
-		    {
-				breakpoint: 565,
-				settings: {
-					slidesToShow: 1,
-					slidesToScroll: 1,
-				}
-		    }
-		]
-	});
-	catalog_card.on('init', function(slick){
-		$(window).trigger('resize');
-	});
-	edu.slick({
-		slidesToShow: 1,
-		slidesToScroll: 1,
-		arrows: true,
-		dots: false,
-		infinite: true, 
-		autoplay: true,
-  		autoplaySpeed: 4000,
-		prevArrow: prevArrow,
-		nextArrow: nextArrow,
-	});
+	$(document).on('show.bs.modal','.modals', function () {
+        catalog_card.slick('setPosition');
+    });
 
-	
-	$('.slick-cloned .content-block__preview').removeAttr('data-fancybox');
-	$('.slick-cloned .card-item__preview').removeAttr('data-fancybox');
-	*/
-}); 
+
+   
+//}); 

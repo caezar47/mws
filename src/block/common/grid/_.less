@@ -49,6 +49,12 @@
 			}
 		}
 	}
+	&.is--full{
+		flex-wrap: nowrap;
+		& > .cols{
+			flex: 1 1 100%;
+		}
+	}
 }
 .cols{
 	padding-left: @container_gap - 10px;

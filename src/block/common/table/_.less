@@ -1,9 +1,10 @@
 .table-responsive{
-	overflow-x: auto;
+	//
 	min-height: 0.01%;
 	.media-breakpoint-down(@lg; {
 		width: 100%; 
-		overflow-y: hidden;
+		overflow-y: auto;
+		//overflow-x: auto;
 		-ms-overflow-style: -ms-autohiding-scrollbar;
 	});
 	.media-breakpoint-down(@md; {
@@ -90,6 +91,10 @@
 			}
 			.is--scroll &{
 				white-space: nowrap;
+			}
+			&.is--more{
+				padding-right: 0;
+				width: 15px;
 			}
 		}
 		&:last-child{

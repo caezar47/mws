@@ -3,15 +3,50 @@
 		border: 1px solid @success;
 		border-radius: @site_br;
 		padding: 20px;
-		margin-bottom: 10px;		
+		margin-bottom: 10px;
+		&.is--null{
+			border-radius: 0;
+			padding: 0px;
+			border: 0;
+			.media-breakpoint-up(@md; {
+				padding: 20px;
+				margin-top: 10px;
+				border: 2px dashed @success;
+				text-align: center;
+				min-height: 530px;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+			});
+		}		
 	}
 	&heading{
 		font-weight: 600; 
 		margin-bottom: 15px; 
 		line-height: 140%;
+		&.is--null{
+			color: fadeout(@default, 50%);
+		}
 		.media-breakpoint-up(@md; {
-			margin-bottom: 5px; 			
+			margin-bottom: 5px; 
+			&.is--null{
+				.heading2();
+				font-weight: 700;
+			}			
 		});
+	}
+	&preview{
+		&.is--null{
+			display: none;			
+			margin-bottom: 20px;
+			img{
+				margin: 0 auto;
+			}
+			.media-breakpoint-up(@md; {
+				display: block;			
+			});
+		}
+		
 	}
 	&gallery{
 		&-group{

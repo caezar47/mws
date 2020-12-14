@@ -46,6 +46,10 @@
 		&.is--sm{
 			padding: 10px 20px;
 		}
+		&.is--xs{
+			font-size: 0.889rem;
+			padding: 10px 7px;
+		}
 		&.is--full{
 			width: 100%;
 		}
@@ -149,7 +153,11 @@
 			color: @more_color;
 			.media-breakpoint-up(@md; {
 				width: @more_width;
-				height: @more_height;				
+				height: @more_height;	
+				.table &{
+					width: 15px;
+					height: 15px;
+				}			
 			});
 			&:hover{
 				color: @more_hover_color;

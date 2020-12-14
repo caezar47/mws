@@ -1,6 +1,6 @@
 <div class="{{prefix}}block modals  fade  {{mod}}" id="{{ID}}" tabindex="-1" role="dialog" aria-hidden="true">
 	<div class="{{prefix}}dialog  {{mod}}">
-		<div class="{{prefix}}body  {{mod}}" >
+		<div class="{{prefix}}body  {{mod}}  {% if view == "null" %}is--null{% endif %}" {% if view == "null" %}style="background-image: url({{bg}});"{% endif %}>
 			<button type="button" class="{{prefix}}btn-close  {{mod}}" data-dismiss="modal" aria-hidden="true">
 				{% include "../svg-sprite/svg.twig" with {icon:"icon-close"} %}
 			</button>
@@ -89,7 +89,8 @@
 					{% include "../events/tpl.twig" with {
 						prefix:"events__", 
 						mod: '',
-						list: list 
+						view: view,
+						list: list,
 					} %}
 				{% endif %}
 				{% if ID == "modal-chat" %}
@@ -191,6 +192,134 @@
 							</div>
 						</div>
 					</div>
+				{% endif %}
+				{% if view == "catalog_card" %}
+					<div class="{{content_prefix}}row  row  {{content_mod}}  is--heading">
+						<div class="cols">					
+							{% include "../page-header/elem.twig" with {
+								prefix:"page-header__", 
+								mod:heading_mod,
+								attr:heading_attr, 
+								level:heading_level, 
+								heading:heading
+							} %}
+						</div>
+						<div class="cols  is--code">
+							{% if code %}
+							<p class="card__code  {{card_mod}}">{{code}}</p>
+							{% endif %}
+						</div>
+					</div>
+
+					<div class="{{content_prefix}}grid  grid__row  {{content_mod}}">
+						<div>
+							<div class="{{content_prefix}}slick  {{content_mod}}" data-slick-catalog-card>
+								{% for sl in slider %}
+								<picture class="card__preview  {{card_mod}}">
+									<img src="{{sl.img}}" class="img-responsive" alt="">
+								</picture>
+								{% endfor %}
+							</div>
+
+							{% if slider_nav == "true" %}
+							<div class="{{content_prefix}}slick  {{content_mod}}" data-slick-catalog-card-nav>
+								{% for sl in slider %}
+								<picture class="card__preview  {{card_mod}}-nav">
+									<img src="{{sl.img}}" class="img-responsive" alt="">
+								</picture>
+								{% endfor %}
+							</div>
+							{% endif %}
+
+							{% if note_short %}
+							<div class="card__note  {{content_mod}}">{{note_short}}</div>
+							{% endif %}
+
+							{% if size %}
+							<div class="card__size-wrap  {{content_mod}}  hidden--md">
+								<div class="form__grid  grid__row  {{content_mod}}">
+									{% include "../form/elem.twig" with {
+										view:"radio", 
+										prefix:'form__', 
+										mod:"is--panel  is--desc", 
+										color:"", 
+										list: size,
+									} %}
+								</div>
+							</div>
+							{% endif %}
+						</div>
+						<div>
+							<div>
+								{% include "../tabs/tpl.twig" with {
+									view:"base", 
+									prefix:'tabs__', 
+									mod:"",
+									group:tabs_group,
+									list: tabs,
+								} %}
+							</div>
+							{% if informer %}
+								{% include "../informer/tpl.twig" with {
+									prefix:"informer__", 
+									status:"",  
+									mod:informer_type,  
+									btn_link:"#", 
+									btn_name:"В корзину", 
+									btn_mod:"is--primary  is--full",
+									modal:"Выбрать", 
+									modal_prefix:"btn__", 
+									modal_attr:'type="button" data-toggle="modal" data-target="#modal-select-basket"',
+									modal_mod:"is--primary  is--full",
+									cost_list_view:"catalog_cost_list",
+									cost_list_mod: card_mod,
+									cost_list:[
+										{
+											"name":"От 500 шт.",
+											"value":"7 900 ₽",
+										},
+										{
+											"name":"От 1 000 шт.",
+											"value":"6 900 ₽",
+										},
+										{
+											"name":"От 1 500 шт.",
+											"value":"5 900 ₽",
+										},
+									], 
+									qty:"5",
+								} %}	
+							{% endif %}				
+						</div>
+						{% if options %}
+						<div class="is--full">	
+							<div class="{{content_prefix}}grid  grid__row  {{content_mod}}  is--options">						
+								{% include "../card/card.twig" with {
+									view:"catalog",
+									prefix:"card__", 
+									mod:"is--catalog", 
+									group:"is--view-list  is--options",
+									list: options,
+								} %}
+							</div>
+						</div>
+						{% endif %}
+						{% if options_table %}
+						<div class="is--full">	
+							<div class="{{content_prefix}}slick  {{content_mod}}" data-slick-catalog-card-table>
+								{% include "../card/card.twig" with {
+									view:"catalog",
+									prefix:"card__", 
+									mod:"is--catalog", 
+									group:"is--view-table",
+									list: options_table,
+								} %}
+							</div>
+						</div>
+						{% endif %}
+					</div>
+				{% endif %}
+				{% if view == "catalog_card2" %}
 				{% endif %}
 			{# </div>  #}
 		</div>

@@ -71,7 +71,7 @@
 									{"name": 'Проект №13-10/2020'},
 									{"progress": '50'},
 									{"name": 'Bessie Cooper'},
-									{"name": 'Jenny Wilson'},
+									{"name": 'Jenny Wilson', "tooltip": "true"},
 									{"name": '30.10.2020'},
 									{"name": '9 500 ₽'},
 								],
@@ -86,7 +86,7 @@
 									{"name": 'Проект №13-10/2020'},
 									{"progress": '50'},
 									{"name": 'Darlene Robertson'},
-									{"name": 'Leslie Alexander'},
+									{"name": 'Leslie Alexander', "tooltip": "true"},
 									{"name": '30.10.2020'},
 									{"name": '23 500 ₽'},
 								],
@@ -320,6 +320,18 @@
 											"td":[
 												{"name": 'Договор оказания услуг (Россия) 1'},
 												{"name": '23.10.2020'},
+												{"more": 'true'},
+											],
+										}
+									],
+								},
+								{
+									"tr":[
+										{
+											"td":[
+												{"name": 'Договор оказания услуг (Россия) 1'},
+												{"name": '23.10.2020'},
+												{"more": 'true'},
 											],
 										}
 									],
@@ -521,22 +533,22 @@
 						} %}
 					</div>
 					<div class="{{content_prefix}}section  {{content_mod}}-sm  visible--md">
-						<div class="row">
+						<div class="row  is--gap-xs  is--full">
 							<div class="cols">
 								{% include "../common/button/btn.twig" with {
 									view:"btn",
-									prefix:"link__", 
+									prefix:"btn__", 
 									attr:'data-toggle="modal" data-target="#modal-chat"',
-									mod:"is--full",   
+									mod:"is--full  is--primary  is--xs",   
 									name:"Чат с менеджером"
 								} %}
 							</div>							
 							<div class="cols">
 								{% include "../common/button/btn.twig" with {
 									view:"btn",
-									prefix:"link__", 
+									prefix:"btn__", 
 									attr:'data-toggle="modal" data-target="#modal-events"',
-									mod:"is--full",   
+									mod:"is--full  is--primary  is--xs", 
 									name:"Лента событий"
 								} %}
 							</div>							
@@ -560,9 +572,10 @@
 										"id":"tabs2",  
 										"status":"active", 
 										"name":"Лента событий",  
+										"type":"events_null",  
 										"type":"events",  
 										"list":events_list
-									}
+									} 
 								]
 							} %}				
 						</div>
