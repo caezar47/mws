@@ -31,6 +31,11 @@
 			bottom: 0;
 			left: 0;
 			z-index: 95;
+			.is--catalog-view &{
+				position: static;
+				box-shadow: none;
+				padding-left: 0;
+			}
 			&.is--catalog{
 				&-fixed{
 					left: 0!important;
@@ -42,6 +47,9 @@
 						display: none;
 						&.informer__modal{
 							display: block;
+						}
+						.is--catalog-view &{
+							display: flex;
 						}
 					}
 				}
@@ -114,6 +122,11 @@
 				position: static;
 				padding: 35px 0 0px;
 				margin-bottom: 0;
+			}
+			.is--catalog-view &{
+				background-color: fadeout(@white, 100%);
+				padding: 0;
+				margin: 0;
 			}
 		});
 	}

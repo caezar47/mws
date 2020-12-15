@@ -59,6 +59,7 @@
                     {"link":"#","modal":"#modal-profile-edit", "name":"Модальное окно: Редактировать данные",},
                     {"link":"#","modal":"#modal-pass-edit", "name":"Модальное окно: Сменить пароль",},
                     {"link":"#","modal":"#modal-add-basket", "name":"Модальное окно: Добавить товар в корзину",},
+                    {"link":"#","modal":"#modal-catalog-card0", "name":"Модальное окно: Быстрый просмотр карточка новая",},
                     {"link":"#","modal":"#modal-catalog-card1", "name":"Модальное окно: Быстрый просмотр карточка 1",},
                     {"link":"#","modal":"#modal-catalog-card2", "name":"Модальное окно: Быстрый просмотр карточка 2",},
                 ],              
@@ -68,18 +69,11 @@
         {% include "../block/common/modals/include.twig"%}
     	{% include "../block/common/script/script.twig"%}
         <script>
-        /* $('[data-toggle="modal"]').on('click', function (e) {
-         //$('.modals').on('shown.bs.modal', function (e) {
-        alert(2);
-        //$('[data-slick-catalog-card]').slick('destroy');
-        //$('[data-slick-catalog-card]').slick('init');
-        $('[data-slick-catalog-card]').slick('setPosition');
-         });
-         /*$(document).ready(function(){
-            $(document).on('show.bs.modal','.modals', function () {
-                alert(2);
-            });
-        });*/
+            setTimeout(function(){
+                $('[data-toggle="modal"]').on('click', function (e) {
+                    $('[data-slick-catalog-card]').slick('setPosition');
+                });
+            }, 1000);
          </script>
 	</body>
 </html> 

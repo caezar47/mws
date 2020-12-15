@@ -579,6 +579,9 @@
 					.media-breakpoint-up(@md; {
 						width: 100%;
 						height: 433px;
+						.is--catalog-view &{					
+							height: 317px;
+						}
 					});
 				}
 				&-nav{
@@ -662,6 +665,12 @@
 					font-size: 1em;
 					padding-top: 0;
 				});
+
+				.is--catalog-view &{					
+					padding-top: 10px;
+					font-size: 0.889em;
+					margin-bottom: 5px;
+				}
 			}
 		}
 	}
@@ -992,6 +1001,9 @@
 					.media-breakpoint-up(@md; {
 						margin-left: -@container_gap;
 						margin-right: -@container_gap;
+						.is--catalog-view &{					
+							margin-top: -25px
+						}
 					});
 				}
 			}
@@ -1046,6 +1058,9 @@
 						}
 						dd{
 							.heading3();
+						}
+						.is--catalog-view &{					
+							margin-top: 25px
 						}
 						.is--catalog-fixed &{
 							dt{

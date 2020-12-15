@@ -42,6 +42,15 @@
 		border-color: @input_focus_border_color;
 		.icon-drop-close();
 	}
+	.item{
+		display: inline-flex;
+		align-items: center;
+		.flag{
+			margin-right: 10px;
+		    max-height: 20px;
+    		max-width: 24px;
+		}
+	}
 
 	//.selectize-box-shadow(@selectize-shadow-input);
 	//.selectize-border-radius(@selectize-border-radius);
@@ -151,6 +160,11 @@
 		cursor: normal;
 		transition: @trs-site;
 		margin-bottom: 16px;
+		.flag{
+			margin-right: 10px;
+		    max-height: 20px;
+    		max-width: 24px;
+		}
 		&:last-child{
 			margin-bottom: 0;
 		}

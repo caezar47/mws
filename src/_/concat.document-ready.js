@@ -3,6 +3,7 @@ var card=$("[data-services-card]"),result=$("#services-result ul");card.on("chan
 var res="noname-browser",userAgent=navigator.userAgent.toLowerCase();-1!=userAgent.indexOf("msie")&&(res="is--msie"),-1!=userAgent.indexOf("trident")&&(res="is--msie"),-1!=userAgent.indexOf("firefox")&&(res="is--firefox"),$(".chat__block").addClass(res),$(".chat__textarea").focusout(function(){var e=$(this);e.text().replace(" ","").length||e.empty()});
 
 
+
 var form_panel=$("[data-form-validation]"),phone=$(".form__control[type='tel']"),file=$(".form__file-input"),file_name=$(".form__file-name"),input=$(".form__control"),reset=$(".form__reset");phone.mask("+7 (999) 999-99-99",{placeholder:"+7 (___) ___-__-__"}),form_panel.validationEngine("attach",{promptPosition:"bottomLeft",scroll:!1}),input.on("input",function(){$(this).siblings(".form__result").addClass("is--open"),$(this).siblings(".form__clear").addClass("is--active")}),file.on("change",function(e){console.log($(this).val()),$(this).siblings(".form__file-name").html($(this).val().replace(/.*(\/|\\)/,""))}),reset.on("click",function(e){file_name.html(file_name.data("heading"))});
 $("img").addClass("img-responsive");
 

@@ -18,6 +18,12 @@
 						placeholder:"Поиск по каталогу",
 					} %}
 				</div>
+				<div class="cols">
+					{% include "../common/filter/tpl.twig" with {
+						prefix:"filter__", 
+						mod:"", 
+					} %}
+				</div>
 				<div class="cols  hidden--md">
 					{% include "../common/button/btn.twig" with {
 						view:"icon",

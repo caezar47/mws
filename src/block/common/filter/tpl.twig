@@ -1,0 +1,21 @@
+<div class="{{prefix}}panel  dropdown">
+	<button type="button" class="btn__icon  is--filter  is--hidden-md" data-toggle="dropdown">
+		{% include "../svg-sprite/svg.twig" with {icon:"icon-filter"} %}
+		<span>Фильтры</span>
+	</button>
+	<button type="button" class="btn__icon  is--filter  is--visible-md" data-toggle="modal" data-target="#modal-filter">
+		{% include "../svg-sprite/svg.twig" with {icon:"icon-filter"} %}
+		<span>Фильтры</span>
+	</button>
+	<div class="{{prefix}}menu  {{mod}}">
+		{% include "../modals/tpl.twig" with {
+			prefix:			"modal__", 
+			mod:			"is--inline", 
+			ID: 			"modal-filter", 
+			heading_level: 	'h2',
+			heading_mod: 	'is--h1  is--modal  visible--md',
+			heading: 		'Фильтры',
+			list: 			value.list,
+		} %}
+	</div>
+</div>

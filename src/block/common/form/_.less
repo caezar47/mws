@@ -45,6 +45,21 @@
 			grid-gap: 21px 20px;
 			margin-bottom: 40px;
 		}
+		&.is--filter{
+			grid-gap: 20px;
+			grid-template-columns: repeat(2, 1fr);
+			& > .is--full{
+				grid-column: span 2; 
+			}
+			& > .is--btn{
+				& > *{
+					margin-bottom: 10px;
+					&:last-child{
+						margin-bottom: 0px;
+					}
+				}
+			}
+		}
 		&.is--page{
 			&-settings{
 				&.is--cols-2{
@@ -112,7 +127,16 @@
 		font-weight: 600;
 		margin-bottom: 5px;
 	}
+	&unit{
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		right: 25px;
+	}
 	&control{
+		&-group{
+			position: relative;
+		}
 		width: 100%;
 		font-weight: 400;
 		background: @input_bg;

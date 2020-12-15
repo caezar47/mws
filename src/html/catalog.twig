@@ -483,6 +483,8 @@
         </main>
 
         {% include "../block/common/modals/include.twig"%}
-    	{% include "../block/common/script/script.twig"%}
+    	{% include "../block/common/script/script.twig" with {
+            selectize_flag: 'true',
+        }%}
 	</body>
-</html> 
+</html>

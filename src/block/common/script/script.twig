@@ -15,4 +15,36 @@ document.createElement("picture");
 {% if wow == "view" %}
 new WOW().init();
 {% endif %}
+
+{% if selectize_flag %}
+$('[data-selectize-flag]').selectize({
+	//maxItems: null,
+	valueField: 'id',
+	searchField: 'title',
+	options: [
+	    {id: 1, title: 'Россия', url: './img/default/flag-rus.jpg'},
+	    {id: 2, title: 'Китай', url: './img/default/flag-china.jpg'},
+	    {id: 3, title: 'США', url: './img/default/flag-usa.jpg'},
+	],
+	render: {
+	    option: function(data, escape) {
+	        return '<div class="option">' +
+	                    '<img src="' + escape(data.url) + '" alt="" class="flag">' + escape(data.title) + 
+	                '</div>';
+	    },
+	    item: function(data, escape) {
+	       return '<div class="item">' +
+	                    '<img src="' + escape(data.url) + '" alt="" class="flag">' + escape(data.title) + 
+	                '</div>';
+	    }
+	},
+	create: function(input) {
+	    return {
+	        id: 0,
+	        title: input,
+	        url: '#'
+	    };
+	}
+});
+{% endif %}
 </script> 

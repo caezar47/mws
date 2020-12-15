@@ -45,7 +45,22 @@
 		{% if value.label %}
 			<p class="{{prefix}}label  {{mod}}  {{value.mod}}">{{value.label}}</p>
 		{% endif %}
-		<input type="{{value.type}}" class="{{prefix}}control  {{value.validate}}  {{mod}}  {{color}}  {{value.mod}}  {% if value.view == "date" %}datepicker-here{% endif %}  {% if value.view == "time" %}datepicker-here{% endif %}" {{value.status}}  {{value.required}} placeholder="{{value.placeholder}}" {% if value.view == "time" %}data-timepicker="true"{% endif %} {% if value.value %}value="{{value.value}}"{% endif %}>
+		{% if value.unit %}
+			<div class="{{prefix}}control-group">				
+		{% endif %}
+			<input type="{{value.type}}" class="{{prefix}}control  
+				{{value.validate}}  {{mod}}  {{color}}  {{value.mod}}  
+				{% if value.view == "date" %}datepicker-here{% endif %}  
+				{% if value.view == "time" %}datepicker-here{% endif %}" 
+				{{value.status}}  
+				{{value.required}} 
+				placeholder="{{value.placeholder}}" 
+				{% if value.view == "time" %}data-timepicker="true"{% endif %} 
+				{% if value.value %}value="{{value.value}}"{% endif %}>
+		{% if value.unit %}
+				<p class="{{prefix}}unit">{{value.unit}}</p>
+			</div>
+		{% endif %}
 	</label>
 	{% endfor %}
 {% endif %}
@@ -103,7 +118,7 @@
 		{% endif %}
 		<select id="{{value.form_id}}[{{value.id}}]" {% if value.placeholder %}placeholder="{{value.placeholder}}"{% endif %} name="f[{{value.name}}]" {{value.type}} {{value.required}}> 
 			{% for opt in value.opt %}
-				<option>{{opt.name}}</option>
+				<option><img src="{{path.img}}/default/flag.jpg" alt="">{{opt.name}}</option>
 			{% endfor %}	
 		</select> 
 		{% if value.text %}
@@ -167,4 +182,3 @@
 		<span class="{{prefix}}file-name  {{mod}}  {{color}}" data-heading="Прикрепить резюме">Прикрепить резюме</span>
 	</label>
 {% endif %}
-
