@@ -21,16 +21,30 @@
 					{% for td in tr.td %}
 					<td {% if td.more %}class="is--more"{% endif %}>
 						
+						
 						{% if td.tooltip %}
-						<span 
+						{# <span 
 							data-html="true" 
 							data-original-title='
 							<h6>Инструктор</h6>
 							<p>+79991234567</p>
 							<p>wishnewsky@gmail.com</p>
-							' data-placement="bottom" data-toggle="tooltip" >{{td.name}}</span>
+							' data-placement="bottom" data-toggle="tooltip" >{{td.name}}</span> #}
+						<span 
+							data-toggle="popover"
+							data-placement="bottom"
+							data-html="true" 
+							data-content='
+							<h6>Инструктор</h6>
+							<p><a href="tel:+79991234567">+79991234567</a></p>
+							<p><a href="mailto:wishnewsky@gmail.com">wishnewsky@gmail.com</a></p>
+							'>{{td.name}}</span>
 						{% else %}
-							{{td.name}}
+							{% if td.link_inline %}
+								<a href="{{td.link_inline}}">{{td.name}}</a>
+							{% else %}
+								{{td.name}}
+							{% endif %}
 						{% endif %}
 						{% if td.progress %}
 							{% include "../progress/tpl.twig" with {

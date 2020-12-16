@@ -16,3 +16,30 @@
 		font-weight: 700;
 	}
 }
+[data-toggle="popover"]{
+	cursor: pointer;
+}
+.popover {
+	background-color: @white;
+	position: absolute;
+	box-shadow: 10px 10px 30px fadeout(@default, 90%);
+	border-radius: @site_br; 
+	padding: 10px;
+	font-size: 0.889rem;
+	line-height: 140%;
+	h6{
+		text-transform: uppercase;
+		font-size: 0.715rem;
+	    letter-spacing: 0.1em;
+    	margin-bottom: 5px;
+	}
+	p{
+		font-weight: 700;
+	}
+	a{
+		color: @default;
+		&:hover{
+			color: @primary;
+		}
+	}
+}

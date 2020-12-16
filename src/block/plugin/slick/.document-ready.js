@@ -90,7 +90,7 @@
 		focusOnSelect: true
 	});
 	catalog_card_table.slick({
-		slidesToShow: 3,
+		slidesToShow: 1,
 		slidesToScroll:1,
 		arrows: true,
 		dots: false,	
@@ -107,11 +107,5 @@
 				}
 		    }
 		]
-	});
-	$(document).on('show.bs.modal','.modals', function () {
-        catalog_card.slick('setPosition');
-    });
-
-
-   
+	});   
 //}); 

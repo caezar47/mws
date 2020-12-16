@@ -1652,11 +1652,15 @@ svg4everybody();
 document.createElement("picture");
 
 </script>         <script>
-            setTimeout(function(){
-                $('[data-toggle="modal"]').on('click', function (e) {
+           
+            $('[data-toggle="modal"]').on('click', function (e) {
+                //$('[data-slick-catalog-card-table]').slick('destroy');
+                setTimeout(function(){
                     $('[data-slick-catalog-card]').slick('setPosition');
-                });
-            }, 1000);
+                    //$('[data-slick-catalog-card-table]').slick('setPosition');
+                    //alert('hi')
+                }, 1000);
+            });
          </script>
 	</body>
 </html> 

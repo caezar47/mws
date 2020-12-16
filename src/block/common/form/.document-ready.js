@@ -6,12 +6,12 @@ var input = $(".form__control");
 var reset = $(".form__reset");
 
 phone.mask("+7 (999) 999-99-99",{placeholder:"+7 (___) ___-__-__"});
-form_panel.validationEngine(
+/*form_panel.validationEngine(
 	'attach', {
 		promptPosition : "bottomLeft",
 		//scrollOffset: 200,		
 		scroll: false
-}); 
+});*/ 
 input.on("input", function () {
 	$(this).siblings('.form__result').addClass('is--open');
 	$(this).siblings('.form__clear').addClass('is--active');
