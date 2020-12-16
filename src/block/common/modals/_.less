@@ -27,6 +27,12 @@
 			opacity: 1;
 			background: @black;
 		}*/
+		&.is--catalog{
+			z-index: 1209;
+			&-view{
+				z-index: 1209;
+			}
+		}
 		.media-breakpoint-up(@md; {
 			&.is--inline{
 				display: block!important;
@@ -59,6 +65,7 @@
 		}
 		.media-breakpoint-down(@md; {
 			height: 100%;
+
 		});
 		.media-breakpoint-up(@md; {
 			background-color: @modal_bg;
@@ -126,6 +133,9 @@
     	}
 		.media-breakpoint-down(@md; {
 			min-height: 100%;
+			.is--informer &{
+				padding-bottom: 82px;
+			}
 		});
 		.media-breakpoint-up(@md; {
 			box-shadow: 20px 20px 30px fadeout(@default, 90%);

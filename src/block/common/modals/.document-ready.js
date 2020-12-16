@@ -1,3 +1,17 @@
+/*var basketOpen = $('.informer__modal .btn__item');
+basketOpen.on('click', function(e) {
+	var btn = $(this);	
+	var modal = btn.attr("data-target");	
+	btn.closest('.modals').modal('hide');
+	$(modal).modal();
+	console.log(btn.attr("data-target"));
+});*/
+$('.informer__panel.visible--md').closest('.modals').addClass('is--informer')
+$('#modal-add-basket').on('hidden.bs.modal', function (e) {
+	//if()
+	$('body').find('.modals.is--catalog.in').closest('body').addClass('modal-open');
+});
+/*var modal_btn_show = $('.informer__modal .btn__item');
 /*var modal_btn_show = $('[data-toggle="modal"]');
 modal_btn_show.on('click', function(e) {
 

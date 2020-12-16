@@ -276,7 +276,7 @@
 							{% if informer %}
 								{% include "../informer/tpl.twig" with {
 									prefix:"informer__", 
-									status:"",  
+									status:"hidden--md",  
 									mod:informer_type,  
 									btn_link:"#", 
 									btn_name:"В корзину", 
@@ -443,4 +443,17 @@
 			{# </div>  #}
 		</div>
 	</div>
+	{% if view == "catalog_card" %}
+		{% if informer %}
+			{% include "../informer/tpl.twig" with {
+				prefix:"informer__", 
+				status:"visible--md",
+				mod:informer_type,  
+				modal:"Выбрать", 
+				modal_prefix:"btn__",
+				modal_attr:'type="button" data-toggle="modal" data-target="#modal-add-basket"',
+				modal_mod:"is--primary  is--full",
+			} %}	
+		{% endif %}
+	{% endif %}
 </div>

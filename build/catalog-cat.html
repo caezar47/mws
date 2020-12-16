@@ -270,6 +270,158 @@
 
 
 				</div>
+				<div class="cols">
+					<div class="filter__panel  dropdown">
+	<button type="button" class="btn__icon  is--filter  is--hidden-md" data-toggle="dropdown">
+		<svg class="icon-svg icon-icon-filter" role="img">
+	<use xlink:href="./img/svg/sprite.svg#icon-filter"></use>
+</svg>		<span>Фильтры</span>
+	</button>
+	<button type="button" class="btn__icon  is--filter  is--visible-md" data-toggle="modal" data-target="#modal-filter">
+		<svg class="icon-svg icon-icon-filter" role="img">
+	<use xlink:href="./img/svg/sprite.svg#icon-filter"></use>
+</svg>		<span>Фильтры</span>
+	</button>
+	<div class="filter__menu  ">
+		<div class="modal__block modals  fade  is--inline" id="modal-filter" tabindex="-1" role="dialog" aria-hidden="true">
+	<div class="modal__dialog  is--inline">
+		<div class="modal__body  is--inline  " >
+			<button type="button" class="modal__btn-close  is--inline" data-dismiss="modal" aria-hidden="true">
+				<svg class="icon-svg icon-icon-close" role="img">
+	<use xlink:href="./img/svg/sprite.svg#icon-close"></use>
+</svg>			</button>
+			
+													<h2 class="page-header__heading  is--h1  is--modal  visible--md  " >Фильтры</h2>						<form action="#" class="form__panel  is--filter">
+		<div class="form__grid  grid__row  is--filter">
+			
+
+		
+	<label class="form__item    "  data-error="Обязательно к заполнению">
+					<p class="form__label    ">Цена от</p>
+							<div class="form__control-group">				
+					<input type="text" class="form__control  
+				        
+				  
+				" 
+				  
+				required 
+				placeholder="Цена от" 
+				 
+				>
+						<p class="form__unit">₽</p>
+			</div>
+			</label>
+		
+	<label class="form__item    "  data-error="Обязательно к заполнению">
+					<p class="form__label    ">До</p>
+							<div class="form__control-group">				
+					<input type="text" class="form__control  
+				        
+				  
+				" 
+				  
+				required 
+				placeholder="До" 
+				 
+				>
+						<p class="form__unit">₽</p>
+			</div>
+			</label>
+		
+	<label class="form__item    "  data-error="Обязательно к заполнению">
+					<p class="form__label    ">Ширина от</p>
+							<div class="form__control-group">				
+					<input type="text" class="form__control  
+				        
+				  
+				" 
+				  
+				required 
+				placeholder="Ширина от" 
+				 
+				>
+						<p class="form__unit">см</p>
+			</div>
+			</label>
+		
+	<label class="form__item    "  data-error="Обязательно к заполнению">
+					<p class="form__label    ">До</p>
+							<div class="form__control-group">				
+					<input type="text" class="form__control  
+				        
+				  
+				" 
+				  
+				required 
+				placeholder="До" 
+				 
+				>
+						<p class="form__unit">см</p>
+			</div>
+			</label>
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+			<div class="is--full">
+				
+
+
+
+
+
+		<div class="form__item      " data-error="Обязательно к заполнению">
+				<label class="form__label  " for="modal-filter[select7]">Производитель</label>
+				<select id="modal-filter[select7]"  name="f[text7]" data-selectize-flag required> 
+				
+		</select> 
+			</div>
+	
+
+
+
+
+
+
+
+
+
+			</div>
+			<div class="is--full  is--btn">
+				<p>
+				
+<button type="submit" class="btn__item  is--full  is--primary" >
+		<span>Показать 13 товаров</span>
+</button>
+
+
+				</p>
+				<p>			
+				
+<button type="reset" class="btn__item  is--full" >
+		<span>Сбросить</span>
+</button>
+
+
+				</p>
+			</div>		
+		</div>
+	</form>
+																															
+		</div>
+	</div>
+	</div>	</div>
+</div>				</div>
 				<div class="cols  hidden--md">
 					
 
@@ -882,7 +1034,7 @@
 																																			
 		</div>
 	</div>
-</div> 
+	</div> 
 <div class="modal__block modals  fade  " id="modal-profile-edit" tabindex="-1" role="dialog" aria-hidden="true">
 	<div class="modal__dialog  ">
 		<div class="modal__body    " >
@@ -991,7 +1143,7 @@
 																																			
 		</div>
 	</div>
-</div> 
+	</div> 
 <div class="modal__block modals  fade  " id="modal-pass-edit" tabindex="-1" role="dialog" aria-hidden="true">
 	<div class="modal__dialog  ">
 		<div class="modal__body    " >
@@ -1061,7 +1213,7 @@
 																																			
 		</div>
 	</div>
-</div> 
+	</div> 
 <div class="modal__block modals  fade  " id="modal-add-basket" tabindex="-1" role="dialog" aria-hidden="true">
 	<div class="modal__dialog  ">
 		<div class="modal__body    " >
@@ -1157,7 +1309,7 @@
 																											
 		</div>
 	</div>
-</div> 
+	</div> 
 <div class="modal__block modals  fade  " id="modal-select-basket" tabindex="-1" role="dialog" aria-hidden="true">
 	<div class="modal__dialog  ">
 		<div class="modal__body    " >
@@ -1169,7 +1321,7 @@
 																																			
 		</div>
 	</div>
-</div> 
+	</div> 
 
 <div class="modal__block modals  fade  is--catalog" id="modal-catalog-card1" tabindex="-1" role="dialog" aria-hidden="true">
 	<div class="modal__dialog  is--catalog">
@@ -1264,7 +1416,7 @@
 
 	</div>
 							</div>
-															<div class="informer__panel  is--catalog-card  ">
+															<div class="informer__panel  is--catalog-card  hidden--md">
 			
 	
 	<dl class="card__cost-list  is--catalog-card">
@@ -1300,9 +1452,9 @@
 
 	<div class="form__item  is--qty">
 		<div class="form__qty">
-			<button type="button"  class="form__qty-btn  is--minus"></button>		
-			<input type="number"  class="form__qty-input" value="19">
-			<button type="button"  class="form__qty-btn  is--plus"></button>		
+			<button type="button" hidden--md class="form__qty-btn  is--minus"></button>		
+			<input type="number" hidden--md class="form__qty-input" value="19">
+			<button type="button" hidden--md class="form__qty-btn  is--plus"></button>		
 		</div>
 	</div>
 
@@ -1332,7 +1484,17 @@
 											
 		</div>
 	</div>
-</div> 
+						<div class="informer__panel  is--catalog-card  visible--md">
+				<div class="informer__modal  is--catalog-card">		
+		
+<button type="" class="btn__item  is--primary  is--full" type="button" data-toggle="modal" data-target="#modal-add-basket">
+		<span>Выбрать</span>
+</button>
+
+
+	</div>
+			</div>	
+			</div> 
 
 <div class="modal__block modals  fade  is--catalog" id="modal-catalog-card2" tabindex="-1" role="dialog" aria-hidden="true">
 	<div class="modal__dialog  is--catalog">
@@ -1998,7 +2160,7 @@
 											
 		</div>
 	</div>
-</div> 
+				</div> 
 
 <div class="modal__block modals  fade  is--catalog-view" id="modal-catalog-card0" tabindex="-1" role="dialog" aria-hidden="true">
 	<div class="modal__dialog  is--catalog-view">
@@ -2119,7 +2281,7 @@
 							
 		</div>
 	</div>
-</div> 
+	</div> 
 
     	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 <!--[if lt IE 9]>

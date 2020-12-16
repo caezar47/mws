@@ -194,6 +194,12 @@
 						placeholder:"Поиск по каталогу",
 					} %}
 				</div>
+				<div class="cols">
+					{% include "../common/filter/tpl.twig" with {
+						prefix:"filter__", 
+						mod:"", 
+					} %}
+				</div>
 				<div class="cols  hidden--md">
 					{% include "../common/button/btn.twig" with {
 						view:"icon",
@@ -412,14 +418,14 @@
 					{% if informer %}
 						{% include "../common/informer/tpl.twig" with {
 							prefix:"informer__", 
-							status:"",  
+							status:"is--catalog-fixed",  
 							mod:informer_type,  
 							btn_link:"#", 
 							btn_name:"В корзину", 
 							btn_mod:"is--primary  is--full",
 							modal:"Выбрать", 
 							modal_prefix:"btn__", 
-							modal_attr:'type="button" data-toggle="modal" data-target="#modal-select-basket"',
+							modal_attr:'type="button" data-toggle="modal" data-target="#modal-add-basket"',
 							modal_mod:"is--primary  is--full",
 							cost_list_view:"catalog_cost_list",
 							cost_list_mod: card_mod,
